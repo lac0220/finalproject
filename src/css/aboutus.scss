@@ -1,0 +1,76 @@
+.container_about_us {
+  background-image: url('/img/bground.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.container_about_us1 {
+  padding-top: 10px;
+}
+
+.about_us_text h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px 0 20px;
+  color: black;
+}
+
+.about_us_text p {
+  text-align: justify;
+  color: black;
+  padding-bottom: 10px;
+  margin: 0 300px 0 300px;
+}
+
+.about_us_text2 p {
+  text-align: justify;
+  color: black;
+  padding: 20px 0 20px;
+  margin: 0 300px 0 300px;
+}
+
+.card_aboutus {
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  background-color: #8a8a8a;
+  border-radius: 10%;
+  padding-top: 10px;
+}
+
+.my_picture {
+  width:100%;
+  border-radius: 50%;
+}
+
+.card_aboutus h1 {
+  font-size: 30px;
+  padding-top: 10px;
+}
+
+.card_aboutus h2 {
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+.card_aboutus p {
+  font-size: 20px;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+}
+
+.card_aboutus h1, .card_aboutus h2 {
+  color: black;
+  text-align: center;
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 950px) {
+
+  .about_us_text p, .about_us_text2 p { 
+      margin: 0 50px 0 50px;
+  }
+}

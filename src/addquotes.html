@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+
+    <title>Add New Quote - Legendary Quotes</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"><i>Legendary Quotes</i></a>
+          <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dailyquotes.html" class="nav-link">Daily Quote</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Search Quotes 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="categories.html">Categories</a>
+                          <a href="authors.html">Authors</a>
+                          <a href="textsearch.html">Text Search</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                  <a href="addquotes.html" class="nav-link"><s>Add New Quote</s></a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+
+            
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="createbutton";">Sign Up</button>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+    </div>
+  </form>
+</div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button class="loginbutton" type="submit">Login</button>
+        <span class="psw">Forgot <a href="index.html">your password?</a></span>
+                </form>
+              </div>
+        </nav>
+</header>
+
+<div class="container_adding">
+  <h1>Add New Quote</h1>
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, sapiente voluptates. Fugiat eius ipsum enim inventore, quas eum facilis? Eligendi sit est quisquam sint beatae illum maxime, delectus vero doloribus.</p>
+  <form class="form_adding" action="action_page.php">
+
+    <div class="adding_label_form">
+    <label class="adding_label" for="author">Author of the Quote</label>
+    </div>
+
+    <input class="input_adding" type="text" id="author" name="author">
+
+    <div class="container_adding_middle">
+    <p>Fugiat eius ipsum enim inventore, quas eum facilis? Eligendi sit est quisquam sint beatae illum maxime, delectus vero doloribus.</p>
+    </div>
+
+    <div class="adding_label_form">
+    <label class="adding_label1" for="quote">Quote</label>
+    </div>
+    <textarea id="quote" name="quote" placeholder="Please insert the quote here" required style="height:200px"></textarea>
+
+    <h2>Choose a category</h2>
+  
+    <div class="container_form_chechbox">
+    <label class="container">Love
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+  
+    <label class="container">Fear
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+  
+    <label class="container">Success
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+  
+    <label class="container">Failure
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+
+    <label class="container">Health
+    <input type="checkbox">
+    <span class="checkmark"></span>
+    </label>
+
+  <div class="container_submit_adding">
+  <input class="submit_btn_adding" type="submit" value="Submit">
+</div>
+</div>
+</form>
+
+<div class="container_adding_end">
+  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur, sapiente voluptates.</p>
+</div>
+</div>
+
+    <footer class="footer-distributed">
+            <div class="footer-left">
+            <p>Created by Legendary Quotes &copy; 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+                <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+                </div>
+
+    </footer>
+
+<script src="/js/script.js" charset="utf-8"></script>
+
+</body>
+</html>

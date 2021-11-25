@@ -1,0 +1,123 @@
+.container_categories {
+  background-image: url('/img/bground1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  text-align: center;
+}
+
+.container_categories h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px 0 20px;
+  color: black;
+}
+
+.search_img {
+  width: 38%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.container_cateimage {
+  position: relative;
+  margin-bottom: -18px;
+}
+
+.content_book {
+  position: absolute; /* Position the background text */
+  bottom: 8px; /* At the bottom. Use top:0 to append it to the top */
+  background: rgba(187, 185, 185, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 38%; /* Full width */
+  padding: 20px; /* Some padding */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.content_book h3 {
+  margin: center;
+  text-align: center;
+}
+
+.container_categories1 {
+  padding: 10px 0 30px;
+}
+
+.accordion {
+  background-color: red;
+  cursor: pointer;
+  width: 38%;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: inherit;
+  transition: 0.4s;
+  text-align: center;
+  color: white;
+  padding: 30px 0 20px;
+  margin: auto;
+  display: block;
+}
+
+.active_accord, .accordion:hover {
+  background-color: rgb(255, 136, 0); 
+}
+
+.panel {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  width: 38%;
+  margin: auto;
+}
+
+.panel p {
+  color: red;
+  font-family: "Trykker";
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin: 0 80px 0 80px;
+  text-align: center;
+}
+
+.panel h4 {
+  color: black;
+  font-family: "Trykker";
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 950px) {
+  .panel p, .panel h4, .content_book { 
+      font-size: 15px;
+    }
+
+  .accordion {
+      font-size: 20px;
+      width: 70%;
+  }
+  .content_book {
+    font-size: 10px;
+    width: 70%;
+  }
+  .panel {
+    width: 70%;
+  }
+  .search_img {
+    width: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}

@@ -1,0 +1,94 @@
+footer {
+  position:relative;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 10;
+    padding: 20px 0 15px 0;
+  }
+  
+  /* Footer links */
+  .footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;  
+  }
+  
+  .footer-links a {
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* dot for nav links */
+  .footer-links a:before {
+    content: "·";
+    font-size: 20px;
+    color: #ff0101;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  /* no dot before home */
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  .footer-left {
+    font-size: 14px;
+    text-align: left;
+    color: #ff0101;
+    flex-grow: 8;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  
+  .footer-right {
+    text-align: right;
+    flex-grow: 10;
+    margin-right: 50px;
+  }
+  
+  .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: #ff0101;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+    margin-left: 3px;
+  }
+  
+  /* hover social media logo */
+  .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+  
+  /* hover nav */
+  .footer-links a:hover{text-decoration:underline;}
+  
+  /* Media Queries */
+  @media screen and (max-width: 1240px) { 
+    .footer-distributed {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .footer-right {
+      text-align: center;
+      padding-left: 50px;
+    }
+    .footer-left {
+      text-align: center;
+      padding-right: 55px;
+    }
+    .footer-links {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 4px;
+    }
+  }

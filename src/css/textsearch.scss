@@ -1,0 +1,60 @@
+.container_advanced {
+  background-image: url('/img/bground1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  text-align: center;
+}
+
+.container_advanced h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px 0 20px;
+  color: black;
+}
+
+.textsearch_img {
+  width: 38%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: -9px;
+}
+
+
+#search-quote-text {
+  width:38%;
+  padding:8px 10px;
+  font-size: 20px; 
+  border: 10px solid red; 
+  font-family: inherit;
+  margin:auto;
+  display: block;
+}
+
+li em {
+  background:red;
+  font-weight:bold;
+}
+
+#quote-list li {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.container_textsearch {
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 950px) {
+
+  .textsearch_img {
+    width: 70%;
+  }
+  
+  #search-quote-text {
+    font-size: 15px; 
+    width: 70%; 
+  }
+}

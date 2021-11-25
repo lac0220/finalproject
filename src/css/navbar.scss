@@ -1,0 +1,334 @@
+.header{
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #292c2f;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin: 40px;
+}
+
+.nav-link{
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;  
+  font-family: inherit;
+}
+
+.nav-link:hover{
+  color: #ff0000;
+}
+
+.nav-logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #ff0000;
+  font-family: "Trykker";
+  padding-bottom: 5px;
+}
+
+.login-container {
+ width: 10%;
+ margin-left: 30px;
+}
+
+.login-container input[type=text] {
+  padding: 6px;
+  background-color: white;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  margin-bottom: 2px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #292c2f;
+  font-weight: bold;
+  opacity: 1; /* Firefox */
+}
+
+.loginbutton {
+  padding: 6px;
+  width: 100%;
+  background: #04AA6D;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  border: 1px solid #ccc; 
+  margin-top: 5px;
+  font-weight: bold; 
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.loginbutton:hover {
+  background: rgb(255, 136, 0);
+}
+
+// forgot password link
+.psw, .psw a {
+  color: rgb(255, 136, 0);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* registration form */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.createbutton {
+  background-color: #ff0000;
+  font-size: 20px;
+  color: #f1f1f1;
+  padding: 10px;
+  border: none;
+  margin: 0 10px;
+  font-weight: bold;
+  border-radius: 10%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.createbutton:hover {
+  background: rgb(255, 136, 0);
+}
+
+.signupbtn {
+padding: 14px 20px;
+background-color: #04AA6D;
+font-weight: bold; 
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: 16px;
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  font-weight: bold; 
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+  color: #f1f1f1;
+  margin-top: 20px;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+.container p {
+  margin-top: 20px;
+}
+
+/* form background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ff0800;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropbtn {
+  font-size: inherit; 
+  font-weight: bold; 
+  border: none;
+  outline: none;
+  color: #ffffff;
+  padding: 14px 0;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.nav-link a:hover, .dropbtn:hover {
+  color: #ff0000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media only screen and (max-width: 950px) {
+  .nav-menu {
+      position: fixed;
+      left: -150%;
+      top: 190px;
+      flex-direction: column;
+      background-color: #ff0000;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.2s;
+      box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+      margin: 20px;
+  }
+
+  .nav-link {
+    font-size: 26px;
+    color: #ffffff;
+  }
+
+  .nav-link:hover, .dropbtn:hover {
+    color: #292c2f;
+  }
+
+  .dropdown, .dropbtn {
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 0;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 26px;
+  }
+
+  .dropdown-content a {
+    font-size: 18px;
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+      margin-left: 10px;
+  }
+
+  .login-container button {
+    float: none;  
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .login-container input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;  
+  }
+  
+  .cancelbtn, .signupbtn {
+    float: none;  
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px;
+ }
+}
+
+

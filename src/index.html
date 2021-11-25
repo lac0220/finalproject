@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+
+    <title>Legendary Quotes</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-logo"><i>Legendary Quotes</i></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dailyquotes.html" class="nav-link">Daily Quote</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Search Quotes 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="categories.html">Categories</a>
+                          <a href="authors.html">Authors</a>
+                          <a href="textsearch.html">Text Search</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                  <a href="addquotes.html" class="nav-link"><s>Add New Quote</s></a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+
+            
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="createbutton";">Sign Up</button>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+    </div>
+  </form>
+</div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button class="loginbutton" type="submit">Login</button>
+        <span class="psw">Forgot <a href="index.html">your password?</a></span>
+                </form>
+              </div>
+        </nav>
+</header>
+
+<div class="container_home">
+<h1>Welcome to Legendary Quotes</h1>
+
+<div id="random_quotes_home"></div>
+
+  <div class="container_home_text">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.</p>
+</div>
+<div class="container_home_text2">
+<h3> You can find here famous quotes and authors like:</h3>
+
+<div class="slideshow-container">
+  
+  <div class="mySlides_fade">
+    <img class="img_homepage" src="img/gandhi.png">
+    <div class="Caption_text">
+    </div>
+  </div>
+  
+  <div class="mySlides_fade">
+    <img class="img_homepage" src="img/benjamin.png">
+    <div class="Caption_text">
+    </div>
+  </div>
+  
+  <div class="mySlides_fade">
+    <img class="img_homepage" src="img/einstein.png">
+    <div class="Caption_text">
+    </div>
+  </div>
+
+  <div class="mySlides_fade">
+    <img class="img_homepage" src="img/buddha.png">
+    <div class="Caption_text">
+    </div>
+  </div>
+
+  <div class="mySlides_fade">
+    <img class="img_homepage" src="img/churchill.png">
+    <div class="Caption_text">
+    </div>
+  </div>
+  
+  </div>
+  <br>
+  
+  <div class="dot_elements">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span>
+    <span class="dot"></span> 
+    <span class="dot"></span>  
+  </div>
+  
+  <div class="SlideContainer">
+    <div class="Slide">
+    <h2><i>"Forgiveness is choosing to love. It is the first skill of self-giving love."</i></h2>
+    <div class="Caption">- Mohandas Gandhi</div>
+    </div>
+    <div class="Slide">
+    <h2><i>"There never was a good knife made of bad steel."</i></h2>
+    <div class="Caption">- Benjamin Franklin</div>
+    </div>
+    <div class="Slide">
+    <h2><i>"Life is like riding a bicycle. To keep your balance you must keep moving."</i></h2>
+    <div class="Caption">- Albert Einstein</div>
+    </div>
+    <div class="Slide">
+    <h2><i>"Every human being is the author of his own health or disease."</i></h2>
+    <div class="Caption">- Buddha</div>
+    </div>
+    <div class="Slide">
+    <h2><i>"Courage is going from failure to failure without losing enthusiasm."</i></h2>
+    <div class="Caption">- Winston Churchill</div>
+    </div>
+    </div>
+    
+    <br />
+    <div class="Navdot_elements">
+    <span class="Navdot" alt="1"></span>
+    <span class="Navdot" alt="2"></span>
+    <span class="Navdot" alt="3"></span>
+    <span class="Navdot" alt="4"></span>
+    <span class="Navdot" alt="5"></span>
+    </div>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.</p>
+</div>
+</div>
+</div>
+
+
+    <footer class="footer-distributed">
+            <div class="footer-left">
+            <p>Created by Legendary Quotes &copy; 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+                <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+                </div>
+    </footer>
+
+<script src="/js/script.js" charset="utf-8"></script>
+
+<script>
+
+function randomQuote() {
+var i = Math.floor((quote_text.length)*Math.random())
+document.getElementById('random_quotes_home').innerHTML = quote_text[i];
+}
+var myInterval = setInterval(randomQuote, 4000);
+
+var quote_text = [
+  '"Love is the flower you\'ve got to let grow."- John Lennon',
+  '"Love all, trust a few, do wrong to none."- William Shakespeare',
+  '"Life is the flower for which love is the honey."- Victor Hugo',
+  '"The path to success is to take massive, determined action."- Tony Robbins',
+  '"The price of greatness is responsibility."- Winston Churchill',
+  '"Well done is better than well said."- Benjamin Franklin',
+  '"Once we accept our limits, we go beyond them."- Albert Einstein',
+  '"There never was a good knife made of bad steel."- Benjamin Franklin',
+  '"Every human being is the author of his own health or disease."- Buddha',
+  '"Healthy citizens are the greatest asset any country can have."- Winston Churchill',
+  '"I have chosen to be happy because it is good for my health."- Voltaire',
+  '"A sad soul can be just as lethal as a germ."- John Steinbeck',
+  '"It can\'t be spring if your heart is filled with past failures." - Byron Pulsifer',
+  '"The more you know yourself, the more you forgive yourself." - Confucius',
+];
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+
+    
+    <title>Categories - Legendary Quotes</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"><i>Legendary Quotes</i></a>
+          <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dailyquotes.html" class="nav-link">Daily Quote</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Search Quotes 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="categories.html">Categories</a>
+                          <a href="authors.html">Authors</a>
+                          <a href="textsearch.html">Text Search</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                  <a href="addquotes.html" class="nav-link"><s>Add New Quote</s></a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+
+            
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="createbutton";">Sign Up</button>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+    </div>
+  </form>
+</div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button class="loginbutton" type="submit">Login</button>
+        <span class="psw">Forgot <a href="index.html">your password?</a></span>
+                </form>
+              </div>
+        </nav>
+</header>
+
+<div class="container_categories">
+<h1>Categories</h1>
+
+<div class="container_cateimage">
+  <img src="/img/search.jpg" class="search_img" alt="Search">
+  <div class="content_book">
+    <h3>There are many different types of quotes. These categories help you to find the one that best suits you.
+
+    </h3>
+  </div>
+</div>
+
+<div class="container_categories1">
+<button class="accordion">Love</button>
+<div class="panel">
+  <p>"If you love someone, set them free. If they come back they're yours; if they don't they never were."</p>
+  <h4>- Richard Bach</h4>
+  <p>"Love is the flower you've got to let grow."</p>
+  <h4>- John Lennon</h4>
+  <p>"Love all, trust a few, do wrong to none."</p>
+  <h4>- William Shakespeare</h4>
+  <p>"Life is the flower for which love is the honey."</p>
+  <h4>- Victor Hugo</h4>
+  <p>"Can miles truly separate you from friends... If you want to be with someone you love, aren't you already there?"</p>
+  <h4>- Richard Bach</h4>
+  <p>"Love doesn't make the world go round, love is what makes the ride worthwhile."</p>
+  <h4>- Elizabeth Browning</h4>
+  <p>"Let us always meet each other with smile, for the smile is the beginning of love."</p>
+  <h4>- Mother Teresa</h4>
+  <p>"Love and compassion open our own inner life, reducing stress, distrust and loneliness."</p>
+  <h4>- Dalai Lama</h4>
+  <p>"You, yourself, as much as anybody in the entire universe, deserve your love and affection."</p>
+  <h4>- Buddha</h4>
+  <p>"Love is the only force capable of transforming an enemy into friend."</p>
+  <h4>- Martin Luther King, Jr.</h4>
+</div>
+
+<button class="accordion">Forgiveness</button>
+<div class="panel">
+<p>"The more you know yourself, the more you forgive yourself."</p>
+<h4>- Confucius</h4>
+<p>"To forgive is to set a prisoner free and realize that prisoner was you."</p>
+<h4>- Lewis B. Smedes</h4>
+<p>"Judge nothing, you will be happy. Forgive everything, you will be happier. Love everything, you will be happiest."</p>
+<h4>- Sri Chinmoy</h4>
+<p>"It is very easy to forgive others their mistakes; it takes more grit to forgive them for having witnessed your own."</p>
+<h4>- Jessamyn West</h4>
+<p>"The weak can never forgive. Forgiveness is the attribute of the strong."</p>
+<h4>- Mohandas Gandhi</h4>
+<p>"Forgiveness is choosing to love. It is the first skill of self-giving love."</p>
+<h4>- Mohandas Gandhi</h4>
+<p>"Forgiveness does not change the past, but it does enlarge the future."</p>
+<h4>- Paul Boese</h4>
+<p>"Forgiveness is an act of the will, and the will can function regardless of the temperature of the heart."</p>
+<h4>- Corrie Ten Boom</h4>
+<p>"True forgiveness is when you can say, "Thank you for that experience."</p>
+<h4>- Oprah Winfrey</h4>
+<p>"Forgiveness is not an occasional act, it is a constant attitude."</p>
+<h4>- Martin Luther King Jr.</h4>
+</div>
+
+<button class="accordion">Success</button>
+<div class="panel">
+<p>"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."</p>
+<h4>- Albert Einstein</h4>
+<p>"The path to success is to take massive, determined action."</p>
+<h4>- Tony Robbins</h4>
+<p>"The price of greatness is responsibility."</p>
+<h4>- Winston Churchill</h4>
+<p>"Well done is better than well said."</p>
+<h4>- Benjamin Franklin</h4>
+<p>"Once we accept our limits, we go beyond them."</p>
+<h4>- Albert Einstein</h4>
+<p>"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."</p>
+<h4>- Winston Churchill</h4>
+<p>"We make a living by what we get, but we make a life by what we give."</p>
+<h4>- Winston Churchill</h4>
+<p>"There never was a good knife made of bad steel."</p>
+<h4>- Benjamin Franklin</h4>
+<p>"Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."</p>
+<h4>- Arthur Rubinstein</h4>
+<p>"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."</p>
+<h4>- Bruce Lee</h4>
+</div>
+
+<button class="accordion">Failure</button>
+<div class="panel">
+<p>"There are two kinds of failures: those who thought and never did, and those who did and never thought."</p>
+<h4>- Laurence J. Peter</h4>
+<p>"Many of life's failures are people who did not realize how close they were to success when they gave up."</p>
+<h4>- Thomas Edison</h4>
+<p>"Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit."</p>
+<h4>- Napoleon Hill</h4>
+<p>"There are no failures. Just experiences and your reactions to them."</p>
+<h4>- Tom Krause</h4>
+<p>"Courage is going from failure to failure without losing enthusiasm."</p>
+<h4>- Winston Churchill</h4>
+<p>"Life is like riding a bicycle. To keep your balance you must keep moving."</p>
+<h4>- Albert Einstein</h4>
+<p>"For every failure, there's an alternative course of action. You just have to find it. When you come to a roadblock, take a detour."</p>
+<h4>- Mary Kay Ash</h4>
+<p>"It can't be spring if your heart is filled with past failures."</p>
+<h4>- Byron Pulsifer</h4>
+<p>"Failure doesn't mean you are a failure it just means you haven't succeeded yet."</p>
+<h4>- Robert Schuller</h4>
+<p>"Don't think of it as failure. Think of it as time-released success."</p>
+<h4>- Robert Orben</h4>
+</div>
+
+<button class="accordion">Health</button>
+<div class="panel">
+<p>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."</p>
+<h4>- Buddha</h4>
+<p>"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."</p>
+<h4>- Dalai Lama</h4>
+<p>"Imagination is not a talent of some men but is the health of every man."</p>
+<h4>- Ralph Waldo Emerson</h4>
+<p>"Every human being is the author of his own health or disease."</p>
+<h4>- Buddha</h4>
+<p>"He who has health has hope, and he who has hope has everything."</p>
+<h4>- Thomas Carlyle</h4>
+<p>"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."</p>
+<h4>- William Londen</h4>
+<p>"It is health that is the real wealth, and not pieces of gold and silver."</p>
+<h4>- Mohandas Gandhi</h4>
+<p>"I have chosen to be happy because it is good for my health."</p>
+<h4>- Voltaire</h4>
+<p>"Healthy citizens are the greatest asset any country can have."</p>
+<h4>- Winston Churchill</h4>
+<p>"A sad soul can be just as lethal as a germ."</p>
+<h4>- John Steinbeck</h4>
+</div>
+</div>
+</div>
+</div>
+
+
+    <footer class="footer-distributed">
+
+            <div class="footer-left">
+            <p>Created by Legendary Quotes &copy; 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+                <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+                </div>
+
+    </footer>
+
+<script src="/js/script.js" charset="utf-8"></script>
+
+<script>
+
+// categories
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active_accord");
+
+    /* Toggle between hiding and showing the panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>

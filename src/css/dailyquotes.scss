@@ -1,0 +1,107 @@
+.container_daily_qoutes {
+  background-image: url('/img/bground1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  text-align: center;
+}
+
+.container_daily_qoutes h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 40px 0 20px;
+  color: black;
+}
+
+.container_daily_qoutes p {
+  text-align: justify;
+  color: black;
+  margin: 0 300px 0 300px;
+}
+
+.love_img, .success_img, .health_img {
+  width:60%;
+  height:50%;
+  border-radius: 80px;
+  padding-bottom: 10px;
+}
+
+.container_daily_qoutes_love h2, .container_daily_qoutes_success h2, .container_daily_qoutes_health h2 {
+  font-size: 25px;
+  padding: 30px 0 10px;
+}
+
+#daily_qoute, #daily_qoute1 {
+  font-family: "Trykker";
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  padding-bottom: 20px;
+  margin: 0 50px 0 50px;
+  text-align: center;
+
+}
+
+#daily_qoute2 {
+  font-family: "Trykker";
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+}
+
+.container_daily_qoutes_love {
+   float:left; 
+   display:inline; 
+   width: 50%;
+   padding-left: 250px;
+}
+
+.container_daily_qoutes_success {
+  float:left; 
+  display:inline; 
+  width: 50%;
+  padding-right: 250px;
+}
+
+.container_daily_qoutes_health {
+  width: 38%;
+  position: relative;
+  left: 32%;
+}
+
+@media only screen and (max-width: 950px) {
+  
+  #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
+  font-size: 22px;
+  margin: auto;
+}
+
+.container_daily_qoutes p {
+  text-align: justify;
+  color: black;
+  padding-bottom: 10px;
+  margin: 0 50px 0 50px;
+}
+
+.container_daily_qoutes_love {
+  float:0; 
+  padding-left: 0px;
+}
+
+.container_daily_qoutes_success {
+ float:0; 
+ padding-right: 0px;
+}
+
+.container_daily_qoutes_health, #daily_qoute2, .container_daily_qoutes_health h2 {
+  margin: auto;
+  left: 0;
+}
+}

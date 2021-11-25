@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+
+    <title>Text Search - Legendary Quotes</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"><i>Legendary Quotes</i></a>
+          <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dailyquotes.html" class="nav-link">Daily Quote</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Search Quotes 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="categories.html">Categories</a>
+                          <a href="authors.html">Authors</a>
+                          <a href="textsearch.html">Text Search</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                  <a href="addquotes.html" class="nav-link"><s>Add New Quote</s></a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+
+            
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="createbutton";">Sign Up</button>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+    </div>
+  </form>
+</div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button class="loginbutton" type="submit">Login</button>
+        <span class="psw">Forgot <a href="index.html">your password?</a></span>
+                </form>
+              </div>
+        </nav>
+</header>
+
+<div class="container_advanced">
+  <h1>Text Search</h1>
+
+  <img src="/img/textsearch.jpg" class="textsearch_img" alt="Textsearch">
+
+  <div class="container_textsearch">
+  <input type="text" id="search-quote-text" placeholder="Search for quote text here..." />
+ 
+<ul id="quote-list">
+  <li>"If you love someone, set them free. If they come back they're yours; if they don't they never were."- Richard Bach</li>
+  <li>"Love is the flower you've got to let grow."- John Lennon</li>
+  <li>"Love all, trust a few, do wrong to none."- William Shakespeare</li>
+  <li>Life is the flower for which love is the honey."- Victor Hugo</li>
+  <li>"Can miles truly separate you from friends... If you want to be with someone you love, are you already there?"- Richard Bach</li>
+  <li>"Love doesn't make the world go round, love is what makes the ride worthwhile."- Elizabeth Browning</li>
+  <li>"Let us always meet each other with smile, for the smile is the beginning of love."- Mother Teresa</li>
+  <li>"Love and compassion open our own inner life, reducing stress, distrust and loneliness."- Dalai Lama</li>
+  <li>"You, yourself, as much as anybody in the entire universe, deserve your love and affection."- Buddha</li>
+  <li>"Love is the only force capable of transforming an enemy into friend."- Martin Luther King, Jr.</li>
+  <li>"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."- Albert Einstein</li>
+  <li>"The price of greatness is responsibility."- Winston Churchill</li>
+  <li>"The path to success is to take massive, determined action."- Tony Robbins</li>
+  <li>"Well done is better than well said."- Benjamin Franklin</li>
+  <li>"Once we accept our limits, we go beyond them."- Albert Einstein</li>
+  <li>"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."- Winston Churchill</li>
+  <li>"We make a living by what we get, but we make a life by what we give."- Winston Churchill</li>
+  <li>"There never was a good knife made of bad steel."- Benjamin Franklin</li>
+  <li>"Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."- Arthur Rubinstein</li>
+  <li>"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."</li>
+  <li>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."- Buddha</li>
+  <li>"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."- Dalai Lama</li>
+  <li>"Imagination is not a talent of some men but is the health of every man."- Ralph Waldo Emerson</li>
+  <li>"Every human being is the author of his own health or disease."- Buddha</li>
+  <li>"Healthy citizens are the greatest asset any country can have."- Winston Churchill</li>
+  <li>"A sad soul can be just as lethal as a germ."- John Steinbeck</li>
+  <li>"He who has health has hope, and he who has hope has everything."- Thomas Carlyle</li>
+  <li>"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."- William Londen</li>
+  <li>"It is health that is the real wealth, and not pieces of gold and silver."- Mohandas Gandhi</li>
+  <li>"I have chosen to be happy because it is good for my health."- Voltaire</li>
+  <li>"There are two kinds of failures: those who thought and never did, and those who did and never thought."- Laurence J. Peter</li>
+  <li>"Many of life's failures are people who did not realize how close they were to success when they gave up."- Thomas Edison</li>
+  <li>"Every adversity, every failure, every heartache carries with it the seed of an equal or greater benefit."- Napoleon Hill</li>
+  <li>"There are no failures. Just experiences and your reactions to them."- Tom Krause</li>
+  <li>"Courage is going from failure to failure without losing enthusiasm."- Winston Churchill</li>
+  <li>"Life is like riding a bicycle. To keep your balance you must keep moving."- Albert Einstein</li>
+  <li>"For every failure, there's an alternative course of action. You just have to find it. When you come to a roadblock, take a detour."- Mary Kay Ash</li>
+  <li>"It can't be spring if your heart is filled with past failures."- Byron Pulsifer</li>
+  <li>"Failure doesn't mean you are a failure it just means you haven't succeeded yet."- Robert Schuller</li>
+  <li>"Don't think of it as failure. Think of it as time-released success."- Robert Orben</li>
+  <li>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."- Buddha</li>
+  <li>"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."- Dalai Lama</li>
+  <li>"Imagination is not a talent of some men but is the health of every man."- Ralph Waldo Emerson</li>
+  <li>"Every human being is the author of his own health or disease."- Buddha</li>
+  <li>"He who has health has hope, and he who has hope has everything."- Thomas Carlyle</li>
+  <li>"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."- William Londen</li>
+  <li>"It is health that is the real wealth, and not pieces of gold and silver."- Mohandas Gandhi</li>
+  <li>"I have chosen to be happy because it is good for my health."- Voltaire</li>
+  <li>"Healthy citizens are the greatest asset any country can have."- Winston Churchill</li>
+  <li>"A sad soul can be just as lethal as a germ."- John Steinbeck</li>
+</ul>
+
+</div>
+  </div>
+
+    <footer class="footer-distributed">
+
+            <div class="footer-left">
+            <p>Created by Legendary Quotes &copy; 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+                <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+                </div>
+
+    </footer>
+
+<script src="/js/script.js" charset="utf-8"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+
+$(document).ready(function () {
+ 
+ /* initially hide product list items */
+ $("#quote-list li").hide();
+
+ /* highlight matches text */
+ var highlight = function (string) {
+     $("#quote-list li.match").each(function () {
+         var matchStart = $(this).text().toLowerCase().indexOf("" + string.toLowerCase() + "");
+         var matchEnd = matchStart + string.length - 1;
+         var beforeMatch = $(this).text().slice(0, matchStart);
+         var matchText = $(this).text().slice(matchStart, matchEnd + 1);
+         var afterMatch = $(this).text().slice(matchEnd + 1);
+         $(this).html(beforeMatch + "<em>" + matchText + "</em>" + afterMatch);
+     });
+ };
+
+
+ /* filter products */
+ $("#search-quote-text").on("keyup click input", function () {
+     if (this.value.length > 0) {
+         $("#quote-list li").removeClass("match").hide().filter(function () {
+             return $(this).text().toLowerCase().indexOf($("#search-quote-text").val().toLowerCase()) != -1;
+         }).addClass("match").show();
+         highlight(this.value);
+         $("#quote-list").show();
+     }
+     else {
+         $("#quote-list, #quote-list li").removeClass("match").hide();
+     }
+ });
+
+
+});
+
+</script>
+
+
+</body>
+</html>

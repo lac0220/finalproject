@@ -1,0 +1,144 @@
+.container_home {
+  background-image: url('/img/bground1.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  text-align: center;
+}
+
+.container_home h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 40px;
+  color: black;
+}
+
+#random_quotes_home {
+  font-family: "Trykker";
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 20px 0 20px;
+  font-style: italic;
+  margin: auto;
+  overflow: none;
+}
+
+.container_home_text p {
+  text-align: justify;
+  color: black;
+  padding-bottom: 10px;
+  margin: 0 300px 0 300px;
+}
+
+.container_home_text2 h3 {
+  text-align: center;
+  color: black;
+  padding: 20px 0 10px;
+  margin: 0 300px 0 300px;
+}
+
+.container_home_text2 p {
+  padding-bottom: 20px;
+  text-align: justify;
+  color: black;
+  margin: 0 300px 0 300px;
+}
+
+.Slide h2 {
+  font-family: "Trykker";
+  color: red;
+  margin: 0 -350px 0 -350px;
+}
+
+.SlideContainer {
+  max-width: 800px;
+  margin: auto;
+  position: relative;
+}
+
+.Caption {
+  color: black;
+  font-weight: bold;
+  font-family: "Trykker";
+  font-size: 25px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.Navdot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  transition: background-color 0.6s ease;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.Navdot_elements {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.selected {
+  background-color: red;
+}
+
+.img_homepage {
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;;
+}
+
+/*author images sliding*/
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-bottom: -20px
+}
+
+.active_sliding_pictures {
+  background-color: red;
+}
+
+/* Fading animation */
+.mySlides_fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 950px) {
+  
+#random_quotes_home, .Slide h2 {
+  font-size: 22px;
+  margin: auto;
+}
+.container_home_text p, .container_home_text2 p {
+  text-align: justify;
+  color: black;
+  padding-bottom: 10px;
+  margin: 0 50px 0 50px;
+}
+.container_home_text2 h3 {
+  margin: auto;
+}
+}

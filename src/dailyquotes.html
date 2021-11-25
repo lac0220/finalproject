@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+
+    <title>Daily Quotes - Legendary Quotes</title>
+
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo"><i>Legendary Quotes</i></a>
+          <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="dailyquotes.html" class="nav-link">Daily Quote</a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="dropbtn">Search Quotes 
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="categories.html">Categories</a>
+                          <a href="authors.html">Authors</a>
+                          <a href="textsearch.html">Text Search</a>
+                        </div>
+                </li>
+                <li class="nav-item">
+                  <a href="addquotes.html" class="nav-link"><s>Add New Quote</s></a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        
+
+            
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto" class="createbutton";">Sign Up</button>
+<div id="id01" class="modal">
+<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+  <form class="modal-content" action="/action_page.php">
+    <div class="container">
+      <h1>Sign Up</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+    </div>
+  </form>
+</div>
+            <div class="login-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Username" name="username">
+                  <input type="text" placeholder="Password" name="psw">
+                  <button class="loginbutton" type="submit">Login</button>
+        <span class="psw">Forgot <a href="index.html">your password?</a></span>
+                </form>
+              </div>
+        </nav>
+</header>
+
+<div class="container_daily_qoutes">
+  <h1>Daily Quotes</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.<p>
+
+<div class="container_daily">
+   
+  <div class="container_daily_qoutes_love">
+   <h2>Love Quote Of The Day</h2>
+   <img src="/img/love.jpg" class="love_img" alt="Love">
+   <div id="daily_qoute"></div>
+   </div>
+
+  <div class="container_daily_qoutes_success">
+   <h2>Success Quote Of The Day</h2>
+   <img src="/img/success.jpg" class="success_img" alt="Success">
+   <div id="daily_qoute1"></div>
+   </div>
+
+  <div class="container_daily_qoutes_health">
+   <h2>Health Quote Of The Day</h2>
+   <img src="/img/health.jpg" class="health_img" alt="Health">
+   <div id="daily_qoute2"></div>
+   </div>
+  </div>
+</div>
+
+
+    <footer class="footer-distributed">
+
+            <div class="footer-left">
+            <p>Created by Legendary Quotes &copy; 2021</p>
+            </div>
+
+            <div class="footer-links">
+                <a class="link-1" href="index.html">Home</a>
+                <a href="aboutus.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-right">
+                <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+                <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+                </div>
+
+    </footer>
+
+<script src="/js/script.js" charset="utf-8"></script>
+
+<script>
+
+// first quote generator
+const randomQ = randomInt(0, 10);
+  function randomInt(lowest, size) {
+    return Math.floor(Math.random() * size) + lowest; 
+  }
+  
+  const quoteElem = document.getElementById("daily_qoute");
+  quoteElem.innerHTML = getQuote(randomQ);
+  
+  function getQuote(n) {
+    const quotes = [
+  '"If you love someone, set them free. If they come back they\'re yours; if they don\'t they never were."- Richard Bach',
+  '"Love is the flower you\'ve got to let grow."- John Lennon',
+  '"Love all, trust a few, do wrong to none."- William Shakespeare',
+  '"Life is the flower for which love is the honey."- Victor Hugo',
+  '"Can miles truly separate you from friends... If you want to be with someone you love, are you already there?"- Richard Bach',
+  '"Love doesn\'t make the world go round, love is what makes the ride worthwhile."- Elizabeth Browning',
+  '"Let us always meet each other with smile, for the smile is the beginning of love."- Mother Teresa',
+  '"Love and compassion open our own inner life, reducing stress, distrust and loneliness."- Dalai Lama',
+  '"You, yourself, as much as anybody in the entire universe, deserve your love and affection."- Buddha',
+  '"Love is the only force capable of transforming an enemy into friend."- Martin Luther King, Jr.'
+     ];
+     return quotes[n];
+    }
+
+// second quote generator 
+  const randomQ1 = randomInt1(0, 10);
+  function randomInt1(lowest, size) {
+    return Math.floor(Math.random() * size) + lowest; 
+  }
+  
+  const quoteElem1 = document.getElementById("daily_qoute1");
+  quoteElem1.innerHTML = getQuote1(randomQ1);
+  
+  function getQuote1(n) {
+    const quotes1 = [
+    '"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."- Albert Einstein',
+  '"The path to success is to take massive, determined action."- Tony Robbins',
+  '"The price of greatness is responsibility."- Winston Churchill',
+  '"Well done is better than well said."- Benjamin Franklin',
+  '"Once we accept our limits, we go beyond them."- Albert Einstein',
+  '"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."- Winston Churchill',
+  '"We make a living by what we get, but we make a life by what we give."- Winston Churchill',
+  '"There never was a good knife made of bad steel."- Benjamin Franklin',
+  '"Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."- Arthur Rubinstein',
+  '"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."- Bruce Lee'
+     ];
+     return quotes1[n];
+  }
+
+  // third quote generator
+  const randomQ2 = randomInt2(0, 10);
+  function randomInt2(lowest, size) {
+    return Math.floor(Math.random() * size) + lowest; 
+  }
+  
+  const quoteElem2 = document.getElementById("daily_qoute2");
+  quoteElem2.innerHTML = getQuote2(randomQ2);
+  
+  function getQuote2(n) {
+    const quotes2 = [
+  '"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."- Buddha',
+  '"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."- Dalai Lama',
+  '"Imagination is not a talent of some men but is the health of every man."- Ralph Waldo Emerson',
+  '"Every human being is the author of his own health or disease."- Buddha',
+  '"Healthy citizens are the greatest asset any country can have."- Winston Churchill',
+  '"A sad soul can be just as lethal as a germ."- John Steinbeck',
+  '"He who has health has hope, and he who has hope has everything."- Thomas Carlyle',
+  '"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."- William Londen',
+  '"It is health that is the real wealth, and not pieces of gold and silver."- Mohandas Gandhi',
+  '"I have chosen to be happy because it is good for my health."- Voltaire'
+     ];
+     return quotes2[n];
+  }
+
+
+  </script>
+
+</body>
+</html>
