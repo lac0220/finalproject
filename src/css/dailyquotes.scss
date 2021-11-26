@@ -42,7 +42,6 @@
   padding-bottom: 20px;
   margin: 0 50px 0 50px;
   text-align: center;
-
 }
 
 #daily_qoute2 {
@@ -76,11 +75,11 @@
   left: 32%;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1200px) {
   
   #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
   font-size: 22px;
-  margin: auto;
+  margin: 0 50px 0 50px;
 }
 
 .container_daily_qoutes p {
@@ -100,8 +99,50 @@
  padding-right: 0px;
 }
 
-.container_daily_qoutes_health, #daily_qoute2, .container_daily_qoutes_health h2 {
+.container_daily_qoutes_health, #daily_qoute2 {
   margin: auto;
   left: 0;
 }
+.container_daily_qoutes_health h2 {
+  margin: 0 10px 0 10px;
+  display:inline-block; 
 }
+}
+  
+@media only screen and (max-width: 530px) {
+  
+  #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
+  font-size: 20px;
+  margin: 0 5px 0 5px;
+  display:inline-block; 
+
+}
+
+.container_daily_qoutes_love {
+   width: 50%;
+   padding-left: 25px;
+}
+
+.container_daily_qoutes_success {
+  width: 50%;
+  padding-right: 25px;
+}
+
+.container_daily_qoutes_health {
+  width: 40%;
+  display:inline; 
+  margin: auto;
+}
+
+.container_daily_qoutes_health h2 {
+  font-size: 20px;
+  display:inline-block; 
+}
+
+.container_daily_qoutes p {
+  line-height: 1.2;
+  word-break: break-all;
+  padding-bottom: 2px;
+}
+}
+

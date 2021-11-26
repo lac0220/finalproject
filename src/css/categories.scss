@@ -1,3 +1,4 @@
+
 .container_categories {
   background-image: url('/img/bground1.jpg');
   background-position: center center;
@@ -104,6 +105,12 @@
       font-size: 15px;
     }
 
+    .panel p { 
+      font-size: 15px;
+      margin: 0 10px 0 10px;
+
+    }
+
   .accordion {
       font-size: 20px;
       width: 70%;
@@ -121,3 +128,7 @@
     border-top-right-radius: 20px;
   }
 }
+
+
+
+

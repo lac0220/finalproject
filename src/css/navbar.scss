@@ -255,11 +255,11 @@ hr {
   display: block;
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1320px) {
   .nav-menu {
       position: fixed;
       left: -150%;
-      top: 190px;
+      top: 122px;
       flex-direction: column;
       background-color: #ff0000;
       width: 100%;
@@ -267,6 +267,7 @@ hr {
       text-align: center;
       transition: 0.2s;
       box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      z-index: 1;
   }
 
   .nav-menu.active {
@@ -307,28 +308,69 @@ hr {
   }
 
   .login-container button {
-    float: none;  
-    text-align: center;
-    width: 100%;
+    width: 180%;
     padding: 5px;
+    margin-left: -30px;
+    float: right;
   }
 
   .login-container input[type=text] {
-    float: none;
+    float: right;
     display: block;
     text-align: left;
-    width: 100%;
+    width: 180%;
     padding: 5px;
     border: 1px solid #ccc;  
+    margin-left: -30px;
   }
-  
+
+  .psw {
+    font-size: 15px;
+    display: none;
+  }
+
+  .createbutton {
+    margin-right: 10px;
+  }
+
   .cancelbtn, .signupbtn {
     float: none;  
-    text-align: center;
     width: 100%;
     margin-top: 10px;
     padding: 14px;
  }
 }
 
+@media only screen and (max-width: 530px) {
+  .nav-menu {
+      top: 120px;
+  }
 
+  .hamburger {
+    margin-right: 5px;
+    }
+
+    .login-container button {
+      width: 280%;
+      position: relative;
+      right:40px;
+    }
+  
+    .login-container input[type=text] {
+      float: none;
+      display: block;
+      width: 280%;
+      margin-left: -90px;
+    }
+
+    .createbutton {
+      margin-right: 70px;
+    }
+
+    .nav-logo {
+      font-size: 20px;
+    }
+    .nav-logo {
+      margin-left: 80px;
+    }
+}

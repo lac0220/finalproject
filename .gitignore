@@ -16,3 +16,4 @@ node_modules/
  
 # Project build
 dist
+phploy.ini
