@@ -115,23 +115,32 @@
   font-size: 20px;
   margin: 0 5px 0 5px;
   display:inline-block; 
+}
 
+.container_daily_qoutes p {
+  margin-bottom: 10px;
+}
+
+.container_daily {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container_daily_qoutes_love {
-   width: 50%;
-   padding-left: 25px;
+   width: 100%;
+   margin-top: -30px;
 }
 
 .container_daily_qoutes_success {
-  width: 50%;
-  padding-right: 25px;
+  width: 100%;
+  margin-top: -30px;
 }
 
 .container_daily_qoutes_health {
-  width: 40%;
+  width: 100%;
   display:inline; 
-  margin: auto;
+  margin-top: -30px;
 }
 
 .container_daily_qoutes_health h2 {
@@ -145,4 +154,7 @@
   padding-bottom: 2px;
 }
 }
+
+
+
 
