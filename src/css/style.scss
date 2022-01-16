@@ -12,6 +12,7 @@
 $font-color:white;
 $font-color2:#ff0000;
 $hover-color:rgb(255, 136, 0);
+$background-color:#292c2f;
 
 
 * {
@@ -155,7 +156,7 @@ input[type=submit]:hover {
   
 
 footer {
-    background-color: #292c2f;
+    background-color: $background-color;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -258,15 +259,15 @@ footer {
     .navbar {
       display: flex;
       justify-content: space-evenly;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #292c2f;
+      padding: 10px;
+      margin: auto;
+      background-color: $background-color;
     }
 
     .navbar__logo {
-      font-size: 27px;
+      font-size: 30px;
       font-weight: bold;
-      color: #ff0000;
+      color: $font-color2;
       font-family: "Trykker";
       padding-bottom: 5px;
     }
@@ -282,11 +283,10 @@ footer {
     
     .navbar__link{
       font-weight: bold;
-      color: #ffffff;
-      font-size: 20px;  
-      font-family: inherit;
+      color: $font-color;
+      font-size: 25px;
         &:hover{
-      color: #ff0000;
+      color: $font-color2;
     }
   }
 
@@ -300,16 +300,17 @@ footer {
       font-weight: bold; 
       border: none;
       outline: none;
-      color: #ffffff;
+      color: $font-color;
       padding: 14px 0;
       background-color: inherit;
       font-family: inherit;
+      font-size: 25px;
         &:hover {
-        color: #ff0000;
+        color: $font-color2;
     }
   }
     
-    .dropdown-content {
+    .navbar__dropdown__content {
       display: none;
       position: absolute;
       background-color: #f9f9f9;
@@ -329,11 +330,11 @@ footer {
     }
   }
     
-    .dropdown:hover .dropdown-content {
+    .navbar__dropdown:hover .navbar__dropdown__content {
       display: block;
     }
 
-    .hamburger {
+    .navbar__hamburger {
       display: none;
     }
     
@@ -344,16 +345,16 @@ footer {
       margin: 5px auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: #ff0800;
+      background-color: $font-color2;
     }
     
     @media only screen and (max-width: 1320px) {
-      .nav-menu {
+      .navbar__menu {
           position: fixed;
           left: -150%;
           top: 122px;
           flex-direction: column;
-          background-color: #ff0000;
+          background-color: $font-color2;
           width: 100%;
           border-radius: 10px;
           text-align: center;
@@ -362,38 +363,38 @@ footer {
           z-index: 1;
       }
     
-      .nav-menu.active {
+      .navbar__menu.active {
         left: 0;
       }
     
-      .nav-item {
+      .navbar__item {
           margin: 20px;
       }
     
-      .nav-link {
+      .navbar__link {
         font-size: 26px;
-        color: #ffffff;
+        color: $font-color;
       }
     
-      .nav-link:hover, .dropbtn:hover {
+      .navbar__link:hover, .navbar__dropbtn:hover {
         color: #292c2f;
       }
     
-      .dropdown, .dropbtn {
+      .navbar__dropdown, .navbar__dropbtn {
         border: none;
         outline: none;
-        color: #ffffff;
+        color: $font-color;
         padding: 0;
         background-color: inherit;
         font-family: inherit;
         font-size: 26px;
       }
     
-      .dropdown-content a {
+      .navbar__dropdown__content a {
         font-size: 18px;
       }
     
-      .hamburger {
+      .navbar__hamburger {
           display: block;
           cursor: pointer;
           margin-left: 10px;
@@ -401,19 +402,17 @@ footer {
     }
     
     @media only screen and (max-width: 530px) {
-      .nav-menu {
+      .navbar__menu {
           top: 120px;
       }
     
-      .hamburger {
+      .navbar__hamburger {
         margin-right: 5px;
         }
     
        
-        .nav-logo {
+        .navbar__logo {
           font-size: 20px;
-        }
-        .nav-logo {
           margin-left: 80px;
         }
     }

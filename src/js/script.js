@@ -1,6 +1,6 @@
 
 // navigation
-const hamburger = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".navbar__hamburger");
 const navMenu = document.querySelector(".navbar__menu");
 
 hamburger.addEventListener("click", mobileMenu);
@@ -10,14 +10,6 @@ function mobileMenu() {
     navMenu.classList.toggle("active");
 }
 
-var modal = document.getElementById('id01');
-
-// clicking anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 // home page sliding quotes
