@@ -16,37 +16,47 @@
 <body>
   <header>
     <nav class="navbar">
-      <a href="index.html" class="navbar__logo"><i>Legendary Quotes</i></a>
-      <ul class="navbar__menu">
+      
+      <a href="index.html" class="navbar__logo"><i>"Legendary Quotes"</i></a>
+      
+      <ul id="mySidenav" class="navbar__menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        
         <li class="navbar__item">
           <a href="index.html" class="navbar__link">Home</a>
         </li>
+        
         <li class="navbar__item">
           <a href="dailyquotes.html" class="navbar__link">Daily Quote</a>
         </li>
+        
         <li class="navbar__item">
           <div class="navbar__dropdown">
             <button class="navbar__dropbtn">Search Quotes 
-              <i class="fa fa-caret-down"></i>
+              <i class="fa fa-caret-down fa fa-fw fa-search"></i>
             </button>
-          <div class="navbar__dropdown__content">
-            <a href="categories.html">Categories</a>
-            <a href="authors.html">Authors</a>
-            <a href="textsearch.html">Text Search</a>
-            </div>
+          
+            <div class="navbar__dropdown__content">
+              <a href="categories.html">Categories</a>
+              <a href="authors.html">Authors</a>
+              <a href="textsearch.html">Text Search</a>
+            </div>  
+          </div>
         </li>
+        
         <li class="navbar__item">
           <a href="aboutus.html" class="navbar__link">About Us</a>
         </li>
+        
         <li class="navbar__item">
-          <a href="contact.html" class="navbar__link">Contact</a>
+          <a href="contact.html" class="navbar__link ">Contact</a>
         </li>
       </ul>
+
       <div class="navbar__hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>      
+        <span onclick="openNav()">&#9776;</span>  
+      </div>
+
     </nav>
   </header>
 
@@ -85,24 +95,34 @@
   </div>
  </section>
 
-<footer>
-  <div class="footer__left">
-    <p>Created by Laszlo Nemeth &copy; 2021</p>
-  </div>
+  <footer>
+    <div class="footer__left">
+      <p>Created by Laszlo Nemeth &copy; 2021</p>
+    </div>
 
-  <div class="footer__links">
-    <a class="footer__homelink" href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="footer__links">
+      <a class="footer__homelink" href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-  <div class="footer__right">
-    <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
-    <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
-  </div>
-</footer>
+    <div class="footer__right">
+      <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
+      <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
+    </div>
+  </footer>
 
-<script src="/js/script.js" charset="utf-8"></script>
+  <script src="/js/script.js" charset="utf-8"></script>
+
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
 
 </body>
 </html>

@@ -1,17 +1,4 @@
 
-// navigation
-const hamburger = document.querySelector(".navbar__hamburger");
-const navMenu = document.querySelector(".navbar__menu");
-
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
-}
-
-
-
 // home page sliding quotes
 var sliding = 0;
 showSlides(sliding);
