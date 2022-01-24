@@ -10,9 +10,9 @@
 @import 'thankyou';
 
 $font-color:white;
-$font-color2:#F19C11;
+$font-color2:#d1e8e2;
 $hover-color:rgb(255, 136, 0);
-$background-color:#2E1114;
+$background-color:#116466;
 
 
 * {
@@ -165,7 +165,7 @@ footer {
   }
 
 .footer__left {
-    color: $font-color2;
+    color: $font-color;
     flex-grow: 7;
     margin:auto;
     padding-left: 50px;
@@ -199,12 +199,12 @@ footer {
   
   .footer__right {
     text-align: right;
-    flex-grow: 9;
+    flex-grow: 10;
     padding-right: 50px;
     margin: auto;
   a {
     display: inline-block;
-    background-color: $font-color2;
+    background-color: $hover-color;
     border-radius: 10px;
     font-size: 30px;
     color: $font-color;
@@ -273,7 +273,7 @@ footer {
     .navbar__logo {
       font-size: 35px;
       font-weight: bold;
-      color: $font-color2;
+      color: $hover-color;
       font-family: "Trykker";
       padding-left: 100px;
     }
@@ -294,7 +294,7 @@ footer {
       font-size: 25px;
       margin-right: 50px;
         &:hover{
-        color: $font-color2;
+        color: $hover-color;
     }
   }
 
@@ -312,14 +312,14 @@ footer {
       font-family: inherit;
       font-size: 25px;
         &:hover {
-        color: $font-color2;
+        color: $hover-color;
     }
   }
     
     .navbar__dropdown__content {
       display: none;
       position: absolute;
-      background-color: $font-color2;
+      background-color: green;
       z-index: 1;
       a {
       color: $font-color;
@@ -518,8 +518,8 @@ footer {
 
 
     .container_home {
-      background-image: url('/img/bground1.jpg');
-      background-position: center center;
+      background-image: url('/img/bground.jpg');
+      background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
       background-attachment: fixed;
@@ -531,15 +531,15 @@ footer {
     .container_home h1 {
       font-size: 40px;
       text-align: center;
-      color:maroon;
+      color:$hover-color;
     }
     
     #random_quotes_home {
       font-family: "Trykker";
-      color: #D62700;
+      color:$background-color;
       font-size: 30px;
       font-weight: bold;
-      padding: 20px 0 20px;
+      padding: 20px 0;
       font-style: italic;
       margin: auto;
       overflow: none;
@@ -548,55 +548,54 @@ footer {
     .container_home_text p {
       text-align: justify;
       color:black;
-      padding-bottom: 10px;
       margin: 0 300px;
     }
     
-    .container_home_text2 h3 {
+    .container_home_text2 h2 {
       text-align: center;
-      color:maroon;
-      padding: 10px 0 10px;
-      margin: 0 300px 0 300px;
+      color:$hover-color;
+      padding: 20px 0;
     }
     
     .container_home_text2 p {
       text-align: justify;
       color:black;
-      margin: 0 300px 0 300px;
+      margin: 0 300px;
     }
     
-    .Slide h2 {
+ /*author images sliding*/
+ .slideshow-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+    .Slide {
       font-family: "Trykker";
-      color:#D62700;
-      margin: 0 -350px 0 -350px;
+      color:$background-color;
+      h2 {
+        padding: 10px 0 10px;
+      }
     }
     
-    .SlideContainer {
-      max-width: 800px;
-      margin: auto;
-      position: relative;
-    }
     
     .Caption {
-      color: maroon;
+      color: $background-color;
       font-weight: bold;
       font-family: "Trykker";
       font-size: 25px;
-      position: absolute;
-      width: 100%;
       text-align: center;
-      padding-top: 10px;
     }
+
     
     .Navdot {
       height: 15px;
       width: 15px;
       margin: 0 2px;
-      background-color: maroon;
+      background-color: $background-color;
       border-radius: 50%;
       transition: background-color 0.6s ease;
       display: inline-block;
-      margin-top: 30px;
     }
     
     .Navdot_elements {
@@ -605,21 +604,13 @@ footer {
     }
     
     .selected {
-      background-color: $font-color2
+      background-color: $hover-color
     }
     
     .img_homepage {
         width: 50%;
         height: 50%;
         border-radius: 10px;
-    }
-    
-    /*author images sliding*/
-    .slideshow-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-      margin-bottom: -20px
     }
     
     .active_sliding_pictures {
@@ -683,3 +674,168 @@ footer {
     
     
     
+
+
+
+
+      .container_daily_qoutes {
+        background-image: url('/img/bground1.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: auto;
+        text-align: center;
+      }
+      
+      .container_daily_qoutes h1 {
+        font-size: 40px;
+        text-align: center;
+        padding: 40px 0 20px;
+        color: black;
+      }
+      
+      .container_daily_qoutes p {
+        text-align: justify;
+        color: black;
+        margin: 0 300px 0 300px;
+      }
+      
+      .love_img, .success_img, .health_img {
+        width:60%;
+        height:50%;
+        border-radius: 80px;
+        padding-bottom: 10px;
+      }
+      
+      .container_daily_qoutes_love h2, .container_daily_qoutes_success h2, .container_daily_qoutes_health h2 {
+        font-size: 25px;
+        padding: 30px 0 10px;
+      }
+      
+      #daily_quote, #daily_quote1 {
+        font-family: "Trykker";
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+        padding-bottom: 20px;
+        margin: 0 50px 0 50px;
+        text-align: center;
+      }
+      
+      #daily_quote2 {
+        font-family: "Trykker";
+        color: red;
+        font-size: 25px;
+        font-weight: bold;
+        font-style: italic;
+        padding-bottom: 20px;
+        margin: auto;
+        text-align: center;
+      }
+      
+      .container_daily_qoutes_love {
+         float:left; 
+         display:inline; 
+         width: 50%;
+         padding-left: 250px;
+      }
+      
+      .container_daily_qoutes_success {
+        float:left; 
+        display:inline; 
+        width: 50%;
+        padding-right: 250px;
+      }
+      
+      .container_daily_qoutes_health {
+        width: 38%;
+        position: relative;
+        left: 32%;
+      }
+      
+      @media only screen and (max-width: 1200px) {
+        
+        #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
+        font-size: 22px;
+        margin: 0 50px 0 50px;
+      }
+      
+      .container_daily_qoutes p {
+        text-align: justify;
+        color: black;
+        padding-bottom: 10px;
+        margin: 0 50px 0 50px;
+      }
+      
+      .container_daily_qoutes_love {
+        float:0; 
+        padding-left: 0px;
+      }
+      
+      .container_daily_qoutes_success {
+       float:0; 
+       padding-right: 0px;
+      }
+      
+      .container_daily_qoutes_health, #daily_qoute2 {
+        margin: auto;
+        left: 0;
+      }
+      .container_daily_qoutes_health h2 {
+        margin: 0 10px 0 10px;
+        display:inline-block; 
+      }
+      }
+        
+      @media only screen and (max-width: 530px) {
+        
+        #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
+        font-size: 20px;
+        margin: 0 5px 0 5px;
+        display:inline-block; 
+      }
+      
+      .container_daily_qoutes p {
+        margin-bottom: 10px;
+      }
+      
+      .container_daily {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .container_daily_qoutes_love {
+         width: 100%;
+         margin-top: -30px;
+      }
+      
+      .container_daily_qoutes_success {
+        width: 100%;
+        margin-top: -30px;
+      }
+      
+      .container_daily_qoutes_health {
+        width: 100%;
+        display:inline; 
+        margin-top: -30px;
+      }
+      
+      .container_daily_qoutes_health h2 {
+        font-size: 20px;
+        display:inline-block; 
+      }
+      
+      .container_daily_qoutes p {
+        line-height: 1.2;
+        word-break: break-all;
+        padding-bottom: 2px;
+      }
+      }
+      
+      
+      
+      
+      

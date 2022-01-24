@@ -70,19 +70,19 @@
   <div class="container_daily_qoutes_love">
    <h2>Love Quote Of The Day</h2>
    <img src="/img/love.jpg" class="love_img" alt="Love">
-   <div id="daily_qoute"></div>
+   <div id="daily_quote"></div>
    </div>
 
   <div class="container_daily_qoutes_success">
    <h2>Success Quote Of The Day</h2>
    <img src="/img/success.jpg" class="success_img" alt="Success">
-   <div id="daily_qoute1"></div>
+   <div id="daily_quote1"></div>
    </div>
 
   <div class="container_daily_qoutes_health">
    <h2>Health Quote Of The Day</h2>
    <img src="/img/health.jpg" class="health_img" alt="Health">
-   <div id="daily_qoute2"></div>
+   <div id="daily_quote2"></div>
    </div>
   </div>
 </div>
@@ -108,80 +108,51 @@
 <script src="/js/script.js" charset="utf-8"></script>
 
 <script>
-
-// first quote generator
-const randomQ = randomInt(0, 10);
-  function randomInt(lowest, size) {
-    return Math.floor(Math.random() * size) + lowest; 
-  }
-  
-  const quoteElem = document.getElementById("daily_qoute");
-  quoteElem.innerHTML = getQuote(randomQ);
-  
-  function getQuote(n) {
+  window.onload=function(){
+    const a = new Date().getDay();
     const quotes = [
-  '"If you love someone, set them free. If they come back they\'re yours; if they don\'t they never were."- Richard Bach',
-  '"Love is the flower you\'ve got to let grow."- John Lennon',
-  '"Love all, trust a few, do wrong to none."- William Shakespeare',
-  '"Life is the flower for which love is the honey."- Victor Hugo',
-  '"Can miles truly separate you from friends... If you want to be with someone you love, are you already there?"- Richard Bach',
-  '"Love doesn\'t make the world go round, love is what makes the ride worthwhile."- Elizabeth Browning',
-  '"Let us always meet each other with smile, for the smile is the beginning of love."- Mother Teresa',
-  '"Love and compassion open our own inner life, reducing stress, distrust and loneliness."- Dalai Lama',
-  '"You, yourself, as much as anybody in the entire universe, deserve your love and affection."- Buddha',
-  '"Love is the only force capable of transforming an enemy into friend."- Martin Luther King, Jr.'
-     ];
-     return quotes[n];
-    }
+      '"If you love someone, set them free. If they come back they\'re yours; if they don\'t they never were."- Richard Bach',
+      '"Love is the flower you\'ve got to let grow."- John Lennon',
+      '"Love all, trust a few, do wrong to none."- William Shakespeare',
+      '"Life is the flower for which love is the honey."- Victor Hugo',
+      '"Can miles truly separate you from friends... If you want to be with someone you love, are you already there?"- Richard Bach',
+      '"Love doesn\'t make the world go round, love is what makes the ride worthwhile."- Elizabeth Browning',
+      '"Let us always meet each other with smile, for the smile is the beginning of love."- Mother Teresa',
+      '"Love and compassion open our own inner life, reducing stress, distrust and loneliness."- Dalai Lama',
+      '"You, yourself, as much as anybody in the entire universe, deserve your love and affection."- Buddha',
+      '"Love is the only force capable of transforming an enemy into friend."- Martin Luther King, Jr.'
+    ];
+    document.getElementById('daily_quote').innerHTML = quotes[a-1];
 
-// second quote generator 
-  const randomQ1 = randomInt1(0, 10);
-  function randomInt1(lowest, size) {
-    return Math.floor(Math.random() * size) + lowest; 
-  }
-  
-  const quoteElem1 = document.getElementById("daily_qoute1");
-  quoteElem1.innerHTML = getQuote1(randomQ1);
-  
-  function getQuote1(n) {
+    const b = new Date().getDay();
     const quotes1 = [
-    '"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."- Albert Einstein',
-  '"The path to success is to take massive, determined action."- Tony Robbins',
-  '"The price of greatness is responsibility."- Winston Churchill',
-  '"Well done is better than well said."- Benjamin Franklin',
-  '"Once we accept our limits, we go beyond them."- Albert Einstein',
-  '"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."- Winston Churchill',
-  '"We make a living by what we get, but we make a life by what we give."- Winston Churchill',
-  '"There never was a good knife made of bad steel."- Benjamin Franklin',
-  '"Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."- Arthur Rubinstein',
-  '"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."- Bruce Lee'
-     ];
-     return quotes1[n];
-  }
+      '"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."- Albert Einstein',
+      '"The path to success is to take massive, determined action."- Tony Robbins',
+      '"The price of greatness is responsibility."- Winston Churchill',
+      '"Well done is better than well said."- Benjamin Franklin',
+      '"Once we accept our limits, we go beyond them."- Albert Einstein',
+      '"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."- Winston Churchill',
+      '"We make a living by what we get, but we make a life by what we give."- Winston Churchill',
+      '"There never was a good knife made of bad steel."- Benjamin Franklin',
+      '"Of course there is no formula for success except perhaps an unconditional acceptance of life and what it brings."- Arthur Rubinstein',
+      '"Always be yourself, express yourself, have faith in yourself, do not go out and look for a successful personality and duplicate it."- Bruce Lee'
+    ];
+    document.getElementById('daily_quote1').innerHTML = quotes1[b-1];
 
-  // third quote generator
-  const randomQ2 = randomInt2(0, 10);
-  function randomInt2(lowest, size) {
-    return Math.floor(Math.random() * size) + lowest; 
-  }
-  
-  const quoteElem2 = document.getElementById("daily_qoute2");
-  quoteElem2.innerHTML = getQuote2(randomQ2);
-  
-  function getQuote2(n) {
+    const c = new Date().getDay();
     const quotes2 = [
-  '"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."- Buddha',
-  '"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."- Dalai Lama',
-  '"Imagination is not a talent of some men but is the health of every man."- Ralph Waldo Emerson',
-  '"Every human being is the author of his own health or disease."- Buddha',
-  '"Healthy citizens are the greatest asset any country can have."- Winston Churchill',
-  '"A sad soul can be just as lethal as a germ."- John Steinbeck',
-  '"He who has health has hope, and he who has hope has everything."- Thomas Carlyle',
-  '"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."- William Londen',
-  '"It is health that is the real wealth, and not pieces of gold and silver."- Mohandas Gandhi',
-  '"I have chosen to be happy because it is good for my health."- Voltaire'
-     ];
-     return quotes2[n];
+      '"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."- Buddha',
+      '"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."- Dalai Lama',
+      '"Imagination is not a talent of some men but is the health of every man."- Ralph Waldo Emerson',
+      '"Every human being is the author of his own health or disease."- Buddha',
+      '"Healthy citizens are the greatest asset any country can have."- Winston Churchill',
+      '"A sad soul can be just as lethal as a germ."- John Steinbeck',
+      '"He who has health has hope, and he who has hope has everything."- Thomas Carlyle',
+      '"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."- William Londen',
+      '"It is health that is the real wealth, and not pieces of gold and silver."- Mohandas Gandhi',
+      '"I have chosen to be happy because it is good for my health."- Voltaire'
+    ];
+    document.getElementById('daily_quote2').innerHTML = quotes2[c-1];
   }
 
 
