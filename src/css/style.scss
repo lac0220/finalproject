@@ -11,7 +11,7 @@
 
 $font-color:white;
 $font-color2:#d1e8e2;
-$hover-color:rgb(255, 136, 0);
+$hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
 
@@ -268,12 +268,12 @@ footer {
       flex-direction: row; 
       padding: 20px 0;
       background-color: $background-color;
+      font-weight: bold;
     }
 
     .navbar__logo {
       font-size: 35px;
-      font-weight: bold;
-      color: $hover-color;
+      color: $font-color2;
       font-family: "Trykker";
       padding-left: 100px;
     }
@@ -289,7 +289,6 @@ footer {
     }
     
     .navbar__link {
-      font-weight: bold;
       color: $font-color;
       font-size: 25px;
       margin-right: 50px;
@@ -323,7 +322,6 @@ footer {
       z-index: 1;
       a {
       color: $font-color;
-      font-weight: bold;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
@@ -340,11 +338,6 @@ footer {
 
     .navbar__hamburger {
       display: none;
-      color: $font-color2;
-      font-size:35px;
-      cursor:pointer;
-      margin-right: auto;
-      padding-left:40px;
     }
 
     .closebtn {
@@ -354,31 +347,14 @@ footer {
     @media only screen and (max-width: 1550px) {
       
       .navbar__logo {
-        font-size: 35px;
-        font-weight: bold;
-        color: $font-color2;
-        font-family: "Trykker";
         padding-left: 20px;
       }
       
       .navbar__menu {
-        display: flex;
-        margin-left: auto;
         padding-right: 0;
       }
       
-      .navbar__link {
-        font-weight: bold;
-        color: $font-color;
-        font-size: 25px;
-        margin-right: 50px;
-          &:hover{
-          color: $font-color2;
-      }
-    }
       .navbar__dropdown {
-        float: left;
-        overflow: hidden;
         margin-right: 30px;
       
     }
@@ -389,30 +365,10 @@ footer {
       
     .navbar__logo {
       font-size: 30px;
-      font-weight: bold;
-      color: $font-color2;
-      font-family: "Trykker";
-      padding-left: 20px;
-    }
-    
-    .navbar__menu {
-      display: flex;
-      margin-left: auto;
-      padding-right: 0;
     }
     
     .navbar__link {
-      font-weight: bold;
-      color: $font-color;
       font-size: 20px;
-      margin-right: 30px;
-        &:hover{
-        color: $font-color2;
-    }
-  }
-    .navbar__dropdown {
-      float: left;
-      overflow: hidden;
       margin-right: 30px;
   }
   
@@ -424,7 +380,6 @@ footer {
     @media only screen and (max-width: 1050px) {
      
       .navbar {
-        display: flex;
         flex-direction: row-reverse; 
         margin: auto;    
       }
@@ -437,17 +392,20 @@ footer {
      .closebtn {
        visibility: visible;
         position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
+        top: 30px;
+        right: 110px;
+        font-size: 50px;
         margin-left: 50px;
-        font-weight: bold;
+        font-weight:normal;
         color:$font-color2;
+        height: 0px;
+        a {
+          height: 0px;
+        }
       }
 
       .navbar__menu {
-        display: flex;
-        flex-direction: column; 
+        display: block;
         height: 100%;
         width: 0;
         position: fixed;
@@ -455,44 +413,47 @@ footer {
         top: 0;
         left: 0;
         background-color: $background-color;
+        transition: 0.6s;
+        padding-top: 100px;
         overflow-x: hidden;
-        transition: 0.4s;
-        padding-top: 60px;
        }
       
       .navbar__item {
-          padding: 0;
-          margin: 30px 0 5px 30px;
+          padding: 20px 0 0 30px;
+          margin-right: -150px;
       }
     
       .navbar__link {
         font-size: 22px;
-        color: $font-color;
-        padding:0;
-        margin: 0;
+        margin-right: 0;
+        
       }
     
-      .navbar__link:hover, .navbar__dropbtn:hover {
-        color: $font-color2;
+      
+
+      .navbar__dropdown {
+        float: none;
+        margin-right: -50px;
       }
-    
-      .navbar__dropdown, .navbar__dropbtn {
-        border: none;
-        outline: none;
-        color: $font-color;
-        padding: 0;
-        margin: auto;
-        background-color: inherit;
-        font-family: inherit;
+      
+      .navbar__dropbtn {
         font-size: 22px;
-      }
+    }
     
       .navbar__dropdown__content a {
-        font-size: 22px;
+        font-size: 20px;
       }
     
       .navbar__hamburger {
           display: block;
+            color: $font-color2;
+            font-size:35px;
+            margin-right: auto;
+            padding-left: 40px;
+            span {
+              font-weight:normal;
+              cursor:pointer;
+            }
       }
     }
     
@@ -506,7 +467,6 @@ footer {
           margin-top: 6px;
         }
         .navbar__hamburger {
-          margin-right: auto;
           padding-left:20px;
         }
     

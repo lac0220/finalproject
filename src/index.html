@@ -63,8 +63,7 @@
   <div class="container_home">
     <h1>Welcome to Legendary Quotes</h1>
 
-    <div id="random_quotes_home"></div>
-    <div id="daily"></div>
+    <div id="random_quotes_home">""Love is the flower you've got to let grow."- John Lennon</div>
 
 
     <div class="container_home_text">
@@ -193,32 +192,6 @@ const quote_text = [
   '"It can\'t be spring if your heart is filled with past failures." - Byron Pulsifer',
 ];
 
-
-const randomQ = randomInt(0, 10);
-function randomInt(lowest, size) {
-return Math.floor(Math.random() * size) + lowest; 
-   }
-
-   const quoteElem = document.getElementById("daily");
-   quoteElem.innerHTML = getQuote(randomQ);
-
-
-  
-   function getQuote(n) {
-     const quotes = [
-   '"If you love someone, set them free. If they come back they\'re yours; if they don\'t they never were."- Richard Bach',
-   '"Love is the flower you\'ve got to let grow."- John Lennon',
-   '"Love all, trust a few, do wrong to none."- William Shakespeare',
-   '"Life is the flower for which love is the honey."- Victor Hugo',
-   '"Can miles truly separate you from friends... If you want to be with someone you love, are you already there?"- Richard Bach',
-   '"Love doesn\'t make the world go round, love is what makes the ride worthwhile."- Elizabeth Browning',
-   '"Let us always meet each other with smile, for the smile is the beginning of love."- Mother Teresa',
-   '"Love and compassion open our own inner life, reducing stress, distrust and loneliness."- Dalai Lama',
-   '"You, yourself, as much as anybody in the entire universe, deserve your love and affection."- Buddha',
-   '"Love is the only force capable of transforming an enemy into friend."- Martin Luther King, Jr.'
-      ];
-      return quotes[n];
-     }
 </script>
 
 <script>
