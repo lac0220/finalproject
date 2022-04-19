@@ -4,205 +4,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="/css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
-    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
 
     <title>Legendary Quotes</title>
 </head>
 
 <body>
-
   <header>
-    <nav class="navbar">
-      
+    <nav>
       <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
       
-      <ul id="mySidenav" class="navbar__menu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul id="sidenav">
+
+        <span class="closebtn" onclick="closeSidenav()">&times;</span>
         
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__link">Home</a>
-        </li>
-        
-        <li class="navbar__item">
-          <a href="dailyquotes.html" class="navbar__link">Daily Quote</a>
-        </li>
-        
-        <li class="navbar__item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li>
           <div class="navbar__dropdown">
-            <button class="navbar__dropbtn">Search Quotes 
-              <i class="fa fa-caret-down fa fa-fw fa-search"></i>
-            </button>
-          
-            <div class="navbar__dropdown__content">
+            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+            <div class="navbar__dropdown__box">
               <a href="categories.html">Categories</a>
               <a href="authors.html">Authors</a>
               <a href="textsearch.html">Text Search</a>
             </div>  
           </div>
         </li>
-        
-        <li class="navbar__item">
-          <a href="aboutus.html" class="navbar__link">About Us</a>
-        </li>
-        
-        <li class="navbar__item">
-          <a href="contact.html" class="navbar__link ">Contact</a>
-        </li>
+        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <div class="navbar__hamburger">
-        <span onclick="openNav()">&#9776;</span>  
-      </div>
-
+      <span class="navbar__hamburger" onclick="openSidenav()">&#9776;</span>  
     </nav>
   </header>
 
-  <div class="container_home">
+  <section class="home">
     <h1>Welcome to Legendary Quotes</h1>
 
-    <div id="random_quotes_home">""Love is the flower you've got to let grow."- John Lennon</div>
+    <div id="quote"></div>
+    <div id="author"></div>
 
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.</p>
 
-    <div class="container_home_text">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.</p>
+    <h2>You find here famous quotes and authors like:</h2>
+
+    <div class="home__slides">
+      <div class="home__slides__fade">
+        <img src="./img/authors/gandhi.png" alt="Gandhi">
+      </div>
+  
+      <div class="home__slides__fade">
+        <img src="./img/authors/benjamin.png" alt="Benjamin Franklin">
+        </div>
+  
+      <div class="home__slides__fade">
+        <img src="./img/authors/einstein.png" alt="Albert Einstein">
+      </div>
+
+      <div class="home__slides__fade">
+        <img src="./img/authors/buddha.png" alt="Buddha">
+      </div>
+
+      <div class="home__slides__fade">
+        <img src="./img/authors/churchill.png" alt="Churchill">
+      </div>
     </div>
-    <div class="container_home_text2">
-      <h2> You can find here famous quotes and authors like:</h2>
-
-      <div class="slideshow-container">
   
-        <div class="mySlides_fade">
-          <img class="img_homepage" src="img/gandhi.png">
-          <div class="Caption_text">
-          </div>
-        </div>
+    <div>
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span> 
+      <span class="dot"></span>  
+    </div>
   
-        <div class="mySlides_fade">
-          <img class="img_homepage" src="img/benjamin.png">
-          <div class="Caption_text">
-          </div>
-        </div>
-  
-        <div class="mySlides_fade">
-          <img class="img_homepage" src="img/einstein.png">
-          <div class="Caption_text">
-          </div>
-        </div>
-
-        <div class="mySlides_fade">
-          <img class="img_homepage" src="img/buddha.png">
-          <div class="Caption_text">
-          </div>
-        </div>
-
-        <div class="mySlides_fade">
-          <img class="img_homepage" src="img/churchill.png">
-          <div class="Caption_text">
-          </div>
-        </div>
-  
+      <div class="home__slides2">
+        <h2><i>"Forgiveness is choosing to love. It is the first skill of self-giving love."</i></h2>
+        <div class="home__slides2__author">- Mohandas Gandhi</div>
       </div>
-  
-      <div class="dot_elements">
-        <span class="dot"></span> 
-        <span class="dot"></span> 
-        <span class="dot"></span>
-        <span class="dot"></span> 
-        <span class="dot"></span>  
+      <div class="home__slides2">
+        <h2><i>"There never was a good knife made of bad steel."</i></h2>
+        <div class="home__slides2__author">- Benjamin Franklin</div>
       </div>
-  
-      <div class="SlideContainer">
-        <div class="Slide">
-          <h2><i>"Forgiveness is choosing to love. It is the first skill of self-giving love."</i></h2>
-          <div class="Caption">- Mohandas Gandhi</div>
-        </div>
-        <div class="Slide">
-          <h2><i>"There never was a good knife made of bad steel."</i></h2>
-          <div class="Caption">- Benjamin Franklin</div>
-        </div>
-        <div class="Slide">
-          <h2><i>"Life is like riding a bicycle. To keep your balance you must keep moving."</i></h2>
-          <div class="Caption">- Albert Einstein</div>
-        </div>
-        <div class="Slide">
-          <h2><i>"Every human being is the author of his own health or disease."</i></h2>
-          <div class="Caption">- Buddha</div>
-        </div>
-        <div class="Slide">
-          <h2><i>"Courage is going from failure to failure without losing enthusiasm."</i></h2>
-          <div class="Caption">- Winston Churchill</div>
-        </div>
+      <div class="home__slides2">
+        <h2><i>"Life is like riding a bicycle. To keep your balance you must keep moving."</i></h2>
+        <div class="home__slides2__author">- Albert Einstein</div>
+      </div>
+      <div class="home__slides2">
+        <h2><i>"Every human being is the author of his own health or disease."</i></h2>
+        <div class="home__slides2__author">- Buddha</div>
+      </div>
+      <div class="home__slides2">
+        <h2><i>"Courage is going from failure to failure without losing enthusiasm."</i></h2>
+        <div class="home__slides2__author">- Winston Churchill</div>
       </div>
     
-      <div class="Navdot_elements">
-        <span class="Navdot" alt="1"></span>
-        <span class="Navdot" alt="2"></span>
-        <span class="Navdot" alt="3"></span>
-        <span class="Navdot" alt="4"></span>
-        <span class="Navdot" alt="5"></span>
+      <div>
+        <span class="dot__author" alt="Navdot1"></span>
+        <span class="dot__author" alt="Navdot2"></span>
+        <span class="dot__author" alt="Navdot3"></span>
+        <span class="dot__author" alt="Navdot4"></span>
+        <span class="dot__author" alt="Navdot5"></span>
       </div>
 
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.</p>
     </div>
-  </div>
+  </section>
 
-<footer>
-  <div class="footer__left">
-    <p>Created by Laszlo Nemeth &copy; 2021</p>
-  </div>
+  <footer>
+      <p>Created by Laszlo Nemeth &copy; 2022</p>
 
-  <div class="footer__links">
-    <a class="footer__homelink" href="index.html">Home</a>
-    <a href="aboutus.html">About Us</a>
-    <a href="contact.html">Contact</a>
-  </div>
+      <div class="footer__menu">
+        <a href="index.html" class="footer__homelink">Home</a>
+        <a href="mystory.html">My Story</a>
+        <a href="contact.html">Contact</a>
+      </div>
 
-  <div class="footer__right">
-    <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
-    <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
-  </div>
-</footer>
+      <div class="footer__socialmedia">
+        <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
+        <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
+      </div>
+  </footer>
 
-<script src="/js/script.js" charset="utf-8"></script>
+<script src="./js/script.js" charset="utf-8"></script>
 
 <script>
+  const text=document.getElementById("quote");
+  const author=document.getElementById("author");
 
-function randomQuote() {
-const i = Math.floor((quote_text.length)*Math.random()); 
-document.getElementById('random_quotes_home').innerHTML = quote_text[i];
-}
-const myInterval = setInterval(randomQuote, 3000);
+  const getRandomQuote = async () =>
+  {
+      const url="https://type.fit/api/quotes";    
+      const response=await fetch(url);
+      console.log(typeof response);
+      const allQuotes = await response.json();
 
-const quote_text = [
-  '"Love is the flower you\'ve got to let grow."- John Lennon',
-  '"Love all, trust a few, do wrong to none."- William Shakespeare',
-  '"Life is the flower for which love is the honey."- Victor Hugo',
-  '"The path to success is to take massive, determined action."- Tony Robbins',
-  '"The price of greatness is responsibility."- Winston Churchill',
-  '"Well done is better than well said."- Benjamin Franklin',
-  '"Once we accept our limits, we go beyond them."- Albert Einstein',
-  '"There never was a good knife made of bad steel."- Benjamin Franklin',
-  '"Every human being is the author of his own health or disease."- Buddha',
-  '"Healthy citizens are the greatest asset any country can have."- Winston Churchill',
-  '"I have chosen to be happy because it is good for my health."- Voltaire',
-  '"A sad soul can be just as lethal as a germ."- John Steinbeck',
-  '"It can\'t be spring if your heart is filled with past failures." - Byron Pulsifer',
-];
+      // Generating random number between 0 and the length of the quotes array
+      const indx = Math.floor(Math.random()*allQuotes.length);
 
-</script>
+      //Storing quote and author at randomly generated index
+      const quote=allQuotes[indx].text;
+      const auth=allQuotes[indx].author;
 
-<script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+      if(auth==null)
+      {
+          author = "Anonymous";
+      }
+
+      //function displays the quote and the author
+      text.innerHTML="\""+quote+"\"";
+      author.innerHTML="- "+auth;
   }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+
+  const myInterval = setInterval(getRandomQuote, 4000);
+  getRandomQuote();
+
+  // hamburger menu
+  function openSidenav() {
+    document.getElementById("sidenav").style.width = "250px";
   }
-  </script>
+
+  function closeSidenav() {
+    document.getElementById("sidenav").style.width = "0";
+  }
+</script> 
 
 </body>
 </html>

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="/css/reset.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
-    <link href='https://fonts.googleapis.com/css?family=Trykker' rel='stylesheet'> <!-- font -->
-    <link rel="shortcut icon" href="img/favicon.png" type="image/png" /> <!-- favicon -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
 
     <title>Contact - Legendary Quotes</title>
 
@@ -15,114 +16,92 @@
 
 <body>
   <header>
-    <nav class="navbar">
+    <nav>
+      <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
       
-      <a href="index.html" class="navbar__logo"><i>"Legendary Quotes"</i></a>
-      
-      <ul id="mySidenav" class="navbar__menu">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <ul id="sidenav">
+
+        <span class="closebtn" onclick="closeSidenav()">&times;</span>
         
-        <li class="navbar__item">
-          <a href="index.html" class="navbar__link">Home</a>
-        </li>
-        
-        <li class="navbar__item">
-          <a href="dailyquotes.html" class="navbar__link">Daily Quote</a>
-        </li>
-        
-        <li class="navbar__item">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li>
           <div class="navbar__dropdown">
-            <button class="navbar__dropbtn">Search Quotes 
-              <i class="fa fa-caret-down fa fa-fw fa-search"></i>
-            </button>
-          
-            <div class="navbar__dropdown__content">
+            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+            <div class="navbar__dropdown__box">
               <a href="categories.html">Categories</a>
               <a href="authors.html">Authors</a>
               <a href="textsearch.html">Text Search</a>
             </div>  
           </div>
         </li>
-        
-        <li class="navbar__item">
-          <a href="aboutus.html" class="navbar__link">About Us</a>
-        </li>
-        
-        <li class="navbar__item">
-          <a href="contact.html" class="navbar__link ">Contact</a>
-        </li>
+        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-
-      <div class="navbar__hamburger">
-        <span onclick="openNav()">&#9776;</span>  
-      </div>
-
+      <span class="navbar__hamburger" onclick="openSidenav()">&#9776;</span>  
     </nav>
   </header>
 
- <section>
-  <div class="contact">
-    <div class="contact__picture">
-      <img class="contact__img" src="/img/contact.jpg" alt="contact">
+ <section class="contact">
+      <img src="./img/contact.jpg" alt="contact">
       <h1>Contact Form</h1>
-      <p>Please fill out the form below</p>
-    </div>
+      <h2>Please fill out the form below</h2>
 
-    <div class="contact__form">
       <form action="https://formsubmit.co/nemeth0220@gmail.com" method="POST">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name">
-
-        <label for="email">Email address</label>
-        <input type="text" id="email" name="email" required>
-        <input type="hidden" name="_next" value="http://localhost:3000/thankyou.html">
-
-        <label for="subject">Topic</label>
+        <label for="subject">Choose a topic
           <select id="subject" name="subject">
             <option value=""></option>
-            <option value="registration">Registration</option>
             <option value="feedback">Feedback</option>
             <option value="other">Other</option>
           </select>
+        </label>
 
-        <label for="subject">Message</label>
-        <textarea id="comment" name="comment" required placeholder="Leave a message here..."></textarea>
+        <label for="name">
+          <input type="text" id="name" name="name" required placeholder="Name">
+        </label>
 
-        <input type="submit" value="Submit">
+        <label for="email">
+          <input type="text" id="email" name="email" required placeholder="Email address">
+          <input type="hidden" name="_next" value="http://localhost:3000/thankyou.html">
+        </label>
+
+        <label for="subject">
+          <textarea id="comment" name="comment" placeholder="Leave a message here..."></textarea>
+        </label>
+
+        <div class="contact__submit">
+          <input type="submit" value="SEND">
+        </div>
       </form>
-    </div>
-      <p>All data is securely stored</p>
-  </div>
  </section>
 
-  <footer>
-    <div class="footer__left">
-      <p>Created by Laszlo Nemeth &copy; 2021</p>
-    </div>
+ <footer>
+  <p>Created by Laszlo Nemeth &copy; 2022</p>
 
-    <div class="footer__links">
-      <a class="footer__homelink" href="index.html">Home</a>
-      <a href="aboutus.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
+  <div class="footer__menu">
+    <a href="index.html" class="footer__homelink">Home</a>
+    <a href="mystory.html">My Story</a>
+    <a href="contact.html">Contact</a>
+  </div>
 
-    <div class="footer__right">
-      <a href="https://www.linkedin.com/in/nemeth0220" target="_blank"><i class="fab fa-linkedin"></i></a>    <!-- linkedin -->
-      <a href="https://github.com/lac0220" target="_blank"><i class="fab fa-github"></i></a>      <!-- github -->
-    </div>
-  </footer>
+  <div class="footer__socialmedia">
+    <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
+    <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
+  </div>
+</footer>
 
-  <script src="/js/script.js" charset="utf-8"></script>
+<script src="/js/script.js" charset="utf-8"></script>
 
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
+<script>
+  // hamburger menu
+  function openSidenav() {
+  document.getElementById("sidenav").style.width = "250px";
   }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
+
+  function closeSidenav() {
+    document.getElementById("sidenav").style.width = "0";
   }
-  </script>
+</script>
 
 </body>
 </html>

@@ -1,0 +1,111 @@
+$font-color:white;
+$font-color2:#d1e8e2;
+$hover-color:rgb(56, 11, 11);
+$background-color:#116466;
+
+footer {
+    background-color: $background-color;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    color: $font-color;
+    p {
+        flex-grow: 7;
+        margin:auto;
+        padding-left: 50px;
+    }
+
+    .footer__menu {
+        font-weight: bold;
+        margin: auto;
+        a {
+            color: inherit;
+            font-size: 1.563rem;
+            &:hover {
+                color: $hover-color;
+            }
+            /* dot for nav links */
+            &:before {       
+                content: "·";
+                color: $font-color2;
+                display: inline-block;
+                padding-right: 5px;
+            }
+        }
+    }
+    
+    /* no dot before home */
+    .footer__menu .footer__homelink:before {
+        content: none;
+    }
+    
+    .footer__socialmedia {
+        text-align: right;
+        flex-grow: 10;
+        padding-right: 50px;
+        margin: auto;
+        a {
+            display: inline-block;
+            background-color: $hover-color;
+            border-radius: 10px;
+            font-size: 1.875rem;
+            color: inherit;
+            margin: auto 2px;
+            padding: 0 10px;
+            &:hover{            
+                transform:scale(1.1); 
+                -webkit-transform:scale(1.2);
+            }
+
+            &:active {
+                color: $background-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) { 
+    footer {
+        flex-direction: column-reverse;
+        padding: 5px 0;
+        p {
+            padding: 10px 0;
+        }
+
+        .footer__socialmedia {
+            padding: 10px 0;
+        }     
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    footer {
+        padding: 0 0 5px;
+        p {
+            font-size: 0.938rem;
+        }
+
+        .footer__menu  {
+            a {
+                font-size: 1.25rem;
+                &:hover {
+                    color: $font-color;
+                }
+
+                &:active {
+                    color: $hover-color;
+                }
+            }
+        }
+
+        .footer__socialmedia {
+            a {
+                font-size: 1.875rem;
+                &:hover {
+                    transform: none;
+                }
+            }
+        }   
+    }
+}
