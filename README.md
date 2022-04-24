@@ -5,8 +5,7 @@ The web application generates random famous quotes from an API. Available daily 
 ## Tech Stack
 
 - HTML5
-- CSS
-- SASS
+- SCSS
 - JavaScript
 - jQuery
 

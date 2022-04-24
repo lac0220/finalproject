@@ -4,8 +4,8 @@ showSlides2();
 
 function showSlides2() {
   let i;
-  let slides = document.getElementsByClassName("home__slides__fade");
-  let dots = document.getElementsByClassName("dot");
+  let slides = document.getElementsByClassName("home__slides");
+  let dots = document.getElementsByClassName("home__slides__dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -26,7 +26,7 @@ showSlides(sliding);
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("home__slides2");
-  let dots = document.getElementsByClassName("dot__author");
+  let dots = document.getElementsByClassName("home__slides__dot2");
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
