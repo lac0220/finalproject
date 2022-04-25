@@ -7,7 +7,7 @@
 @import 'textsearch';
 @import 'aboutus';
 @import 'contact';
-@import 'thankyou';
+@import 'message';
 
 $font-family: "Trykker"; 
 $font-color:white;
@@ -338,7 +338,8 @@ input[type=submit]:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-      text-align: right;
+    width: 95%;
+
       font-family: $font-family;
       font-size: 1.6rem;
       font-weight: bold;
@@ -351,7 +352,6 @@ input[type=submit]:hover {
         -webkit-hyphenate-limit-last: always;
         -webkit-hyphenate-limit-zone: 8%;
       font-style: italic;
-      width: 95%;
       text-align: center;
     }
   }
@@ -407,8 +407,8 @@ input[type=submit]:hover {
       font-family: $font-family;
       font-size: 1.563rem;
       padding: 10px 0;
-      width: 40%;
-      margin-left: 60%;
+      width: 50%;
+      margin-left: 50%;
       border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     position: absolute;
@@ -590,8 +590,8 @@ input[type=submit]:hover {
         }
         &__author {
             font-size: 1.2rem;
-            width: 70%;
-            margin-left: 30%;
+            width: 75%;
+            margin-left: 25%;
           }
         }
         .home__slides__dot2 {
@@ -724,61 +724,116 @@ input[type=submit]:hover {
 
       }
       
-      .dailyquotes__box {
+      &__box {
+
         display: grid;
         grid-template-columns: repeat(2, 1fr);  /* same sized column */
-        column-gap: 100px;
+        column-gap: 50px;
+        row-gap: 30px;
         margin: auto;
        width: 70%;
       h2 {
         font-size: 1.875rem;
         padding: 20px 0 10px;
-      }
-
-      .dailyquotes__love {
-        grid-column: 1;
-        grid-row: 1;
-            }
-      
-      .dailyquotes__success {
-        grid-column: 2;
-        grid-row: 1; 
-        margin: auto;   
-        }
-      
-      .dailyquotes__health {
-        grid-column: 1;
-            grid-row: 2;
+        text-decoration: underline;
       }
       img {
         max-width: 100%;
         height:auto;
-        border-radius: 80px;
-        padding-bottom: 10px;
+        border-top-right-radius: 80px;
+        border-top-left-radius: 80px;
+        margin-bottom: -10px;
       }
 
-      #daily_quote, #daily_quote1 {
-        font-family: $font-family;
-        color: red;
-        font-size: 1.563rem;
-        font-weight: bold;
-        font-style: italic;
-        padding-bottom: 20px;
-        text-align: center;
-      }
+      &__love {
+        grid-column: 1;
+        grid-row: 1;
+        
+
+            }
       
-      #daily_quote2 {
-        font-family: $font-family;
-        color: red;
-        font-size: 1.563rem;
-        font-weight: bold;
-        font-style: italic;
-        padding-bottom: 20px;
-        margin: auto;
-        text-align: center;
+      &__success {
+        grid-column: 2;
+        grid-row: 1; 
+        }
+      
+      &__health {
+        grid-column: span 2;
+        grid-row: 2;
+        img {
+        max-width: 50%;
+        }
       }
-    } 
+
+      #daily_quote, #daily_quote1, #daily_quote2 {
+      font-family: $font-family;
+      font-size: 1.55rem;
+      font-weight: bold;
+      hyphens: auto;
+        -webkit-hyphens: auto;
+        -webkit-hyphenate-limit-before: 3;
+        -webkit-hyphenate-limit-after: 3;
+        -webkit-hyphenate-limit-chars: 6 3 3;
+        -webkit-hyphenate-limit-lines: 2;
+        -webkit-hyphenate-limit-last: always;
+        -webkit-hyphenate-limit-zone: 8%;
+      font-style: italic;
+      width: 100%;
+      color: $font-color;
+      background-color: $background-color;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      border-bottom-left-radius: 35px;
+      margin: auto;
+      padding: 0 14px;
+
+      }
+
+     #daily_quote2 {
+
+        width: 50%;
+        
+  
+        }
+
+    #daily_author, #daily_author1, #daily_author2 {
+    font-family: $font-family;
+    background-color: $hover-color;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-left: 30%;
+    color: $font-color;
+    padding: 15px 0;
+    width: 70%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+  #daily_author2 {
+    margin-left: 40%;
+    color: $font-color;
+    padding: 15px 0;
+    width: 35%;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
     }
+  } 
+
+  @media only screen and (max-width: 1350px) {
+    .dailyquotes {
+      &__box {
+        #daily_quote, #daily_quote1, #daily_quote2 {
+          font-size: 1.4rem;
+        }
+      
+      #daily_author, #daily_author1, #daily_author2 {
+        font-size: 1.4rem;
+      }
+    }
+    }
+  }
       @media only screen and (max-width: 1200px) {
         
         
@@ -788,34 +843,48 @@ input[type=submit]:hover {
           }
           p {
             width: 90%;
-    
           }
+          &__box {
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr); 
+            row-gap: 10px;
+
+            &__love {
+              grid-column: 1;
+              grid-row: 1;
+              
+                  }
+            
+            &__success {
+              grid-column: 1;
+              grid-row: 2; 
+              }
+            
+            &__health {
+              grid-column: span 1;
+              grid-row: 3;
+            }
+            h2 {
+              font-size: 1.6rem;
+            }
+            img {
+              max-width: 60%;
+  
+            }
+            #daily_quote, #daily_quote1, #daily_quote2 {
+              font-size: 1.25rem;
+              width: 60%;
+              height: 8rem;
+
+            }
           
-        
-        #daily_qoute, #daily_qoute1, #daily_qoute2, .dailyquotes__box h2 {
-        font-size: 1.375rem;
-        margin: 0 50px 0 50px;
-      }
-      
-      
-      .dailyquotes__love {
-        float:0; 
-        padding-left: 0px;
-      }
-      
-      .dailyquotes__success {
-       float:0; 
-       padding-right: 0px;
-      }
-      
-      #daily_qoute2 {
-        margin: auto;
-        left: 0;
-      }
-      .dailyquotes__health h2 {
-        margin: 0 10px 0 10px;
-        display:inline-block; 
-      }
+          #daily_author, #daily_author1, #daily_author2 {
+            font-size: 1.25rem;
+            width: 40%;
+            margin-left: 40%;
+          }
+         
+        }
       }
     }  
 
@@ -828,8 +897,55 @@ input[type=submit]:hover {
           font-size: 1.6rem;
           padding: 10px 0;
         }
+       
+        h2 {
+          font-size: 1.4rem;
+        }
       }
+      }
+    
+
+    @media only screen and (max-width: 820px) {
+      .dailyquotes {
+        
+        &__box {
+          #daily_quote, #daily_quote1, #daily_quote2 {
+            font-size: 1.2rem;
+          }
+          #daily_author, #daily_author1, #daily_author2 {
+            font-size: 1.2rem;
+            width: 45%;
+            margin-left: 35%;
+          }
+      
+        }
     }
+  }  
+
+  @media only screen and (max-width: 645px) {
+    .dailyquotes {
+      
+      &__box {
+        img {
+          max-width: 100%;
+        }
+        #daily_quote, #daily_quote1, #daily_quote2 {
+          font-size: 1.25rem;
+          width: 100%;
+          height: 8rem;
+          border-bottom-left-radius: 0;
+
+
+        }
+      
+        #daily_author, #daily_author1, #daily_author2 {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+  }
+}  
+
 @media only screen and (max-width: 500px) {
 
   .dailyquotes {
@@ -838,41 +954,25 @@ input[type=submit]:hover {
       margin: auto auto 20px;
     }
     
-        
-        #daily_qoute, #daily_qoute1, #daily_qoute2, .container_daily_qoutes_love h2, .container_daily_qoutes_success h2 {
-        font-size: 1.25rem;
-        margin: 0 5px;
-        display:inline-block; 
-      }
-      
+    &__box {
+      h2 {
+        font-size: 1.1rem;
+        padding: 10px 0;
 
-      .container_daily {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
       }
       
-      .dailyquotes__love {
-         width: 100%;
-         margin-top: -30px;
+      #daily_quote, #daily_quote1, #daily_quote2 {
+        font-size: 1rem;
+       
       }
-      
-      .dailyquotes__success {
-        width: 100%;
-        margin-top: -30px;
+      #daily_author, #daily_author1, #daily_author2 {
+        font-size: 1rem;
       }
-      
-      .dailyquotes__health {
-        width: 100%;
-        display:inline; 
-        margin-top: -30px;
-      }
-      
-      .dailyquotes__health h2 {
-        font-size: 1.25rem;
-        display:inline-block; 
-      }
-      
+
+     
+  
+    }
+  
      
       }
     } 
@@ -1030,4 +1130,384 @@ input[type=submit]:hover {
 
 
 
+    .authors {
+      background-image: url('/img/bground.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 40px;
+      h1 {
+        font-size: 2.4rem;
+      text-align: center;
+      font-size: 2.4rem;
+      margin: auto auto 30px; 
+      padding: 10px 0 15px;
+      width: 100%;     
+      color:$font-color;
+      background-color: $hover-color;
+      font-family: $font-family;
+      }
+    }
+    
+    
+    .author_img {
+      width: 38%;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+    
+    .container_authors p {
+      text-align: justify;
+      color: black;
+      padding-bottom: 10px;
+      margin: 0 480px 0 480px;
+    }
+    
+    #input {
+      width: 38%; 
+      font-size: 20px; 
+      border: 10px solid red; 
+      font-family: inherit;
+      margin: -8px 0 -1px 0;
+    
+    }
+    
+    #fil {
+      list-style-type: none;
+      width: 38%;
+      margin: auto;
+      padding-bottom: 30px;
+    }
+    
+    #fil li a {
+      background-color: red; 
+      text-decoration: none; 
+      font-size: 25px; 
+      font-weight: bold;
+      color: white; 
+    }
+    
+    #fil li a:hover:not(.header) {
+      background-color: rgb(255, 136, 0);
+    }
+    
+    .accordion1 {
+      background-color: red;
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: inherit;
+      transition: 0.4s;
+      text-align: center;
+      color: white;
+      padding: 30px 0 20px;
+      margin: auto;
+    }
+    
+    .active_accord1, .accordion1:hover {
+      background-color: rgb(255, 136, 0); 
+    }
+    
+    .panel1 {
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    .panel1 p {
+      color: red;
+      font-family: "Trykker";
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0 80px 0 80px;
+      text-align: center;
+      padding-top: 20px;
+    }
+    
+    .panel1 a {
+      color: black;
+      font-family: "Trykker";
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    @media only screen and (max-width: 1200px) {
+
+     .authors {
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .authors {
+    padding: 25px 0 20px;
+    
+    h1 {
+      font-size: 1.6rem;
+      padding: 10px 0;
+    }
+}
+}
+   
+@media only screen and (max-width: 500px) {
+
+  .authors {    
+    h1 {
+      font-size: 1.25rem;
+      margin: auto auto 20px;
+    }
+}
+}
       
+
+
+
+
+
+
+
+
+
+
+
+.categories {
+  background-image: url('/img/bground.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 40px;
+      h1 {
+        font-size: 2.4rem;
+      text-align: center;
+      font-size: 2.4rem;
+      margin: auto auto 30px; 
+      padding: 10px 0 15px;
+      width: 100%;     
+      color:$font-color;
+      background-color: $hover-color;
+      font-family: $font-family;
+      }
+    }
+
+.search_img {
+  width: 38%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.container_cateimage {
+  position: relative;
+  margin-bottom: -18px;
+}
+
+.content_book {
+  position: absolute; /* Position the background text */
+  bottom: 8px; /* At the bottom. Use top:0 to append it to the top */
+  background: rgba(187, 185, 185, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 38%; /* Full width */
+  padding: 20px; /* Some padding */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.content_book h3 {
+  margin: center;
+  text-align: center;
+}
+
+.container_categories1 {
+  padding: 10px 0 30px;
+}
+
+.accordion {
+  background-color: red;
+  cursor: pointer;
+  width: 38%;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: inherit;
+  transition: 0.4s;
+  text-align: center;
+  color: white;
+  padding: 30px 0 20px;
+  margin: auto;
+  display: block;
+}
+
+.active_accord, .accordion:hover {
+  background-color: rgb(255, 136, 0); 
+}
+
+.panel {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  width: 38%;
+  margin: auto;
+}
+
+.panel p {
+  color: red;
+  font-family: "Trykker";
+  font-size: 20px;
+  font-weight: bold;
+  padding-top: 20px;
+  margin: 0 80px 0 80px;
+  text-align: center;
+}
+
+.panel h4 {
+  color: black;
+  font-family: "Trykker";
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .categories {
+
+ h1 {
+   font-size: 2rem;
+ }
+}
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .categories {
+    padding: 25px 0 20px;
+ 
+ h1 {
+   font-size: 1.6rem;
+   padding: 10px 0;
+ }
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .categories {
+    h1 {
+   font-size: 1.25rem;
+   margin: auto auto 20px;
+ }
+}
+}
+
+
+
+
+
+
+
+
+
+.textsearch {
+  background-image: url('/img/bground.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: auto;
+        text-align: center;
+        padding-bottom: 40px;
+      h1 {
+        font-size: 2.4rem;
+      text-align: center;
+      font-size: 2.4rem;
+      margin: auto auto 30px; 
+      padding: 10px 0 15px;
+      width: 100%;     
+      color:$font-color;
+      background-color: $hover-color;
+      font-family: $font-family;
+      }
+    }
+
+.textsearch_img {
+  width: 38%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: -9px;
+}
+
+
+#search-quote-text {
+  width:38%;
+  padding:8px 10px;
+  font-size: 20px; 
+  border: 10px solid red; 
+  font-family: inherit;
+  margin:auto;
+  display: block;
+}
+
+li em {
+  background:red;
+  font-weight:bold;
+}
+
+#quote-list li {
+  text-align: center;
+  padding: 10px 0 10px 0;
+}
+
+.container_textsearch {
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .textsearch {
+
+ h1 {
+   font-size: 2rem;
+ }
+}
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .textsearch {
+    padding: 25px 0 20px;
+ 
+ h1 {
+   font-size: 1.6rem;
+   padding: 10px 0;
+ }
+}
+}
+
+@media only screen and (max-width: 500px) {
+
+  .textsearch {
+    h1 {
+   font-size: 1.25rem;
+   margin: auto auto 20px;
+ }
+}
+}
