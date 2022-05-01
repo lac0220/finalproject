@@ -80,9 +80,9 @@ nav {
     .navbar__hamburger {
       display: none;
     }
-  }
+}
   
-  @media only screen and (max-width: 1550px) {
+@media only screen and (max-width: 1550px) {
     
     nav {
         .navbar__logo {
@@ -93,9 +93,9 @@ nav {
             padding-right: 0;
         }  
     }
-  }
+}
    
-  @media only screen and (max-width: 1370px) {
+@media only screen and (max-width: 1370px) {
   
     nav {
         .navbar__logo {
@@ -122,9 +122,9 @@ nav {
             }
         } 
     } 
-  }
+}
   
-  @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
    
     nav {
         position: fixed;
@@ -168,26 +168,23 @@ nav {
                 padding: 20px 0 0 30px;
                 margin-right: -150px;
                 a {
-                    font-size: 1.375rem;
+                    font-size: 1.25rem;
                     margin-right: 0;
-                    &:hover{
-                        color: $font-color;
+                }
+            
+                .navbar__dropdown {
+                    margin: 0px -50px 0 0;
+                    button {
+                        font-size: 1.25rem;
                     }
 
-                    &:active {
-                        color: $hover-color;
+                    &__box {
+                        left: 50%;
                     }
-                }
-            }
-    
-            .navbar__dropdown {
-                margin: 0px -50px 0 0;
-                button {
-                    font-size: 1.375rem;
                 }
             }
         }
-        
+
         .navbar__hamburger {
             display: block;
             color: $font-color2;
@@ -197,9 +194,9 @@ nav {
             cursor: pointer;
         }   
     }
-  }
+}
   
-  @media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   
     nav { 
         .navbar__logo {
@@ -207,9 +204,34 @@ nav {
             margin-top: 6px;
         }
   
+        ul li {
+            a:hover {
+                color: $font-color;
+                &:active {
+                    color: $hover-color;
+                }
+            }
+      
+            .navbar__dropdown {
+                button:hover {
+                    color: $font-color;
+                    &:active {
+                        color: $hover-color;
+                    }
+                }
+
+                &__box {
+                    left: 12%;
+                    a:hover {
+                        background-color: green;
+                    }    
+                }
+            }
+        } 
+    
         .navbar__hamburger {
             padding-left: 20px;
-        }
-    }
-  }
+        } 
+    }   
+}
   

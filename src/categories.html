@@ -46,18 +46,16 @@
   <section class="categories">
     <h1>Categories</h1>
 
-    <div class="container_cateimage">
-      <img src="/img/search.jpg" class="search_img" alt="Search">
-      <div class="content_book">
-        <h3>There are many different types of quotes. These categories help you to find the one that best suits you.
-
-        </h3>
+    <div class="categories__header">
+      <img src="./img/search.jpg" class="search_img" alt="Search">
+      <div class="categories__header__box">
+        <h3>There are many different types of quotes. These categories help you to find the one that best suits you.</h3>
       </div>
     </div>
 
-    <div class="container_categories1">
-    <button class="accordion">Love</button>
-    <div class="panel">
+    <div class="categories__items">
+    <button class="categories__items__button">Love</button>
+    <div class="categories__items__button__panel">
       <p>"If you love someone, set them free. If they come back they're yours; if they don't they never were."</p>
       <h4>- Richard Bach</h4>
       <p>"Love is the flower you've got to let grow."</p>
@@ -80,8 +78,8 @@
       <h4>- Martin Luther King, Jr.</h4>
     </div>
 
-    <button class="accordion">Forgiveness</button>
-    <div class="panel">
+    <button class="categories__items__button">Forgiveness</button>
+    <div class="categories__items__button__panel">
     <p>"The more you know yourself, the more you forgive yourself."</p>
     <h4>- Confucius</h4>
     <p>"To forgive is to set a prisoner free and realize that prisoner was you."</p>
@@ -104,8 +102,8 @@
     <h4>- Martin Luther King Jr.</h4>
     </div>
 
-    <button class="accordion">Success</button>
-    <div class="panel">
+    <button class="categories__items__button">Success</button>
+    <div class="categories__items__button__panel">
     <p>"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."</p>
     <h4>- Albert Einstein</h4>
     <p>"The path to success is to take massive, determined action."</p>
@@ -128,8 +126,8 @@
     <h4>- Bruce Lee</h4>
     </div>
 
-    <button class="accordion">Failure</button>
-    <div class="panel">
+    <button class="categories__items__button">Failure</button>
+    <div class="categories__items__button__panel">
     <p>"There are two kinds of failures: those who thought and never did, and those who did and never thought."</p>
     <h4>- Laurence J. Peter</h4>
     <p>"Many of life's failures are people who did not realize how close they were to success when they gave up."</p>
@@ -152,8 +150,8 @@
     <h4>- Robert Orben</h4>
     </div>
 
-    <button class="accordion">Health</button>
-    <div class="panel">
+    <button class="categories__items__button">Health</button>
+    <div class="categories__items__button__panel">
     <p>"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."</p>
     <h4>- Buddha</h4>
     <p>"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."</p>
@@ -200,12 +198,12 @@
   <script>
 
   // categories
-  var acc = document.getElementsByClassName("accordion");
+  var categoriesPanel = document.getElementsByClassName("categories__items__button");
   var i;
 
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active_accord");
+  for (i = 0; i < categoriesPanel.length; i++) {
+    categoriesPanel[i].addEventListener("click", function() {
+      this.classList.toggle("active__categories__button");
 
       /* Toggle between hiding and showing the panel */
       var panel = this.nextElementSibling;

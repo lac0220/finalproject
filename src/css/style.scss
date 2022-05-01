@@ -426,12 +426,7 @@ input[type=submit]:hover {
     display: inline-block;
   }
  
-    
-    .sliding__pictures {
-      background-color: red;
-    }
-    
-    .selected {
+    .sliding__quotes {
       background-color: $hover-color
     }
     
@@ -1150,94 +1145,52 @@ input[type=submit]:hover {
       background-color: $hover-color;
       font-family: $font-family;
       }
-    }
+      img {
+        margin: auto;
+        display: block;
+        width: 38%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+ 
+      #searchBar {
+        width:38%;
+        padding:8px 10px;
+        font-size: 20px; 
+        border: 10px solid red; 
+        font-family: inherit;
+        margin:auto;
+        display: block;
+      }
     
-    
-    .author_img {
-      width: 38%;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    
-    .container_authors p {
-      text-align: justify;
-      color: black;
-      padding-bottom: 10px;
-      margin: 0 480px 0 480px;
-    }
-    
-    #input {
-      width: 38%; 
-      font-size: 20px; 
-      border: 10px solid red; 
-      font-family: inherit;
-      margin: -8px 0 -1px 0;
-    
-    }
-    
-    #fil {
+    #authorSearch {
       list-style-type: none;
       width: 38%;
       margin: auto;
       padding-bottom: 30px;
+    
+      p {
+        color: red;
+        font-family: "Trykker";
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0 80px 0 80px;
+        text-align: center;
+        padding-top: 20px;
+      }
+    
     }
     
-    #fil li a {
-      background-color: red; 
-      text-decoration: none; 
-      font-size: 25px; 
-      font-weight: bold;
-      color: white; 
-    }
-    
-    #fil li a:hover:not(.header) {
-      background-color: rgb(255, 136, 0);
-    }
-    
-    .accordion1 {
-      background-color: red;
-      cursor: pointer;
-      width: 100%;
-      border: none;
-      font-size: 30px;
-      font-weight: bold;
-      font-family: inherit;
-      transition: 0.4s;
-      text-align: center;
-      color: white;
-      padding: 30px 0 20px;
-      margin: auto;
-    }
-    
-    .active_accord1, .accordion1:hover {
-      background-color: rgb(255, 136, 0); 
-    }
-    
-    .panel1 {
+    .authors__items__button__panel {
       display: none;
       background-color: white;
       overflow: hidden;
       width: 100%;
-    }
-    
-    .panel1 p {
-      color: red;
-      font-family: "Trykker";
-      font-size: 20px;
-      font-weight: bold;
-      margin: 0 80px 0 80px;
-      text-align: center;
-      padding-top: 20px;
-    }
-    
-    .panel1 a {
-      color: black;
-      font-family: "Trykker";
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
-    
+  
+  
+ 
+}
+}   
     @media only screen and (max-width: 1200px) {
 
      .authors {
@@ -1301,20 +1254,21 @@ input[type=submit]:hover {
       background-color: $hover-color;
       font-family: $font-family;
       }
-    }
+    
+.categories__header {
 
-.search_img {
+  position: relative;
+  margin-bottom: -18px;
+
+img {
   width: 38%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.container_cateimage {
-  position: relative;
-  margin-bottom: -18px;
-}
 
-.content_book {
+
+.categories__header__box {
   position: absolute; /* Position the background text */
   bottom: 8px; /* At the bottom. Use top:0 to append it to the top */
   background: rgba(187, 185, 185, 0.5); /* Black background with 0.5 opacity */
@@ -1328,18 +1282,19 @@ input[type=submit]:hover {
   left: 0;
   right: 0;
   text-align: center;
+  h3 {
+    margin: center;
+    text-align: center;
+  }
+}
 }
 
-.content_book h3 {
-  margin: center;
-  text-align: center;
-}
 
-.container_categories1 {
+.categories__items {
   padding: 10px 0 30px;
-}
 
-.accordion {
+
+.categories__items__button {
   background-color: red;
   cursor: pointer;
   width: 38%;
@@ -1356,19 +1311,17 @@ input[type=submit]:hover {
   display: block;
 }
 
-.active_accord, .accordion:hover {
+.active__categories__button, .categories__items__button:hover {
   background-color: rgb(255, 136, 0); 
 }
 
-.panel {
+.categories__items__button__panel {
   display: none;
   background-color: white;
   overflow: hidden;
   width: 38%;
   margin: auto;
-}
-
-.panel p {
+p {
   color: red;
   font-family: "Trykker";
   font-size: 20px;
@@ -1378,14 +1331,16 @@ input[type=submit]:hover {
   text-align: center;
 }
 
-.panel h4 {
+h4 {
   color: black;
   font-family: "Trykker";
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 20px;
 }
-
+}
+}
+}
 @media only screen and (max-width: 1200px) {
 
   .categories {
@@ -1426,7 +1381,7 @@ input[type=submit]:hover {
 
 
 
-.textsearch {
+.textSearch {
   background-image: url('/img/bground.webp');
         background-position: center;
         background-repeat: no-repeat;
@@ -1446,17 +1401,14 @@ input[type=submit]:hover {
       background-color: $hover-color;
       font-family: $font-family;
       }
-    }
-
-.textsearch_img {
-  width: 38%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-bottom: -9px;
-}
-
-
-#search-quote-text {
+      img {
+        width: 38%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin-bottom: -9px;
+      }
+      
+      #searchBar {
   width:38%;
   padding:8px 10px;
   font-size: 20px; 
@@ -1466,24 +1418,45 @@ input[type=submit]:hover {
   display: block;
 }
 
-li em {
-  background:red;
-  font-weight:bold;
+#textSearch {
+  list-style-type: none;
+  width: 38%;
+  margin: auto;
+  padding-bottom: 30px;
+
+  h3 {
+    color: red;
+    font-family: "Trykker";
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 80px 0 80px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  p {
+    font-family: "Trykker";
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 80px 0 80px;
+    text-align: center;
+    padding-top: 20px;
+  }
 }
 
-#quote-list li {
-  text-align: center;
-  padding: 10px 0 10px 0;
+.textSearch__panel {
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  width: 100%;
 }
 
-.container_textsearch {
-  padding-bottom: 20px;
+
+
 }
 
 @media only screen and (max-width: 1200px) {
 
-  .textsearch {
-
+  .textSearch {
  h1 {
    font-size: 2rem;
  }
@@ -1492,9 +1465,8 @@ li em {
 
 @media only screen and (max-width: 1000px) {
 
-  .textsearch {
+  .textSearch {
     padding: 25px 0 20px;
- 
  h1 {
    font-size: 1.6rem;
    padding: 10px 0;
@@ -1504,10 +1476,31 @@ li em {
 
 @media only screen and (max-width: 500px) {
 
-  .textsearch {
+  .textSearch {
     h1 {
    font-size: 1.25rem;
    margin: auto auto 20px;
  }
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
