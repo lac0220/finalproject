@@ -22,7 +22,7 @@
       
       <ul id="sidenav">
 
-        <span class="closebtn" onclick="closeSidenav()">&times;</span>
+        <span class="close__btn" onclick="closeSidenav()">&times;</span>
         
         <li><a href="index.html">Home</a></li>
         <li><a href="dailyquotes.html">Daily Quote</a></li>
@@ -175,6 +175,9 @@
     </div>
     </div>
     </div>
+
+    <div id="quote"></div>
+  </div>
   </section>
 
 
@@ -193,20 +196,18 @@
     </div>
   </footer>
 
-  <script src="./js/script.js" charset="utf-8"></script>
-
   <script>
 
   // categories
-  var categoriesPanel = document.getElementsByClassName("categories__items__button");
-  var i;
+  const categoriesPanel = document.getElementsByClassName("categories__items__button");
+  let i;
 
   for (i = 0; i < categoriesPanel.length; i++) {
     categoriesPanel[i].addEventListener("click", function() {
       this.classList.toggle("active__categories__button");
 
       /* Toggle between hiding and showing the panel */
-      var panel = this.nextElementSibling;
+      let panel = this.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {

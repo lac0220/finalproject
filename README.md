@@ -7,7 +7,6 @@ The web application generates random famous quotes from an API. Available daily 
 - HTML5
 - SCSS
 - JavaScript
-- jQuery
 
 [API:](https://type.fit/api/quotes) Free API - Inspirational quotes 
 ## Version

@@ -1,23 +1,60 @@
-.thank_you {
-    background-image: url('/img/bground1.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    margin: auto;
-    text-align: center;
-  }
+$font-family: "Trykker"; 
+$font-color:white;
+$font-color2:#d1e8e2;
+$hover-color:rgb(56, 11, 11);
+$background-color:#116466;
+
+.message {
+    h1, p {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    h1 {
+        padding: 0 30px 180px;
+        font-size: 2.5rem;
+    }
   
-  .thank_you h1 {
-    font-size: 40px;
-    text-align: center;
-    padding: 300px 0 100px;
-    color: black;
-  }
+    p {
+        font-size: 1.875rem;
+    }
+    
+    a {
+        color: $background-color;
+        &:hover {
+            color: lightblue;
+        }
+    }
+}
   
-  .thank_you p {
-    text-align: center;
-    color: black;
-    font-size: 30px;
-    padding-bottom: 465px;
-  }
+@media only screen and (max-width: 500px) {
+  
+    .message {
+        h1 {
+            font-size: 1.5rem;
+            padding: 0 10px 100px;
+        }
+        
+        p {
+            font-size: 1.125rem;
+        }
+        
+        a {
+            &:hover {
+                color: $background-color;
+            }
+        
+            &:active {
+                color: lightblue;
+            }
+        }
+    }
+}
+  
+  
+  
+  

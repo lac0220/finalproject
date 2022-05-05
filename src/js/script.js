@@ -1,5 +1,5 @@
-import slidingelements from './slidingelements';
-import randomquotes from './randomquotes';
+import slidingElements from './slidingElements';
+import randomQuotes from './randomQuotes';
 
 
 

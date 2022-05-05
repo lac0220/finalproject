@@ -1,0 +1,264 @@
+$font-family: "Trykker"; 
+$font-color:white;
+$font-color2:#d1e8e2;
+$hover-color:rgb(56, 11, 11);
+$background-color:#116466;
+
+.dailyQuotes {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 40px;
+    h1 {
+        font-size: 2.4rem;
+        margin: auto auto 30px; 
+        padding: 10px 0 15px;
+        width: 100%;     
+        color:$font-color;
+        background-color: $hover-color;
+        font-family: $font-family;
+    }
+
+    p {
+        width: 70%;
+        margin: auto;
+    }
+    
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);  /* same sized column */
+        column-gap: 50px;
+        row-gap: 30px;
+        margin: auto;
+        width: 70%;
+        h2 {
+            font-size: 1.875rem;
+            padding: 20px 0 10px;
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            height:auto;
+            border-top-right-radius: 80px;
+            border-top-left-radius: 80px;
+            margin-bottom: -10px;
+        }
+
+        &__love {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        
+        &__success {
+            grid-column: 2;
+            grid-row: 1; 
+        }
+        
+        &__health {
+            grid-column: span 2;
+            grid-row: 2;
+            img {
+                max-width: 50%;
+            }
+        }
+
+        #daily__quote, #daily__quote1, #daily__quote2 {
+            font-family: $font-family;
+            font-size: 1.55rem;
+            font-weight: bold;
+            font-style: italic;
+            width: 100%;
+            color: $font-color;
+            background-color: $background-color;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom-left-radius: 35px;
+            margin: auto;
+            padding: 0 14px;
+            hyphens: auto;
+            -webkit-hyphens: auto;
+            -webkit-hyphenate-limit-before: 3;
+            -webkit-hyphenate-limit-after: 3;
+            -webkit-hyphenate-limit-chars: 6 3 3;
+            -webkit-hyphenate-limit-lines: 2;
+            -webkit-hyphenate-limit-last: always;
+            -webkit-hyphenate-limit-zone: 8%;
+        }
+
+        #daily__quote2 {
+            width: 50%;
+        }
+
+        #daily__author, #daily__author1, #daily__author2 {
+            font-family: $font-family;
+            background-color: $hover-color;
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin-left: 30%;
+            color: $font-color;
+            padding: 15px 0;
+            width: 70%;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+        }
+
+        #daily__author2 {
+            margin-left: 40%;
+            width: 35%;
+        }
+    }
+} 
+
+@media only screen and (max-width: 1350px) {
+
+    .dailyQuotes {
+        &__box {
+            #daily__quote, #daily__quote1, #daily__quote2 {
+                font-size: 1.4rem;
+            }
+        
+            #daily__author, #daily__author1, #daily__author2 {
+                font-size: 1.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    
+    .dailyQuotes {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            width: 90%;
+        }
+
+        &__box {
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr); 
+            row-gap: 10px;
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            img {
+                max-width: 60%;
+            }
+
+            &__love {
+                grid-column: 1;
+                grid-row: 1;
+            }
+            
+            &__success {
+                grid-column: 1;
+                grid-row: 2; 
+            }
+            
+            &__health {
+                grid-column: span 1;
+                grid-row: 3;
+            }
+
+            #daily__quote, #daily__quote1, #daily__quote2 {
+                font-size: 1.25rem;
+                width: 60%;
+                height: 8rem;
+            }
+        
+            #daily__author, #daily__author1, #daily__author2 {
+                font-size: 1.25rem;
+                width: 40%;
+                margin-left: 40%;
+            }
+        }
+    }
+}  
+
+@media only screen and (max-width: 1000px) {
+
+    .dailyQuotes {
+        padding: 25px 0 20px;
+
+        h1 {
+            font-size: 1.6rem;
+            padding: 10px 0;
+        }
+    
+        h2 {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 820px) {
+
+    .dailyQuotes {
+        &__box {
+            #daily__quote, #daily__quote1, #daily__quote2 {
+                font-size: 1.2rem;
+            }
+            
+            #daily__author, #daily__author1, #daily__author2 {
+                font-size: 1.2rem;
+                width: 45%;
+                margin-left: 35%;
+            }
+        }
+    }
+}  
+
+@media only screen and (max-width: 645px) {
+
+    .dailyQuotes {
+        &__box {
+            img {
+                max-width: 100%;
+            }
+
+            #daily__quote, #daily__quote1, #daily__quote2 {
+                font-size: 1.25rem;
+                width: 100%;
+                height: 8rem;
+                border-bottom-left-radius: 0;
+            }
+        
+            #daily__author, #daily__author1, #daily__author2 {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    }
+}  
+
+@media only screen and (max-width: 500px) {
+
+    .dailyQuotes {
+        h1 {
+            font-size: 1.25rem;
+            margin: auto auto 20px;
+        }
+
+        &__box {
+            h2 {
+                font-size: 1.1rem;
+                padding: 10px 0;
+            }
+        
+            #daily__quote, #daily__quote1, #daily__quote2 {
+                font-size: 1rem;
+            }
+
+            #daily__author, #daily__author1, #daily__author2 {
+                font-size: 1rem;
+            }
+        }
+    }
+} 
+  
+  

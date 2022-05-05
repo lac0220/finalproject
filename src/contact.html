@@ -21,7 +21,7 @@
       
       <ul id="sidenav">
 
-        <span class="closebtn" onclick="closeSidenav()">&times;</span>
+        <span class="close__btn" onclick="closeSidenav()">&times;</span>
         
         <li><a href="index.html">Home</a></li>
         <li><a href="dailyquotes.html">Daily Quote</a></li>
@@ -42,69 +42,67 @@
     </nav>
   </header>
 
- <section class="contact">
-      <h1>Contact Form</h1>
+  <section class="contact">
+    <h1>Contact Form</h1>
 
-      <img src="./img/contact.jpg" alt="contact">
+    <img src="./img/contact.jpg" alt="contact">
 
-      <h2>Please fill out the form below</h2>
+    <h2>Please fill out the form below</h2>
 
-      <form action="https://formsubmit.co/nemeth0220@gmail.com" method="POST">
-        <label for="subject">Choose a topic
-          <select id="subject" name="subject">
-            <option value=""></option>
-            <option value="newquote">Send us your quote</option>
-            <option value="feedback">Feedback</option>
-            <option value="other">Other</option>
-          </select>
-        </label>
+    <form action="https://formsubmit.co/nemeth0220@gmail.com" method="POST">
+      <label for="subject">Choose a topic
+        <select id="subject" name="subject">
+          <option value=""></option>
+          <option value="newquote">Send me your quote</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+      </label>
 
-        <label for="name">
-          <input type="text" id="name" name="name" required placeholder="Name">
-        </label>
+      <label for="name">
+        <input type="text" id="name" name="name" required placeholder="Name">
+      </label>
 
-        <label for="email">
-          <input type="text" id="email" name="email" required placeholder="Email address">
-          <input type="hidden" name="_next" value="http://lac0220.github.io/finalproject-quotes/message.html">
-        </label>
+      <label for="email">
+        <input type="text" id="email" name="email" required placeholder="Email address">
+        <input type="hidden" name="_next" value="http://lac0220.github.io/finalproject-quotes/message.html">
+      </label>
 
-        <label for="comment">
-          <textarea id="comment" name="comment" placeholder="Leave a message here..."></textarea>
-        </label>
+      <label for="comment">
+        <textarea id="comment" name="comment" placeholder="Leave a message here..."></textarea>
+      </label>
 
-        <div class="contact__submit">
-          <input type="submit" value="SEND">
-        </div>
-      </form>
- </section>
+      <div class="contact__submit">
+        <input type="submit" value="SEND">
+      </div>
+    </form>
+  </section>
 
- <footer>
-  <p>Created by Laszlo Nemeth &copy; 2022</p>
+  <footer>
+    <p>Created by Laszlo Nemeth &copy; 2022</p>
 
-  <div class="footer__menu">
-    <a href="index.html" class="footer__homelink">Home</a>
-    <a href="mystory.html">My Story</a>
-    <a href="contact.html">Contact</a>
-  </div>
+    <div class="footer__menu">
+      <a href="index.html" class="footer__homelink">Home</a>
+      <a href="mystory.html">My Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-  <div class="footer__socialmedia">
-    <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
-    <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
-  </div>
-</footer>
+    <div class="footer__socialmedia">
+      <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
+      <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
+    </div>
+  </footer>
 
-<script src="./js/script.js" charset="utf-8"></script>
+  <script>
+    // hamburger menu
+    function openSidenav() {
+    document.getElementById("sidenav").style.width = "250px";
+    }
 
-<script>
-  // hamburger menu
-  function openSidenav() {
-  document.getElementById("sidenav").style.width = "250px";
-  }
-
-  function closeSidenav() {
-    document.getElementById("sidenav").style.width = "0";
-  }
-</script>
+    function closeSidenav() {
+      document.getElementById("sidenav").style.width = "0";
+    }
+  </script>
 
 </body>
 </html>

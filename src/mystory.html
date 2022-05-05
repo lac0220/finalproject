@@ -18,7 +18,7 @@
       
       <ul id="sidenav">
 
-        <span class="closebtn" onclick="closeSidenav()">&times;</span>
+        <span class="close__btn" onclick="closeSidenav()">&times;</span>
         
         <li><a href="index.html">Home</a></li>
         <li><a href="dailyquotes.html">Daily Quote</a></li>
@@ -39,15 +39,15 @@
     </nav>
   </header>
 
-  <section class="mystory">
+  <section class="myStory">
     <h1>My Story</h1>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. </p>
 
-    <div class="mystory__box">
+    <div class="myStory__box">
       <img src="./img/logo/profile.png" alt="Laszlo Nemeth profile picture">
       <h2>Laszlo Nemeth</h2>
       <h3>Front-End Web Developer</h3>
-      <div class="mystory__box__contact">
+      <div class="myStory__box__contact">
         <a href="contact.html">Send me a message</a>
       </div>
     </div>
@@ -70,18 +70,15 @@
     </div>
   </footer>
 
-<script src="./js/script.js" charset="utf-8"></script>
+  <script>
+    // hamburger menu
+    function openSidenav() {
+    document.getElementById("sidenav").style.width = "250px";
+    }
 
-<script>
-  // hamburger menu
-  function openSidenav() {
-  document.getElementById("sidenav").style.width = "250px";
-  }
-
-  function closeSidenav() {
-    document.getElementById("sidenav").style.width = "0";
-  }
-</script>
-
+    function closeSidenav() {
+      document.getElementById("sidenav").style.width = "0";
+    }
+  </script>
 </body>
 </html>
