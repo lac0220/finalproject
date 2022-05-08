@@ -56,7 +56,7 @@ a {
 @media screen and (max-width: 1000px) {
     
   html, body {
-      margin-top: 30px;
+      margin-top: 28px;
   }
 }
 
@@ -98,7 +98,7 @@ a {
         border-top-right-radius: 20px;
       }
  
-      #searchBar {
+      #authorSearchBar {
         width:38%;
         padding:8px 10px;
         font-size: 1.25rem; 
@@ -179,6 +179,28 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .categories {
         margin: auto;
         text-align: center;
@@ -193,20 +215,16 @@ a {
       font-family: $font-family;
       }
     
-.categories__header {
-
+&__header {
   position: relative;
   margin-bottom: -18px;
-
 img {
   width: 38%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-
-
-.categories__header__box {
+&__box {
   position: absolute; /* Position the background text */
   bottom: 8px; /* At the bottom. Use top:0 to append it to the top */
   background: rgba(187, 185, 185, 0.5); /* Black background with 0.5 opacity */
@@ -228,11 +246,11 @@ img {
 }
 
 
-.categories__items {
+&__items {
   padding: 10px 0 30px;
 
 
-.categories__items__button {
+&__button {
   background-color: red;
   cursor: pointer;
   width: 38%;
@@ -253,7 +271,7 @@ img {
   background-color: rgb(255, 136, 0); 
 }
 
-.categories__items__button__panel {
+&__button__panel {
   display: none;
   background-color: white;
   overflow: hidden;
@@ -318,7 +336,6 @@ h4 {
 
 
 
-
 .textSearch {
  
         margin: auto;
@@ -340,7 +357,7 @@ h4 {
         margin-bottom: -9px;
       }
       
-      #searchBar {
+      #textSearchBar {
   width:38%;
   padding:8px 10px;
   font-size: 1.25rem; 
@@ -375,7 +392,7 @@ h4 {
   }
 }
 
-.textSearch__panel {
+&__panel {
   display: none;
   background-color: white;
   overflow: hidden;

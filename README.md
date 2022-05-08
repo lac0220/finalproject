@@ -1,6 +1,6 @@
 # Legendary Quotes - Bootcamp finalproject
 
-The web application generates random famous quotes from an API. Available daily quotes in 3 different categories, feature of text-keyword searching between quotes, alphabetical filtering of authors, contact form submission and mobile-friendly web design with a navigation bar
+The web application generates random famous quotes from an API. Available daily quotes in 3 different categories, text-keyword searching between quotes, alphabetical filtering of authors, contact form submission and mobile-friendly web design with a navigation bar
 
 ## Tech Stack
 

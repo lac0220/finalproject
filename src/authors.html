@@ -18,12 +18,12 @@
 <body>
   <header>
     <nav>
+      <span class="navbar__hamburger__btn">&#9776;</span>  
+      
       <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
       
-      <ul id="sidenav">
-
-        <span class="close__btn" onclick="closeSidenav()">&times;</span>
-        
+      <ul id="sideNav">
+        <span class="navbar__close__btn">&times;</span>
         <li><a href="index.html">Home</a></li>
         <li><a href="dailyquotes.html">Daily Quote</a></li>
         <li>
@@ -39,7 +39,6 @@
         <li><a href="mystory.html">My Story</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
-      <span class="navbar__hamburger" onclick="openSidenav()">&#9776;</span>  
     </nav>
   </header>
 
@@ -48,7 +47,7 @@
 
     <img src="./img/author.jpg" alt="Author">
 
-    <input type="text" name="searchBar" id="searchBar" placeholder="Search for an author"<input/>
+    <input type="text" name="searchBar" id="authorSearchBar" placeholder="Search for an author"<input/>
 
     <ul id="authorSearch" class="authors__items__button__panel"></ul>
   </section>
@@ -72,7 +71,7 @@
     const authorSearch = document.getElementById('authorSearch');
     document.getElementById("authorSearch").style.display = "none";
 
-    const searchBar = document.getElementById('searchBar');
+    const searchBar = document.getElementById('authorSearchBar');
     let allAuthors = [];
 
     searchBar.addEventListener('keyup', (e) => {
@@ -92,7 +91,6 @@
         document.getElementById("authorSearch").style.display = "none";
       }
     });
-
 
     const loadAuthors = async () => {
         try {
@@ -123,12 +121,21 @@
 
   <script>
     // hamburger menu
-    function openSidenav() {
-    document.getElementById("sidenav").style.width = "250px";
+    const navHamburger = document.querySelector(".navbar__hamburger__btn");
+    const sideNav = document.querySelector("#sideNav");
+
+    navHamburger.addEventListener("click", mobileNavOpen);
+
+    function mobileNavOpen() {
+      sideNav.classList.toggle("active");
     }
 
-    function closeSidenav() {
-      document.getElementById("sidenav").style.width = "0";
+    const navClose = document.querySelector(".navbar__close__btn");
+
+    navClose.addEventListener("click", mobileNavClose);
+
+    function mobileNavClose() {
+      sideNav.classList.remove("active");
     }
   </script>
 

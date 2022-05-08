@@ -14,18 +14,23 @@ nav {
         color: $font-color;
         font-family: "Trykker";
         position: relative;
-        left:150px;
+        left: 150px;
         bottom: 4px;
     }
-  
-    .close__btn {
+
+    .navbar__hamburger__btn {
         visibility: hidden;
+        width: 0;
     }
-  
+    
     ul {
         display: flex;
         margin-left: auto;
         padding-right: 100px;
+        .navbar__close__btn {
+             visibility: hidden;
+        }
+
         li {
             margin:auto;
             a {
@@ -75,10 +80,6 @@ nav {
         .navbar__dropdown:hover .navbar__dropdown__box {
             display: block;
         }
-    }
-  
-    .navbar__hamburger {
-      display: none;
     }
 }
   
@@ -130,27 +131,24 @@ nav {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100vw;
-        flex-direction: row-reverse; 
-        margin: auto;   
+        width: 100%;
         z-index: 1; 
+        margin: auto;
         .navbar__logo {
-            margin-right: auto;
             left: 0;
+            margin: auto;
         }
-  
-        .close__btn {
+
+        .navbar__hamburger__btn {
             visibility: visible;
-            position: absolute;
-            top: 30px;
-            right: 110px;
-            font-size: 3.125rem;
-            font-weight:normal;
             color: $font-color2;
-            height: 0px;
-            cursor:pointer;
-        }
-    
+            font-size: 2rem;
+            cursor: pointer;
+            position: absolute;
+            left: 7%;
+            top: 22%;    
+        }   
+      
         ul {
             display: block;
             height: 100vh;
@@ -164,6 +162,18 @@ nav {
             padding: 100px 0 0;
             overflow-x: hidden;
             margin: auto;
+            .navbar__close__btn {
+                visibility: visible;
+                position: absolute;
+                top: 30px;
+                right: 110px;
+                font-size: 3.125rem;
+                font-weight: normal;
+                color: $font-color2;
+                height: 0;
+                cursor:pointer;
+            }
+
             li {
                 padding: 20px 0 0 30px;
                 margin-right: -150px;
@@ -177,23 +187,18 @@ nav {
                     button {
                         font-size: 1.25rem;
                     }
-
+  
                     &__box {
                         left: 50%;
                     }
                 }
             }
         }
-
-        .navbar__hamburger {
-            display: block;
-            color: $font-color2;
-            font-size: 2rem;
-            margin-right: auto;
-            padding-left: 40px;
-            cursor: pointer;
-        }   
     }
+
+    #sideNav.active {
+        width: 250px;
+    }   
 }
   
 @media only screen and (max-width: 500px) {
@@ -203,7 +208,11 @@ nav {
             font-size: 1.563rem;
             margin-top: 6px;
         }
-  
+        
+        .navbar__hamburger__btn {
+          top: 24%;    
+        }   
+      
         ul li {
             a:hover {
                 color: $font-color;
@@ -219,7 +228,7 @@ nav {
                         color: $hover-color;
                     }
                 }
-
+  
                 &__box {
                     left: 12%;
                     a:hover {
@@ -234,4 +243,7 @@ nav {
         } 
     }   
 }
+  
+  
+  
   
