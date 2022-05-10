@@ -43,32 +43,29 @@
   <section class="textSearch">
     <h1>Text Search</h1>
 
-    <img src="./img/textsearch.jpg" alt="Text search">
+    <img src="./img/textsearch.webp" alt="Text search">
 
     <input type="text" name="searchBar" id="textSearchBar" placeholder="Search for a quote"<input/>
-    </div>
 
-    <ul id="textSearch" class="textSearch__panel"></ul>
-
+    <ul id="textSearch"></ul>
   </section>
 
-    <footer>
-      <p>Created by Laszlo Nemeth &copy; 2022</p>
+  <footer>
+    <p>Created by Laszlo Nemeth &copy; 2022</p>
 
-      <div class="footer__menu">
-        <a href="index.html" class="footer__homelink">Home</a>
-        <a href="mystory.html">My Story</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <div class="footer__menu">
+      <a href="index.html" class="footer__homelink">Home</a>
+      <a href="mystory.html">My Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
 
-      <div class="footer__socialmedia">
-        <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
-        <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
-      </div>
-    </footer>
+    <div class="footer__socialmedia">
+      <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
+      <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
+    </div>
+  </footer>
 
   <script>
-
     const textSearch = document.getElementById('textSearch');
     document.getElementById("textSearch").style.display = "none";
 
@@ -114,7 +111,7 @@
             }
                 return `
                 <li>
-                    <h3>${object.text}</h3>
+                    <h3>"${object.text}"</h3>
                     <p>- ${object.author}</p>
                 </li>
             `;
@@ -145,6 +142,5 @@
       sideNav.classList.remove("active");
     }
   </script>
-
 </body>
 </html>

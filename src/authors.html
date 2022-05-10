@@ -45,11 +45,11 @@
   <section class="authors">
     <h1>Authors</h1>
 
-    <img src="./img/author.jpg" alt="Author">
+    <img src="./img/author.webp" alt="Author">
 
     <input type="text" name="searchBar" id="authorSearchBar" placeholder="Search for an author"<input/>
 
-    <ul id="authorSearch" class="authors__items__button__panel"></ul>
+    <ul id="authorSearch"></ul>
   </section>
 
   <footer>
@@ -107,7 +107,7 @@
             .map((object) => {
                 return `
                 <li>
-                    <h3>${object.text}</h3>
+                    <h3>"${object.text}"</h3>
                     <p>- ${object.author}</p>
                 </li>
             `;
@@ -138,6 +138,5 @@
       sideNav.classList.remove("active");
     }
   </script>
-
 </body>
 </html>

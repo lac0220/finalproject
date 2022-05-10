@@ -17,7 +17,7 @@ nav {
         left: 150px;
         bottom: 4px;
     }
-
+  
     .navbar__hamburger__btn {
         visibility: hidden;
         width: 0;
@@ -30,7 +30,7 @@ nav {
         .navbar__close__btn {
              visibility: hidden;
         }
-
+  
         li {
             margin:auto;
             a {
@@ -44,7 +44,7 @@ nav {
         }
   
         .navbar__dropdown {
-            margin: 0px 50px -3px 0;
+            margin: 0 50px -3px 0;
             button {
                 font-weight: bold; 
                 border: none;
@@ -112,7 +112,7 @@ nav {
             }
   
             .navbar__dropdown {
-                margin: 0px 30px 0 0;
+                margin: 0 30px 0 0;
                 button {
                     font-size: 1.375rem;
                 } 
@@ -138,7 +138,7 @@ nav {
             left: 0;
             margin: auto;
         }
-
+  
         .navbar__hamburger__btn {
             visibility: visible;
             color: $font-color2;
@@ -159,21 +159,21 @@ nav {
             left: 0;
             background-color: $background-color;
             transition: 0.4s;
-            padding: 100px 0 0;
+            padding: 80px 0 0;
             overflow-x: hidden;
             margin: auto;
             .navbar__close__btn {
                 visibility: visible;
                 position: absolute;
                 top: 30px;
-                right: 110px;
+                right: 80px;
                 font-size: 3.125rem;
                 font-weight: normal;
                 color: $font-color2;
                 height: 0;
                 cursor:pointer;
             }
-
+  
             li {
                 padding: 20px 0 0 30px;
                 margin-right: -150px;
@@ -183,21 +183,21 @@ nav {
                 }
             
                 .navbar__dropdown {
-                    margin: 0px -50px 0 0;
+                    margin: 0 -50px 0 0;
                     button {
                         font-size: 1.25rem;
                     }
   
                     &__box {
-                        left: 50%;
+                        left: 39%;
                     }
                 }
             }
         }
     }
-
+  
     #sideNav.active {
-        width: 250px;
+        width: 200px;
     }   
 }
   
@@ -243,6 +243,20 @@ nav {
         } 
     }   
 }
+
+@media only screen and (max-width: 360px) {
+  
+    nav { 
+        .navbar__logo {
+            font-size: 1.4rem;
+            margin-top: 8px;
+        }      
+    }   
+}
+  
+  
+  
+  
   
   
   

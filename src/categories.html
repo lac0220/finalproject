@@ -15,7 +15,6 @@
 </head>
 
 <body>
-
   <header>
     <nav>
       <span class="navbar__hamburger__btn">&#9776;</span>  
@@ -46,45 +45,38 @@
     <h1>Categories</h1>
 
     <div class="categories__header">
-      <img src="./img/search.jpg" class="search_img" alt="Search">
+      <img src="./img/search.webp" class="search_img" alt="Search">
       <div class="categories__header__box">
-        <h3>There are many different types of quotes. These categories help you to find the one that best suits you.</h3>
+        <h3>These categories help you to find the one that best suits you</h3>
       </div>
     </div>
 
     <div class="categories__items">
-    <button class="categories__items__button">Love</button>
-    <div class="categories__items__button__panel">
-      <ul id="textSearch1" class="textSearch__panel1"></ul>
+      <button class="categories__items__button">LOVE</button>
+      <div class="categories__items__button__panel">
+        <ul id="categoriesSearch" class="categoriesSearch__panel"></ul>
+      </div>
+
+      <button class="categories__items__button">FORGIVENESS</button>
+      <div class="categories__items__button__panel">
+        <ul id="categoriesSearch1" class="categoriesSearch__panel"></ul>
+      </div>
+
+      <button class="categories__items__button">SUCCESS</button>
+      <div class="categories__items__button__panel">
+        <ul id="categoriesSearch2" class="categoriesSearch__panel"></ul>
+      </div>
+
+      <button class="categories__items__button">FAILURE</button>
+      <div class="categories__items__button__panel">
+        <ul id="categoriesSearch3" class="categoriesSearch__panel"></ul>
+      </div>
+
+      <button class="categories__items__button">HEALTH</button>
+      <div class="categories__items__button__panel">
+        <ul id="categoriesSearch4" class="categoriesSearch__panel"></ul>
+      </div>
     </div>
-
-    <button class="categories__items__button">Forgiveness</button>
-    <div class="categories__items__button__panel">
-      <ul id="textSearch2" class="textSearch__panel1"></ul>
-  
-    </div>
-
-    <button class="categories__items__button">Success</button>
-    <div class="categories__items__button__panel">
-    
-    </div>
-
-    <button class="categories__items__button">Failure</button>
-    <div class="categories__items__button__panel">
-    
-    </div>
-
-    <button class="categories__items__button">Health</button>
-    <div class="categories__items__button__panel">
-    
-    </div>
-    </div>
-    </div
-
-</div>
-
-
-
   </section>
 
   <footer>
@@ -103,10 +95,11 @@
   </footer>
 
   <script>
-
-const textSearch = document.getElementById('textSearch1');
-const textSearch1 = document.getElementById('textSearch2');
-
+    const categoriesSearch = document.getElementById('categoriesSearch');
+    const categoriesSearch1 = document.getElementById('categoriesSearch1');
+    const categoriesSearch2 = document.getElementById('categoriesSearch2');
+    const categoriesSearch3 = document.getElementById('categoriesSearch3');
+    const categoriesSearch4 = document.getElementById('categoriesSearch4');
 
     let allQuotes = [];
 
@@ -115,72 +108,132 @@ const textSearch1 = document.getElementById('textSearch2');
             const res = await fetch('https://type.fit/api/quotes');
             allQuotes = await res.json();
             displayQuotes(allQuotes);
+            displayQuotes1(allQuotes);
+            displayQuotes2(allQuotes);
+            displayQuotes3(allQuotes);
+            displayQuotes4(allQuotes);
         } catch (err) {
             console.error(err);
         }
     };
-
-    const displayQuotes = (objects) => {
-      const theWord  = "love";
-        const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord) !== -1)       
-                return `
-                <li>
-                    <h3>${object.text}</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            textSearch.innerHTML = htmlString;
-
-
-          const theWord1  = "forgiveness";
-          const htmlString1 = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord1) !== -1) 
-                return `
-                <li>
-                    <h3>${object.text}</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            textSearch1.innerHTML = htmlString1;
-
-
-    };
     loadQuotes();
+
+    var displayQuotes = (objects) => {
+      const theWord  = "Love";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch.innerHTML = htmlString;
+    };
+
+    var displayQuotes1 = (objects) => {
+      const theWord1  = "forgive";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord1) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch1.innerHTML = htmlString;
+    };
     
+    var displayQuotes2 = (objects) => {
+      const theWord2  = "success";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord2) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch2.innerHTML = htmlString;
+          };
 
-  // categories
-  const categoriesPanel = document.getElementsByClassName("categories__items__button");
-  let i;
+    var displayQuotes3 = (objects) => {
+      const theWord3  = "failure";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord3) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch3.innerHTML = htmlString;
+    };
 
-  for (i = 0; i < categoriesPanel.length; i++) {
-    categoriesPanel[i].addEventListener("click", function() {
-      this.classList.toggle("active__categories__button");
+    var displayQuotes4 = (objects) => {
+      const theWord4  = "health";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord4) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch4.innerHTML = htmlString;
+    };
+      
+    // hiding and showing the panel
+    const categoriesPanel = document.getElementsByClassName("categories__items__button");
 
-      /* Toggle between hiding and showing the panel */
-      let panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
+    let i;
+    for (i = 0; i < categoriesPanel.length; i++) {
+      categoriesPanel[i].addEventListener("click", function() {
+        this.classList.toggle("active__categories__button");
 
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
   </script>
 
   <script>
