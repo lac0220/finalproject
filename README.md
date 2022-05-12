@@ -9,9 +9,18 @@
 - JavaScript
 
 [API:](https://type.fit/api/quotes) Free API - Inspirational quotes 
+
+## Setup
+To run this project locally:
+
+```
+$ cd ../lorem
+$ npm install
+$ gulp watch
+```
 ## Version
 
-1.0 - 13/05/2022 - Publishing of the website
+1.0 - 12/05/2022 - Publishing of the website
 ## Author
 
 <b>Laszlo Nemeth</b>
