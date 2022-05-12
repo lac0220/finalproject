@@ -1,3 +1,4 @@
+$font-family: "Trykker"; 
 $font-color:white;
 $font-color2:#d1e8e2;
 $hover-color:rgb(56, 11, 11);
@@ -12,7 +13,7 @@ nav {
     .navbar__logo {
         font-size: 2.188rem;
         color: $font-color;
-        font-family: "Trykker";
+        font-family: $font-family;
         position: relative;
         left: 150px;
         bottom: 4px;

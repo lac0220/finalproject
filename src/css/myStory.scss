@@ -1,10 +1,9 @@
 $font-family: "Trykker"; 
 $font-color:white;
-$font-color2:#d1e8e2;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
-.myStory {
+.mystory {
     margin: auto;
     text-align: center;
     padding-bottom: 40px;
@@ -31,15 +30,15 @@ $background-color:#116466;
         border-radius: 10%;
         padding-top: 5px;
         img {
-            max-width:100%;
+            max-width: 100%;
             height: auto;
             border-radius: 50%;
         }
-
+  
         h2, h3 {
             color: $font-color;
         }
-
+  
         h3 {
             padding-bottom: 10px;
         }
@@ -65,20 +64,20 @@ $background-color:#116466;
   
 @media only screen and (max-width: 1200px) {
   
-    .myStory { 
+    .mystory { 
         h1 {
             font-size: 2rem;
         }
-
+  
         p {
             width: 90%;
         }
-
+  
         &__box {
             h2 {
                 font-size: 1.7rem;
             }
-
+  
             h3 {
                 font-size: 1.4rem;
             }
@@ -93,48 +92,44 @@ $background-color:#116466;
 }
   
 @media only screen and (max-width: 1000px) {
-
-    .myStory {
+  
+    .mystory {
         padding: 25px 0 20px;
         h1 {
             font-size: 1.6rem;
             padding: 10px 0;
         }
-
+  
         &__box {
             margin: 10px auto;
         }
     }
 }
-
+  
 @media only screen and (max-width: 500px) {
     
-    .myStory {
+    .mystory {
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
         }
-
+  
         &__box {
-            max-width: 300px;
-            img {
-                max-width: 100%;
-            }
-
+            width: 90%;
             h2 {
                 font-size: 1.4rem;
             }
-
+  
             h3 {
                 font-size: 1.2rem;
             }
-
+  
             &__contact a {
                 font-size: 1.2rem;
                 &:hover {
                     color: $font-color;
                 }
-
+  
                 &:active {
                     color: $hover-color;
                 }
@@ -142,3 +137,19 @@ $background-color:#116466;
         }
     }
 }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+     

@@ -1,0 +1,213 @@
+$font-family: "Trykker"; 
+$font-color:white;
+$hover-color:rgb(56, 11, 11);
+$background-color:#116466;
+
+.textsearch {
+    margin: auto;
+    text-align: center;
+    padding-bottom: 40px;
+    h1 {
+        font-size: 2.4rem;
+        margin: auto auto 30px; 
+        padding: 10px 0 15px;
+        width: 100%;     
+        color: $font-color;
+        background-color: $hover-color;
+        font-family: $font-family;
+    }
+
+    img {
+        margin: auto;
+        display: block;
+        max-height: 630px;
+        width: 50%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #textSearchBar {
+        width: 50%;
+        padding: 8px 10px;
+        font-size: 1.6rem; 
+        border: 5px solid $background-color; 
+        font-family: inherit;
+        margin:auto;
+        display: block;
+        outline: none;
+    }
+
+    #textSearch {
+        width: 50%;
+        margin: auto;
+        padding-bottom: 30px;
+        background-color: $background-color;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+        li {
+            border: solid 1px $hover-color;
+            font-family: $font-family;
+            font-weight: bold;
+        }
+
+        h3 {
+            color: lightgreen;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 20px 10px;
+            width: 95%;
+            font-style: italic;
+        }
+
+        p {
+            color: $font-color;
+            background-color: $hover-color;
+            font-size: 1.6rem;
+            text-align: center;
+            padding: 10px;
+            width: 60%;
+            border-top-left-radius: 50px;
+            margin-left: 40%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+
+    .textsearch {
+        img {
+            width: 70%;
+        }
+
+        #textSearchBar {
+            width: 70%;
+            font-size: 1.4rem; 
+        }
+
+        #textSearch {
+            width: 70%;
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                padding: 8px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .textsearch {
+        h1 {
+            font-size: 2rem;
+        }
+
+        #textSearchBar {
+            font-size: 1.25rem; 
+        }
+
+        #textSearch {
+            h3 {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .textsearch {
+        padding: 25px 0 20px;
+        h1 {
+            font-size: 1.6rem;
+            padding: 10px 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 820px) {
+
+    .textsearch {
+        #textSearchBar {
+            width: 70%;
+            font-size: 1.2rem; 
+        }
+
+        #textSearch {
+            h3 {
+                font-size: 1.2rem;
+            }
+            
+            p {
+                font-size: 1.2rem;
+                padding: 6px;
+                width: 70%;
+                margin-left: 30%;   
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+
+    .textsearch {
+        img {
+            width: 90%;
+        }
+
+        #textSearchBar {
+            width: 90%;
+        }
+
+        #textSearch {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .textsearch {    
+        h1 {
+            font-size: 1.25rem;
+            margin: auto auto 20px;
+        }
+
+        #textSearchBar {
+            font-size: 1rem; 
+        }
+
+        #textSearch {
+            h3 {
+                font-size: 1rem;
+                padding: 10px;
+            }
+            
+            p {
+                font-size: 1rem;
+                width: 100%;
+                margin-left: 0;
+                border-top-left-radius: 0;   
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

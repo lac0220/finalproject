@@ -1,6 +1,6 @@
 # Legendary Quotes - Bootcamp finalproject
 
-The web application generates random famous quotes from an API. Available daily quotes in 3 different categories, text-keyword searching between quotes, alphabetical filtering of authors, contact form submission and mobile-friendly web design with a navigation bar
+​​The web application uses an API to generate random and daily inspirational quotes. It delivers 5 different quote categories, alphabetical filtering of authors, text-keyword searching between quotes, contact form submission, and mobile-friendly web design with a navigation bar
 
 ## Tech Stack
 
@@ -11,7 +11,7 @@ The web application generates random famous quotes from an API. Available daily 
 [API:](https://type.fit/api/quotes) Free API - Inspirational quotes 
 ## Version
 
-*1.0* 
+1.0 - 13/05/2022 - Publishing of the website
 ## Author
 
 <b>Laszlo Nemeth</b>

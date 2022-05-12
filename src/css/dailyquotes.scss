@@ -1,10 +1,9 @@
 $font-family: "Trykker"; 
 $font-color:white;
-$font-color2:#d1e8e2;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
-.dailyQuotes {
+.dailyquotes {
     margin: auto;
     text-align: center;
     padding-bottom: 40px;
@@ -113,7 +112,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 1350px) {
 
-    .dailyQuotes {
+    .dailyquotes {
         &__box {
             #daily__quote, #daily__quote1, #daily__quote2 {
                 font-size: 1.4rem;
@@ -128,7 +127,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 1200px) {
     
-    .dailyQuotes {
+    .dailyquotes {
         h1 {
             font-size: 2rem;
         }
@@ -182,7 +181,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 1000px) {
 
-    .dailyQuotes {
+    .dailyquotes {
         padding: 25px 0 20px;
 
         h1 {
@@ -198,7 +197,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 820px) {
 
-    .dailyQuotes {
+    .dailyquotes {
         &__box {
             #daily__quote, #daily__quote1, #daily__quote2 {
                 font-size: 1.2rem;
@@ -215,7 +214,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 645px) {
 
-    .dailyQuotes {
+    .dailyquotes {
         &__box {
             img {
                 max-width: 100%;
@@ -238,7 +237,7 @@ $background-color:#116466;
 
 @media only screen and (max-width: 500px) {
 
-    .dailyQuotes {
+    .dailyquotes {
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
