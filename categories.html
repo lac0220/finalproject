@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" href="/css/reset.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
+    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
+    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+
+    <title>Categories - Legendary Quotes</title>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <span class="navbar__hamburger__btn">&#9776;</span>  
+      
+      <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
+      
+      <ul id="sideNav">
+        <span class="navbar__close__btn">&times;</span>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li>
+          <div class="navbar__dropdown">
+            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+            <div class="navbar__dropdown__box">
+              <a href="categories.html">Categories</a>
+              <a href="authors.html">Authors</a>
+              <a href="textsearch.html">Text Search</a>
+            </div>  
+          </div>
+        </li>
+        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="categories">
+    <h1>Categories</h1>
+
+    <div class="categories__header">
+      <img src="./img/search.webp" class="search_img" alt="Search">
+      <div class="categories__header__box">
+        <h3>These categories help you to find the quote that best suits you</h3>
+      </div>
+    </div>
+
+    <button class="categories__button">LOVE</button>
+    <div class="categories__button__panel">
+      <ul id="categoriesSearch" class="categoriesSearch__panel"></ul>
+    </div>
+
+    <button class="categories__button">FORGIVENESS</button>
+    <div class="categories__button__panel">
+      <ul id="categoriesSearch1" class="categoriesSearch__panel"></ul>
+    </div>
+
+    <button class="categories__button">SUCCESS</button>
+    <div class="categories__button__panel">
+      <ul id="categoriesSearch2" class="categoriesSearch__panel"></ul>
+    </div>
+
+    <button class="categories__button">FAILURE</button>
+    <div class="categories__button__panel">
+      <ul id="categoriesSearch3" class="categoriesSearch__panel"></ul>
+    </div>
+
+    <button class="categories__button">HEALTH</button>
+    <div class="categories__button__panel">
+      <ul id="categoriesSearch4" class="categoriesSearch__panel"></ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Created by Laszlo Nemeth &copy; 2022</p>
+
+    <div class="footer__menu">
+      <a href="index.html" class="footer__homelink">Home</a>
+      <a href="mystory.html">My Story</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="footer__socialmedia">
+      <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
+      <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
+    </div>
+  </footer>
+
+  <script>
+    const categoriesSearch = document.getElementById('categoriesSearch');
+    const categoriesSearch1 = document.getElementById('categoriesSearch1');
+    const categoriesSearch2 = document.getElementById('categoriesSearch2');
+    const categoriesSearch3 = document.getElementById('categoriesSearch3');
+    const categoriesSearch4 = document.getElementById('categoriesSearch4');
+
+    let allQuotes = [];
+
+    const loadQuotes = async () => {
+        try {
+            const res = await fetch('https://type.fit/api/quotes');
+            allQuotes = await res.json();
+            displayQuotes(allQuotes);
+            displayQuotes1(allQuotes);
+            displayQuotes2(allQuotes);
+            displayQuotes3(allQuotes);
+            displayQuotes4(allQuotes);
+        } catch (err) {
+            console.error(err);
+        }
+    };
+    loadQuotes();
+
+    var displayQuotes = (objects) => {
+      const theWord  = "Love";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch.innerHTML = htmlString;
+    };
+
+    var displayQuotes1 = (objects) => {
+      const theWord1  = "forgive";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord1) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch1.innerHTML = htmlString;
+    };
+    
+    var displayQuotes2 = (objects) => {
+      const theWord2  = "success";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord2) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch2.innerHTML = htmlString;
+          };
+
+    var displayQuotes3 = (objects) => {
+      const theWord3  = "failure";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord3) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch3.innerHTML = htmlString;
+    };
+
+    var displayQuotes4 = (objects) => {
+      const theWord4  = "health";
+      const htmlString = objects
+            .map((object) => {
+               if (object.author == null) {
+                object.author = "Anonymous author";
+            } 
+            if
+            (object.text.indexOf(theWord4) !== -1)   
+                return `
+                <li>
+                    <h3>"${object.text}"</h3>
+                    <p>- ${object.author}</p>
+                </li>
+            `;
+            })
+            .join('');
+            categoriesSearch4.innerHTML = htmlString;
+    };
+      
+    // hiding and showing the panel
+    const categoriesPanel = document.getElementsByClassName("categories__button");
+
+    let i;
+    for (i = 0; i < categoriesPanel.length; i++) {
+      categoriesPanel[i].addEventListener("click", function() {
+        this.classList.toggle("active__categories__button");
+
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
+
+  <script>
+
+    const navHamburger = document.querySelector(".navbar__hamburger__btn");
+    const sideNav = document.querySelector("#sideNav");
+
+    navHamburger.addEventListener("click", mobileNavOpen);
+
+    function mobileNavOpen() {
+      sideNav.classList.toggle("active");
+    }
+
+    const navClose = document.querySelector(".navbar__close__btn");
+
+    navClose.addEventListener("click", mobileNavClose);
+
+    function mobileNavClose() {
+      sideNav.classList.remove("active");
+    }
+  </script>
+</body>
+</html>
