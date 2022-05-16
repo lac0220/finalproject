@@ -77,7 +77,7 @@ footer .footer__socialmedia a:active {
     font-size: 0.938rem;
   }
   footer .footer__menu a {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   footer .footer__menu a:hover {
     color: white;
@@ -86,7 +86,8 @@ footer .footer__socialmedia a:active {
     color: #380b0b;
   }
   footer .footer__socialmedia a {
-    font-size: 1.875rem;
+    font-size: 1.6rem;
+    padding: 3px 10px 0;
   }
   footer .footer__socialmedia a:hover {
     transform: none;
@@ -145,19 +146,24 @@ nav ul .navbar__dropdown button {
 nav ul .navbar__dropdown button:hover {
   color: #380b0b;
 }
+nav ul .navbar__dropdown button i {
+  padding: 0 10px;
+}
 nav ul .navbar__dropdown__box {
   display: none;
   position: absolute;
   background-color: green;
   z-index: 1;
+  border-radius: 10px;
 }
 nav ul .navbar__dropdown__box a {
   color: white;
-  padding: 7px 15px;
+  padding: 5px 5px 5px 10px;
   display: block;
   text-align: left;
   font-size: 1.4rem;
   margin: auto;
+  border-radius: 10px;
 }
 nav ul .navbar__dropdown__box a:hover {
   background-color: lightgreen;
@@ -192,6 +198,7 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
   }
   nav ul li .navbar__dropdown__box a {
     font-size: 1.125rem;
+    padding: 3px 5px 3px 10px;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -246,14 +253,14 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     margin-right: -150px;
   }
   nav ul li a {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     margin-right: 0;
   }
   nav ul li .navbar__dropdown {
     margin: 0 -50px 0 0;
   }
   nav ul li .navbar__dropdown button {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   nav ul li .navbar__dropdown__box {
     left: 39%;
@@ -281,13 +288,19 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     color: white;
   }
   nav ul li .navbar__dropdown button:hover:active {
-    color: #380b0b;
+    background-color: red;
   }
   nav ul li .navbar__dropdown__box {
-    left: 12%;
+    left: 15%;
+  }
+  nav ul li .navbar__dropdown__box a {
+    padding: 3px 5px 3px 10px;
   }
   nav ul li .navbar__dropdown__box a:hover {
     background-color: green;
+  }
+  nav ul li .navbar__dropdown__box a:active {
+    background-color: lightgreen;
   }
   nav .navbar__hamburger {
     padding-left: 20px;
@@ -396,17 +409,16 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     opacity: 1;
   }
 }
-.home .home__slides {
-  max-width: 1000px;
+.home__slides {
+  max-width: 30%;
   margin: auto;
   padding-bottom: 10px;
 }
-.home .home__slides img {
-  width: 50%;
-  height: 50%;
-  border-radius: 10px;
+.home__slides img {
+  border-radius: 20px;
+  width: 100%;
 }
-.home .home__slides__dot2 {
+.home__slides__dot2 {
   height: 15px;
   width: 15px;
   margin: 0 2px 10px;
@@ -415,7 +427,7 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
   transition: background-color 0.6s ease;
   display: inline-block;
 }
-.home .home__slides2 {
+.home__slides2 {
   font-family: "Trykker";
   background-color: #116466;
   width: 70%;
@@ -426,16 +438,17 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
   position: relative;
   height: 6rem;
 }
-.home .home__slides2 h2 {
+.home__slides2 h2 {
   font-size: 1.563rem;
   color: white;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
+  width: 90%;
+  hyphens: auto;
 }
-.home .home__slides2__author {
+.home__slides2__author {
   color: white;
   background-color: #380b0b;
   font-weight: bold;
@@ -484,10 +497,13 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     font-size: 1.4rem;
     height: 3.5rem;
   }
-  .home .home__slides2 h2 {
+  .home__slides {
+    max-width: 40%;
+  }
+  .home__slides2 h2 {
     font-size: 1.4rem;
   }
-  .home .home__slides2__author {
+  .home__slides2__author {
     font-size: 1.4rem;
     height: 3.5rem;
   }
@@ -521,15 +537,15 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     padding: 10px 0;
     height: 3.3rem;
   }
-  .home .home__slides2 {
+  .home__slides2 {
     width: 90%;
     height: 5rem;
     margin: auto auto 60px auto;
   }
-  .home .home__slides2 h2 {
+  .home__slides2 h2 {
     font-size: 1.25rem;
   }
-  .home .home__slides2__author {
+  .home__slides2__author {
     font-size: 1.25rem;
     height: 3.3rem;
   }
@@ -548,6 +564,9 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
   .home h2:nth-child(6) {
     font-size: 1.4rem;
   }
+  .home__slides {
+    max-width: 50%;
+  }
 }
 @media only screen and (max-width: 820px) {
   .home__random {
@@ -562,18 +581,19 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     margin-left: 25%;
     height: 3.2rem;
   }
-  .home .home__slides {
+  .home__slides {
     padding-bottom: 0;
+    max-width: 65%;
   }
-  .home .home__slides__dot2 {
+  .home__slides__dot2 {
     height: 10px;
     width: 10px;
     margin: 0 2px 5px;
   }
-  .home .home__slides2 h2 {
+  .home__slides2 h2 {
     font-size: 1.2rem;
   }
-  .home .home__slides2__author {
+  .home__slides2__author {
     font-size: 1.2rem;
     width: 75%;
     margin-left: 25%;
@@ -608,13 +628,16 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     margin: auto;
     height: 2.8rem;
   }
-  .home .home__slides2 {
+  .home__slides {
+    max-width: 90%;
+  }
+  .home__slides2 {
     border-bottom-left-radius: 0;
   }
-  .home .home__slides2 h2 {
+  .home__slides2 h2 {
     font-size: 1rem;
   }
-  .home .home__slides2__author {
+  .home__slides2__author {
     font-size: 1rem;
     width: 100%;
     margin: auto;
@@ -1659,7 +1682,7 @@ html, body {
   font-family: "Times New Roman", Times, serif;
   height: 100vh;
   scroll-behavior: smooth;
-  background-image: url("/img/bground.webp");
+  background-image: url("../img/bground.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

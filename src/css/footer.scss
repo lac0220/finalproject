@@ -88,7 +88,7 @@ footer {
 
         .footer__menu  {
             a {
-                font-size: 1.25rem;
+                font-size: 1.2rem;
                 &:hover {
                     color: $font-color;
                 }
@@ -101,7 +101,8 @@ footer {
 
         .footer__socialmedia {
             a {
-                font-size: 1.875rem;
+                font-size: 1.6rem;
+                padding: 3px 10px 0;
                 &:hover {
                     transform: none;
                 }
