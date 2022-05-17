@@ -66,6 +66,7 @@ footer {
 }
 
 @media screen and (max-width: 1250px) { 
+
     footer {
         flex-direction: column-reverse;
         padding: 5px 0;
@@ -80,26 +81,29 @@ footer {
 }
 
 @media screen and (max-width: 500px) { 
+    
     footer {
-        padding: 0 0 5px;
+        padding: 0;
         p {
             font-size: 0.938rem;
+            padding: 5px 0;
         }
-
+  
         .footer__menu  {
             a {
                 font-size: 1.2rem;
                 &:hover {
                     color: $font-color;
                 }
-
+  
                 &:active {
                     color: $hover-color;
                 }
             }
         }
-
+  
         .footer__socialmedia {
+            padding: 5px 0;
             a {
                 font-size: 1.6rem;
                 padding: 3px 10px 0;
@@ -110,3 +114,8 @@ footer {
         }   
     }
 }
+  
+  
+  
+  
+  

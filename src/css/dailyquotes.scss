@@ -114,11 +114,7 @@ $background-color:#116466;
 
     .dailyquotes {
         &__box {
-            #daily__quote, #daily__quote1, #daily__quote2 {
-                font-size: 1.4rem;
-            }
-        
-            #daily__author, #daily__author1, #daily__author2 {
+            #daily__quote, #daily__quote1, #daily__quote2, #daily__author, #daily__author1, #daily__author2 {
                 font-size: 1.4rem;
             }
         }
@@ -183,7 +179,6 @@ $background-color:#116466;
 
     .dailyquotes {
         padding: 25px 0 20px;
-
         h1 {
             font-size: 1.6rem;
             padding: 10px 0;
@@ -238,6 +233,7 @@ $background-color:#116466;
 @media only screen and (max-width: 500px) {
 
     .dailyquotes {
+        padding: 0 0 20px;
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
@@ -249,11 +245,7 @@ $background-color:#116466;
                 padding: 10px 0;
             }
         
-            #daily__quote, #daily__quote1, #daily__quote2 {
-                font-size: 1rem;
-            }
-
-            #daily__author, #daily__author1, #daily__author2 {
+            #daily__quote, #daily__quote1, #daily__quote2, #daily__author, #daily__author1, #daily__author2 {
                 font-size: 1rem;
             }
         }

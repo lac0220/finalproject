@@ -183,10 +183,8 @@ $background-color:#116466;
 @media only screen and (max-width: 1350px) {
   
     .home {
-        &__random {
-            #quote {
-                font-size: 1.4rem;
-            } 
+        &__random #quote {
+            font-size: 1.4rem;
         }
 
         #author {
@@ -274,11 +272,7 @@ $background-color:#116466;
             padding: 10px 0;
         }
   
-        h2:nth-child(2) {
-            font-size: 1.4rem;
-        }
-  
-        h2:nth-child(6) {
+        h2:nth-child(2), h2:nth-child(6) {
             font-size: 1.4rem;
         }
         
@@ -338,21 +332,18 @@ $background-color:#116466;
             height: 9.5rem;
         }
     }
-}
+} 
   
 @media only screen and (max-width: 500px) {
     
     .home {
+        padding: 0 0 20px;
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
         }
   
-        h2:nth-child(2) {
-            font-size: 1.1rem;
-        }
-  
-        h2:nth-child(6) {
+        h2:nth-child(2), h2:nth-child(6) {
             font-size: 1.1rem;
         }
   
@@ -369,7 +360,7 @@ $background-color:#116466;
             margin: auto;
             height: 2.8rem;
         }
-
+  
         &__slides { 
             max-width: 90%;
         }
@@ -406,4 +397,5 @@ $background-color:#116466;
         }
     }
 }
+    
     

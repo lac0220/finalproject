@@ -10,6 +10,7 @@ nav {
     padding: 20px 0;
     background-color: $background-color;
     font-weight: bold;
+    border-bottom: solid 2px $font-color;
     .navbar__logo {
         font-size: 2.188rem;
         color: $font-color;
@@ -59,7 +60,7 @@ nav {
                 }
                 
                 i {
-                  padding: 0 10px;
+                    padding: 0 10px;
                 }
             }
     
@@ -197,7 +198,10 @@ nav {
                     }
   
                     &__box {
-                        left: 39%;
+                        left: 25%;
+                        a {
+                            padding: 3px 12px 3px 12px;
+                        }
                     }
                 }
             }
@@ -210,15 +214,15 @@ nav {
 }
   
 @media only screen and (max-width: 500px) {
-  
+    
     nav { 
+        padding: 8px 0;
         .navbar__logo {
             font-size: 1.563rem;
-            margin-top: 6px;
         }
         
         .navbar__hamburger__btn {
-          top: 24%;    
+            top: 3%;    
         }   
       
         ul li {
@@ -233,28 +237,24 @@ nav {
                 button:hover {
                     color: $font-color;
                     &:active {
-                        background-color: red;
+                        color: $font-color;
                     }
                 }
   
                 &__box {
                     left: 15%;
                     a {
-                      padding: 3px 5px 3px 10px;
-                      &:hover {
-                          background-color: green;
-                      } 
-
-                      &:active {
-                        background-color: lightgreen;
-                      }   
+                        padding: 3px 5px 3px 10px;
+                        &:hover {
+                            background-color: green;
+                        } 
+  
+                        &:active {
+                            background-color: lightgreen;
+                        }   
+                    } 
                 } 
-              } 
-          }
-        } 
-    
-        .navbar__hamburger {
-            padding-left: 20px;
+            }
         } 
     }   
 }
@@ -262,10 +262,10 @@ nav {
 @media only screen and (max-width: 360px) {
   
     nav { 
+        padding: 9px 0;
         .navbar__logo {
             font-size: 1.4rem;
-            margin-top: 8px;
+            margin-top: 2px;
         }      
     }   
 }
-  

@@ -82,10 +82,8 @@ $background-color:#116466;
                 font-size: 1.4rem;
             }
             
-            &__contact {
-                a {
-                    font-size: 1.4rem;
-                }
+            &__contact a {
+                font-size: 1.4rem;
             }
         }
     }
@@ -102,6 +100,7 @@ $background-color:#116466;
   
         &__box {
             margin: 10px auto;
+            max-width: 300px;
         }
     }
 }
@@ -109,13 +108,14 @@ $background-color:#116466;
 @media only screen and (max-width: 500px) {
     
     .mystory {
+        padding: 0 0 20px;
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
         }
   
         &__box {
-            width: 90%;
+            max-width: 250px;
             h2 {
                 font-size: 1.4rem;
             }
@@ -138,18 +138,3 @@ $background-color:#116466;
     }
 }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-     

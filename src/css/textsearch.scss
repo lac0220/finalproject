@@ -111,11 +111,7 @@ $background-color:#116466;
         }
 
         #textSearch {
-            h3 {
-                font-size: 1.25rem;
-            }
-
-            p {
+            h3, p {
                 font-size: 1.25rem;
             }
         }
@@ -159,15 +155,7 @@ $background-color:#116466;
 @media only screen and (max-width: 640px) {
 
     .textsearch {
-        img {
-            width: 90%;
-        }
-
-        #textSearchBar {
-            width: 90%;
-        }
-
-        #textSearch {
+        img, #textSearchBar, #textSearch {
             width: 90%;
         }
     }
@@ -175,7 +163,8 @@ $background-color:#116466;
 
 @media only screen and (max-width: 500px) {
 
-    .textsearch {    
+    .textsearch {  
+        padding: 0 0 20px;  
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;

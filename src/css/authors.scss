@@ -109,11 +109,7 @@ $background-color:#116466;
         }
 
         #authorSearch {
-            h3 {
-                font-size: 1.25rem;
-            }
-
-            p {
+            h3, p {
                 font-size: 1.25rem;
             }
         }
@@ -157,15 +153,7 @@ $background-color:#116466;
 @media only screen and (max-width: 640px) {
 
     .authors {
-        img {
-            width: 90%;
-        }
-
-        #authorSearchBar {
-            width: 90%;
-        }
-
-        #authorSearch {
+        img, #authorSearchBar, #authorSearch {
             width: 90%;
         }
     }
@@ -173,7 +161,8 @@ $background-color:#116466;
 
 @media only screen and (max-width: 500px) {
 
-    .authors {    
+    .authors {  
+        padding: 0 0 20px;
         h1 {
             font-size: 1.25rem;
             margin: auto auto 20px;
