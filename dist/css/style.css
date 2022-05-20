@@ -1466,94 +1466,6 @@ nav ul .navbar__dropdown:hover .navbar__dropdown__box {
     color: #380b0b;
   }
 }
-.message h1, .message p {
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-.message h1 {
-  padding: 0 30px 180px;
-  font-size: 2.5rem;
-}
-.message p {
-  font-size: 1.875rem;
-}
-.message a {
-  color: #116466;
-}
-.message a:hover {
-  color: lightblue;
-}
-
-@media only screen and (max-width: 500px) {
-  .message h1 {
-    font-size: 1.5rem;
-    padding: 0 10px 100px;
-  }
-  .message p {
-    font-size: 1.125rem;
-  }
-  .message a:hover {
-    color: #116466;
-  }
-  .message a:active {
-    color: lightblue;
-  }
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 100%;
-}
-
-body {
-  font-size: 1.25rem;
-}
-
-html, body {
-  line-height: 1.5;
-  font-family: "Times New Roman", Times, serif;
-  height: 100vh;
-  scroll-behavior: smooth;
-  background: url("../img/bground.webp") center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-section p {
-  text-align: left;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-@media screen and (max-width: 1000px) {
-  html, body {
-    margin-top: 28px;
-  }
-}
-@media screen and (max-width: 1000px) {
-  section p {
-    font-size: 1.125rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  section p {
-    font-size: 1rem;
-  }
-}
 .contact {
   margin: auto;
   text-align: center;
@@ -1706,6 +1618,95 @@ a {
   .contact form input[type=submit]:hover:active {
     background-color: #d1e8e2;
     color: #380b0b;
+  }
+}
+.message h1, .message p {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.message h1 {
+  padding: 0 30px 180px;
+  font-size: 2.5rem;
+}
+.message p {
+  font-size: 1.875rem;
+}
+.message a {
+  color: #116466;
+}
+.message a:hover {
+  color: lightblue;
+}
+
+@media only screen and (max-width: 500px) {
+  .message h1 {
+    font-size: 1.5rem;
+    padding: 0 10px 100px;
+  }
+  .message p {
+    font-size: 1.125rem;
+  }
+  .message a:hover {
+    color: #116466;
+  }
+  .message a:active {
+    color: lightblue;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1.25rem;
+}
+
+html, body {
+  line-height: 1.5;
+  font-family: "Times New Roman", Times, serif;
+  height: 100vh;
+  scroll-behavior: smooth;
+  background: url("../img/bground.webp") white center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+section p {
+  text-align: left;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1000px) {
+  html, body {
+    margin-top: 28px;
+    background-attachment: scroll;
+    background-size: 1000rem;
+  }
+
+  section p {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  section p {
+    font-size: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
