@@ -9,61 +9,60 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
     <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
     <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-
     <title>Daily Quotes - Legendary Quotes</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <span class="navbar__hamburger__btn">&#9776;</span>  
+      <span class="navbar-hamburger__btn">&#9776;</span>  
       
-      <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
+      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
       
-      <ul id="sideNav">
-        <span class="navbar__close__btn">&times;</span>
+      <ul id="side-nav">
+        <span class="navbar-close__btn">&times;</span>
         <li><a href="index.html">Home</a></li>
-        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li><a href="daily-quotes.html">Daily Quote</a></li>
         <li>
-          <div class="navbar__dropdown">
+          <div class="navbar-dropdown">
             <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar__dropdown__box">
+            <div class="navbar-dropdown__box">
               <a href="categories.html">Categories</a>
               <a href="authors.html">Authors</a>
-              <a href="textsearch.html">Text Search</a>
+              <a href="text-search.html">Text Search</a>
             </div>  
           </div>
         </li>
-        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="my-story.html">My Story</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="dailyquotes">
+  <section class="daily-quotes">
     <h1>Daily Quotes</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.<p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.<p>
 
-    <div class="dailyquotes__box">
-      <div class="dailyquotes__box__love">
+    <div class="daily-quotes__box">
+      <div class="daily-quotes__box__love">
         <h2>Love Quote Of The Day</h2>
         <img src="./img/love.webp" alt="Love">
-        <div id="daily__quote"></div>
-        <div id="daily__author"></div>
+        <div id="daily-quote"></div>
+        <div id="daily-author"></div>
       </div>
 
-      <div class="dailyquotes__box__success">
+      <div class="daily-quotes__box__success">
         <h2>Success Quote Of The Day</h2>
         <img src="./img/success.webp" alt="Success">
-        <div id="daily__quote1"></div>
-        <div id="daily__author1"></div>
+        <div id="daily-quote1"></div>
+        <div id="daily-author1"></div>
       </div>
 
-      <div class="dailyquotes__box__health">
+      <div class="daily-quotes__box__health">
         <h2>Health Quote Of The Day</h2>
         <img src="./img/health.webp" alt="Health">
-        <div id="daily__quote2"></div>
-        <div id="daily__author2"></div>
+        <div id="daily-quote2"></div>
+        <div id="daily-author2"></div>
       </div>
     </div>
   </section>
@@ -71,13 +70,13 @@
   <footer>
     <p>Created by Laszlo Nemeth &copy; 2022</p>
 
-    <div class="footer__menu">
-      <a href="index.html" class="footer__homelink">Home</a>
-      <a href="mystory.html">My Story</a>
+    <div class="footer-menu">
+      <a href="index.html" class="footer-home-link">Home</a>
+      <a href="my-story.html">My Story</a>
       <a href="contact.html">Contact</a>
     </div>
 
-    <div class="footer__socialmedia">
+    <div class="footer-social-media">
       <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
       <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
     </div>
@@ -109,8 +108,8 @@
         '- Dalai Lama',
       ];
 
-     document.getElementById('daily__quote').innerHTML = quotes[a];
-     document.getElementById('daily__author').innerHTML = authors[a];
+     document.getElementById('daily-quote').innerHTML = quotes[a];
+     document.getElementById('daily-author').innerHTML = authors[a];
 
       const b = new Date().getDay();
       const quotes1 = [
@@ -135,8 +134,8 @@
         '- Benjamin Franklin',
       ];
 
-      document.getElementById('daily__quote1').innerHTML = quotes1[b];
-      document.getElementById('daily__author1').innerHTML = authors1[b];
+      document.getElementById('daily-quote1').innerHTML = quotes1[b];
+      document.getElementById('daily-author1').innerHTML = authors1[b];
 
       const c = new Date().getDay();
       const quotes2 = [
@@ -161,13 +160,13 @@
         '- William Londen',
       ];
       
-      document.getElementById('daily__quote2').innerHTML = quotes2[c];
-      document.getElementById('daily__author2').innerHTML = authors2[b];
+      document.getElementById('daily-quote2').innerHTML = quotes2[c];
+      document.getElementById('daily-author2').innerHTML = authors2[b];
    }
 
     // hamburger menu
-    const navHamburger = document.querySelector(".navbar__hamburger__btn");
-    const sideNav = document.querySelector("#sideNav");
+    const navHamburger = document.querySelector(".navbar-hamburger__btn");
+    const sideNav = document.querySelector("#side-nav");
 
     navHamburger.addEventListener("click", mobileNavOpen);
 
@@ -175,7 +174,7 @@
       sideNav.classList.toggle("active");
     }
 
-    const navClose = document.querySelector(".navbar__close__btn");
+    const navClose = document.querySelector(".navbar-close__btn");
 
     navClose.addEventListener("click", mobileNavClose);
 
