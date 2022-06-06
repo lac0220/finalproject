@@ -17,7 +17,7 @@ To run this project locally:
 ```
 $ cd ../lorem
 $ npm install
-$ gulp watch
+$ npm start
 ```
 ## Version
 

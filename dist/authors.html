@@ -10,33 +10,31 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
     <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
     <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-
     <title>Authors - Legendary Quotes</title>
-
 </head>
 
 <body>
   <header>
     <nav>
-      <span class="navbar__hamburger__btn">&#9776;</span>  
+      <span class="navbar-hamburger__btn">&#9776;</span>  
       
-      <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
+      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
       
-      <ul id="sideNav">
-        <span class="navbar__close__btn">&times;</span>
+      <ul id="side-nav">
+        <span class="navbar-close__btn">&times;</span>
         <li><a href="index.html">Home</a></li>
-        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li><a href="daily-quotes.html">Daily Quote</a></li>
         <li>
-          <div class="navbar__dropdown">
+          <div class="navbar-dropdown">
             <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar__dropdown__box">
+            <div class="navbar-dropdown__box">
               <a href="categories.html">Categories</a>
               <a href="authors.html">Authors</a>
-              <a href="textsearch.html">Text Search</a>
+              <a href="text-search.html">Text Search</a>
             </div>  
           </div>
         </li>
-        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="my-story.html">My Story</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -47,16 +45,16 @@
 
     <img src="./img/author.webp" alt="Author">
 
-    <input type="text" name="searchBar" id="authorSearchBar" placeholder="Search for an author"<input/>
+    <input type="text" name="author-searchbar" id="author-search-bar" placeholder="Search for authors here..."<input/>
 
-    <ul id="authorSearch"></ul>
+    <ul id="author-search"></ul>
   </section>
 
   <script>
-    const authorSearch = document.getElementById('authorSearch');
-    document.getElementById("authorSearch").style.display = "none";
+    const authorSearch = document.getElementById('author-search');
+    document.getElementById("author-search").style.display = "none";
 
-    const searchBar = document.getElementById('authorSearchBar');
+    const searchBar = document.getElementById('author-search-bar');
     let allAuthors = [];
 
     searchBar.addEventListener('keyup', (e) => {
@@ -66,14 +64,14 @@
               object.author?.toLowerCase().includes(searchString) 
             );
         });
-        document.getElementById("authorSearch").style.display = "block";
+        document.getElementById("author-search").style.display = "block";
 
         displayAuthors(filteredAuthors);
     });
 
     searchBar.addEventListener('keyup', (e) => {
       if (e.which === 8) {			
-        document.getElementById("authorSearch").style.display = "none";
+        document.getElementById("author-search").style.display = "none";
       }
     });
 
@@ -106,8 +104,8 @@
 
   <script>
     // hamburger menu
-    const navHamburger = document.querySelector(".navbar__hamburger__btn");
-    const sideNav = document.querySelector("#sideNav");
+    const navHamburger = document.querySelector(".navbar-hamburger__btn");
+    const sideNav = document.querySelector("#side-nav");
 
     navHamburger.addEventListener("click", mobileNavOpen);
 
@@ -115,7 +113,7 @@
       sideNav.classList.toggle("active");
     }
 
-    const navClose = document.querySelector(".navbar__close__btn");
+    const navClose = document.querySelector(".navbar-close__btn");
 
     navClose.addEventListener("click", mobileNavClose);
 

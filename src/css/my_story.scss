@@ -3,39 +3,41 @@ $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
-.mystory {
+.my-story {
     margin: auto;
-    text-align: center;
     padding-bottom: 40px;
+    text-align: center;
     h1 {
-        font-size: 2.4rem;
-        margin: auto auto 30px; 
+        margin: auto auto 20px; 
         padding: 10px 0 15px;
         width: 100%;     
-        color:$font-color;
-        background-color: $hover-color;
+        font-size: 2.4rem;
         font-family: $font-family;
+        background-color: $hover-color;
+        color:$font-color;
     }
         
     p {
-        width: 70%;
         margin: auto;
+        width: 70%;
     }
     
     &__box {
-        max-width: 350px;
         margin: 20px auto;
-        text-align: center;
-        background-color: black;
-        border-radius: 10%;
         padding-top: 5px;
+        width: 20%;
+        text-align: center;
+        border-radius: 10%;
+        background-color: black;
         img {
             max-width: 100%;
             height: auto;
             border-radius: 50%;
         }
   
-        h2, h3 {
+        h2, 
+        h3 {
+            margin: 0 10px;
             color: $font-color;
         }
   
@@ -45,15 +47,15 @@ $background-color:#116466;
         
         &__contact {
             padding-bottom: 5px;
-            background-color: $background-color;
             border-bottom-left-radius: 10px;
             border-bottom-right-radius: 10px;
+            background-color: $background-color;
             a {
                 display: block;
-                color: $font-color;
+                padding: 10px;
                 font-weight: bold;
                 font-size: 1.563rem;
-                padding: 10px 0;
+                color: $font-color;
                 &:hover {
                     color: $hover-color;
                 }
@@ -62,9 +64,18 @@ $background-color:#116466;
     }
 }
   
+@media only screen and (max-width: 1500px) {
+  
+    .my-story {
+        &__box {
+            width: 25%;
+        }
+    }
+}
+  
 @media only screen and (max-width: 1200px) {
   
-    .mystory { 
+    .my-story { 
         h1 {
             font-size: 2rem;
         }
@@ -74,6 +85,7 @@ $background-color:#116466;
         }
   
         &__box {
+            width: 30%;
             h2 {
                 font-size: 1.7rem;
             }
@@ -91,41 +103,75 @@ $background-color:#116466;
   
 @media only screen and (max-width: 1000px) {
   
-    .mystory {
+    .my-story {
         padding: 25px 0 20px;
         h1 {
-            font-size: 1.6rem;
             padding: 10px 0;
+            font-size: 1.6rem;
         }
   
         &__box {
             margin: 10px auto;
-            max-width: 300px;
+            width: 35%;
+            h2 {
+              font-size: 1.55rem;
+            }
+    
+            h3,
+            &__contact a {
+                font-size: 1.35rem;
+            }
+        }
+    }
+}
+  
+@media only screen and (max-width: 775px) {
+    
+    .my-story {
+        &__box {
+          width: 43%;
+          h2 {
+                font-size: 1.45rem;
+            }
+  
+            h3,
+            &__contact a {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+  
+@media only screen and (max-width: 600px) {
+    
+    .my-story {
+        &__box {
+          width: 55%;
         }
     }
 }
   
 @media only screen and (max-width: 500px) {
     
-    .mystory {
+    .my-story {
         padding: 0 0 20px;
         h1 {
+            margin: auto auto 10px;
             font-size: 1.25rem;
-            margin: auto auto 20px;
         }
   
         &__box {
-            max-width: 250px;
+            width: 60%;
             h2 {
-                font-size: 1.4rem;
+                font-size: 1.25rem;
             }
   
             h3 {
-                font-size: 1.2rem;
+                font-size: 1.05rem;
             }
   
             &__contact a {
-                font-size: 1.2rem;
+                font-size: 1.05rem;
                 &:hover {
                     color: $font-color;
                 }
@@ -134,6 +180,15 @@ $background-color:#116466;
                     color: $hover-color;
                 }
             }
+        }
+    }
+}
+  
+@media only screen and (max-width: 370px) {
+    
+    .my-story {
+        &__box {
+            width: 70%;    
         }
     }
 }

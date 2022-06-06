@@ -1,10 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/random__quotes.js":
-/*!**********************************!*\
-  !*** ./src/js/random__quotes.js ***!
-  \**********************************/
+/***/ "./src/js/random_quotes.js":
+/*!*********************************!*\
+  !*** ./src/js/random_quotes.js ***!
+  \*********************************/
 /***/ (() => {
 
 const randomQuote = async () => {
@@ -32,15 +32,15 @@ const randomQuote = async () => {
   author.innerHTML = "- " + auth;
 }
 
-  const myInterval = setInterval(randomQuote, 4000);
-  randomQuote();
+const myInterval = setInterval(randomQuote, 4000);
+randomQuote();
 
 /***/ }),
 
-/***/ "./src/js/sliding__elements.js":
-/*!*************************************!*\
-  !*** ./src/js/sliding__elements.js ***!
-  \*************************************/
+/***/ "./src/js/sliding_elements.js":
+/*!************************************!*\
+  !*** ./src/js/sliding_elements.js ***!
+  \************************************/
 /***/ (() => {
 
 // home page sliding author pictures
@@ -49,18 +49,18 @@ showAuthor();
 
 function showAuthor() {
   let i;
-  let slides = document.getElementsByClassName("home__slides");
-  let dots = document.getElementsByClassName("home__slides__dot");
+  let slides = document.getElementsByClassName("home-slides");
+  let dots = document.getElementsByClassName("home-dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
   slidingAuthor++;
   if (slidingAuthor > slides.length) {slidingAuthor = 1}    
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" sliding__pictures", "");
+    dots[i].className = dots[i].className.replace(" sliding-pictures", "");
   }
   slides[slidingAuthor-1].style.display = "block";  
-  dots[slidingAuthor-1].className += " sliding__pictures";
+  dots[slidingAuthor-1].className += " sliding-pictures";
   setTimeout(showAuthor, 4000); 
 }
 
@@ -70,18 +70,18 @@ showQuotes();
 
 function showQuotes() {
   let i;
-  let slides = document.getElementsByClassName("home__slides2");
-  let dots = document.getElementsByClassName("home__slides__dot2");
+  let slides = document.getElementsByClassName("home-slides2");
+  let dots = document.getElementsByClassName("home-dot2");
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
   slidingQuotes++;
     if (slidingQuotes > slides.length) {slidingQuotes = 1}    
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" sliding__quotes", "");
+      dots[i].className = dots[i].className.replace(" sliding-quotes", "");
   }
   slides[slidingQuotes-1].style.display = "block";  
-  dots[slidingQuotes-1].className += " sliding__quotes";
+  dots[slidingQuotes-1].className += " sliding-quotes";
   setTimeout(showQuotes, 4000);
 }
 
@@ -164,9 +164,9 @@ var __webpack_exports__ = {};
   !*** ./src/js/script.js ***!
   \**************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _sliding_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliding__elements */ "./src/js/sliding__elements.js");
+/* harmony import */ var _sliding_elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliding_elements */ "./src/js/sliding_elements.js");
 /* harmony import */ var _sliding_elements__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sliding_elements__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _random_quotes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./random__quotes */ "./src/js/random__quotes.js");
+/* harmony import */ var _random_quotes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./random_quotes */ "./src/js/random_quotes.js");
 /* harmony import */ var _random_quotes__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_random_quotes__WEBPACK_IMPORTED_MODULE_1__);
 
 

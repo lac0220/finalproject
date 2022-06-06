@@ -1,5 +1,5 @@
-import sliding__elements from './sliding__elements';
-import random__quotes from './random__quotes';
+import sliding_elements from './sliding_elements';
+import random_quotes from './random_quotes';
 
 
 

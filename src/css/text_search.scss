@@ -3,200 +3,199 @@ $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
-.textsearch {
+.text-search {
     margin: auto;
-    text-align: center;
     padding-bottom: 40px;
+    text-align: center;
     h1 {
-        font-size: 2.4rem;
         margin: auto auto 30px; 
         padding: 10px 0 15px;
         width: 100%;     
-        color: $font-color;
-        background-color: $hover-color;
+        font-size: 2.4rem;
         font-family: $font-family;
+        background-color: $hover-color;
+        color: $font-color;
     }
-
+  
     img {
-        margin: auto;
         display: block;
-        max-height: 630px;
+        margin: auto;
+        max-height: 640px;
         width: 50%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
     
-    #textSearchBar {
-        width: 50%;
-        padding: 8px 10px;
-        font-size: 1.6rem; 
-        border: 5px solid $background-color; 
-        font-family: inherit;
-        margin:auto;
+    #text-search-bar {
         display: block;
-        outline: none;
-    }
-
-    #textSearch {
+        margin: auto;
+        padding: 8px 10px;
         width: 50%;
+        border: 5px solid $background-color; 
+        outline: none;
+        font-size: 1.6rem; 
+        font-family: inherit;
+    }
+  
+    #text-search {
         margin: auto;
         padding-bottom: 30px;
-        background-color: $background-color;
+        width: 50%;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-
+        background-color: $background-color;
         li {
             border: solid 1px $hover-color;
-            font-family: $font-family;
             font-weight: bold;
+            font-family: $font-family;
         }
-
+  
         h3 {
-            color: lightgreen;
-            font-size: 1.6rem;
-            text-align: center;
             padding: 20px 10px;
             width: 95%;
-            font-style: italic;
-        }
-
-        p {
-            color: $font-color;
-            background-color: $hover-color;
-            font-size: 1.6rem;
             text-align: center;
+            font-size: 1.6rem;
+            font-style: italic;
+            color: lightgreen;
+        }
+  
+        p {
+            margin-left: 40%;
             padding: 10px;
             width: 60%;
             border-top-left-radius: 50px;
-            margin-left: 40%;
+            text-align: center;
+            font-size: 1.6rem;
+            background-color: $hover-color;
+            color: $font-color;
         }
     }
-}
-
+  
+    ::placeholder {
+        font-weight: bold;
+        color: $background-color;
+      }
+  }
+  
 @media only screen and (max-width: 1350px) {
-
-    .textsearch {
+  
+    .text-search {
         img {
             width: 70%;
         }
-
-        #textSearchBar {
+  
+        #text-search-bar {
             width: 70%;
             font-size: 1.4rem; 
         }
-
-        #textSearch {
+  
+        #text-search {
             width: 70%;
             h3 {
                 font-size: 1.4rem;
             }
-
+  
             p {
-                font-size: 1.4rem;
                 padding: 8px;
+                font-size: 1.4rem;
             }
         }
     }
 }
-
+  
 @media only screen and (max-width: 1200px) {
-
-    .textsearch {
+  
+    .text-search {
         h1 {
             font-size: 2rem;
         }
-
-        #textSearchBar {
+  
+        #text-search-bar {
             font-size: 1.25rem; 
         }
-
-        #textSearch {
-            h3, p {
+  
+        #text-search {
+            h3, 
+            p {
                 font-size: 1.25rem;
             }
         }
     }
 }
-
+  
 @media only screen and (max-width: 1000px) {
-
-    .textsearch {
+  
+    .text-search {
         padding: 25px 0 20px;
         h1 {
-            font-size: 1.6rem;
             padding: 10px 0;
+            font-size: 1.6rem;
         }
     }
 }
-
+  
 @media only screen and (max-width: 820px) {
-
-    .textsearch {
-        #textSearchBar {
+  
+    .text-search {
+        #text-search-bar {
             width: 70%;
             font-size: 1.2rem; 
         }
-
-        #textSearch {
+  
+        #text-search {
             h3 {
                 font-size: 1.2rem;
             }
             
             p {
-                font-size: 1.2rem;
+                margin-left: 30%; 
                 padding: 6px;
                 width: 70%;
-                margin-left: 30%;   
+                font-size: 1.2rem;  
             }
         }
     }
 }
-
+  
 @media only screen and (max-width: 640px) {
-
-    .textsearch {
-        img, #textSearchBar, #textSearch {
+  
+    .text-search {
+        img, 
+        #text-search-bar, 
+        #text-search {
             width: 90%;
         }
     }
 }
-
+  
 @media only screen and (max-width: 500px) {
-
-    .textsearch {  
+  
+    .text-search {  
         padding: 0 0 20px;  
         h1 {
-            font-size: 1.25rem;
             margin: auto auto 20px;
+            font-size: 1.25rem;
         }
-
-        #textSearchBar {
+  
+        #text-search-bar {
             font-size: 1rem; 
         }
-
-        #textSearch {
+  
+        #text-search {
             h3 {
-                font-size: 1rem;
                 padding: 10px;
+                font-size: 1rem;
             }
             
             p {
-                font-size: 1rem;
-                width: 100%;
                 margin-left: 0;
+                width: 100%;
                 border-top-left-radius: 0;   
+                font-size: 1rem;
             }
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  

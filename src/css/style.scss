@@ -1,11 +1,11 @@
 @import 'footer';
 @import 'navbar';
 @import 'home';
-@import 'dailyquotes';
+@import 'daily_quotes';
 @import 'categories';
 @import 'authors';
-@import 'textsearch';
-@import 'mystory';
+@import 'text_search';
+@import 'my_story';
 @import 'contact';
 @import 'message';
 
@@ -29,14 +29,15 @@ body {
   font-size: 1.25rem;
 }
 
-html, body {
-  line-height: 1.5;
-  font-family:'Times New Roman', Times, serif;
+html, 
+body {
   height: 100vh;
   scroll-behavior: smooth;
   background: url('../img/bground.webp') white center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  line-height: 1.5;
+  font-family:'Times New Roman', Times, serif;
 }
 
 section p {
@@ -53,7 +54,8 @@ a {
 
 @media screen and (max-width: 1000px) {
     
-  html, body {
+  html, 
+  body {
     margin-top: 28px;
     background-attachment: scroll;
     background-size: 1000rem;
@@ -67,23 +69,7 @@ a {
 @media screen and (max-width: 500px) {
     
   section p {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
-
-
-
-
-
-
-
-    
-  
-
-
-
-
-
-
-
 

@@ -6,15 +6,15 @@ $background-color:#116466;
 
 .contact {
     margin: auto;
-    text-align: center;
     padding-bottom: 40px;
+    text-align: center;
     h1 {
-        font-size: 2.4rem;
         padding: 10px 0 15px;
         width: 100%;     
-        color: $font-color;
-        background-color: $hover-color;
+        font-size: 2.4rem;
         font-family: $font-family;
+        background-color: $hover-color;
+        color: $font-color;
     }
   
     img {
@@ -25,34 +25,36 @@ $background-color:#116466;
     }
   
     h2 {
+        padding: 20px 0;
         font-size: 2.2rem;
         color: $hover-color;
-        padding: 20px 0;
     }
           
     form {
         display: block;
-        border-radius: 20px;
-        background-color: $background-color;
+        margin: auto;
         padding: 10px 20px 20px;
         width: 35%;
-        margin: auto;
+        border-radius: 20px;
         text-align: left;
+        background-color: $background-color;
         label {
-            color: $font-color;
             font-size: 1.4rem;
+            color: $font-color;
         }
             
-        input[type=text], select, textarea {
-            background-color: white;
-            width: 100%;
+        input[type=text], 
+        select, 
+        textarea {
+            margin: 6px 0 16px;
             padding: 10px;
+            width: 100%;
             border: 2px solid #ccc;
             border-radius: 20px;
-            margin: 6px 0 16px;
-            font-size: 1.4rem;
             outline: none;
+            font-size: 1.4rem;
             font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: white;
         }
         
         input[type=text]:required:focus:invalid {
@@ -60,9 +62,9 @@ $background-color:#116466;
         }
         
         textarea {
+            margin: 6px 0;
             height: 200px;
             resize: vertical;
-            margin: 6px 0;
         }
   
         // hide placeholder on click
@@ -71,8 +73,6 @@ $background-color:#116466;
         }
         
         input[type=submit] {
-            background-color:$hover-color;
-            color: white;
             padding: 12px 40px;
             border: none;
             border-radius: 20px;
@@ -80,13 +80,15 @@ $background-color:#116466;
             font-size: 1.4rem;
             font-weight: bold;
             font-family: 'Times New Roman', Times, serif;
+            background-color:$hover-color;
+            color: white;
             &:hover {
                 background-color: $font-color2;
                 color: $hover-color;
             }
         }
         
-        .contact__submit {
+        .contact-submit {
             text-align: center;
         }
     }
@@ -118,8 +120,8 @@ $background-color:#116466;
     .contact {
         padding: 25px 0 20px;
         h1 {
-            font-size: 1.6rem;
             padding: 10px 0;
+            font-size: 1.6rem;
         }
   
         h2 {
@@ -132,7 +134,10 @@ $background-color:#116466;
                 font-size: 1.25rem;
             }
                 
-            input[type=text], input[type=submit], select, textarea {
+            input[type=text], 
+            input[type=submit], 
+            select, 
+            textarea {
                 font-size: 1.25rem;
             }
         }
@@ -165,18 +170,21 @@ $background-color:#116466;
         }
   
         h2 {
-            font-size: 1.1rem;
             padding: 10px 0;
+            font-size: 1.1rem;
         }
   
         form {
-            width: 90%;
             padding: 10px 10px 20px;
+            width: 90%;
             label {
                 font-size: 1.1rem;
             }
   
-            input[type=text], input[type=submit], select, textarea {
+            input[type=text], 
+            input[type=submit], 
+            select, 
+            textarea {
                 font-size: 1rem;
             }
   

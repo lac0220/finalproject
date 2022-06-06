@@ -5,19 +5,19 @@ $background-color:#116466;
 
 .categories {
     margin: auto;
-    text-align: center;
     padding-bottom: 40px;
+    text-align: center;
     h1 {
-        font-size: 2.4rem;
         margin: auto auto 30px; 
         padding: 10px 0 15px;
-        width: 100%;     
-        color: $font-color;
+        width: 100%; 
+        font-size: 2.4rem;
+        font-family: $font-family;    
         background-color: $hover-color;
-        font-family: $font-family;
+        color: $font-color;
     }
   
-    &__header {
+    &-header {
         position: relative;
         margin-bottom: -8px;
         img {
@@ -32,12 +32,12 @@ $background-color:#116466;
             bottom: 8px;
             left: 0;
             right: 0;
+            margin: auto;
+            padding: 8px;
+            width: 50%; 
+            text-align: center;
             background: rgba(187, 185, 185, 0.4); 
             color: $font-color;
-            width: 50%; 
-            padding: 8px;
-            margin: auto;
-            text-align: center;
             h3 {
                 margin: center;
                 text-align: center;
@@ -46,65 +46,66 @@ $background-color:#116466;
         }
     }
   
-    &__button {
-        border-top: 2px solid $font-color;
-        background-color: $background-color;
-        cursor: pointer;
+    &-button {
+        display: block;
+        margin: auto;
+        padding: 30px 0;
         width: 50%;
+        border-top: 2px solid $font-color;
+        cursor: pointer;
+        transition: 0.4s;
+        text-align: center;
         font-size: 1.875rem;
         font-weight: bold;
         font-family: inherit;
-        transition: 0.4s;
-        text-align: center;
+        background-color: $background-color;
         color: white;
-        padding: 30px 0;
-        margin: auto;
-        display: block;
     }
   
-    &__button:nth-child(11) {
+    &-button:nth-child(11) {
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
   
-    .active__categories__button, .categories__button:hover {
+    .active-categories__button, 
+    .categories-button:hover {
         background-color: $hover-color; 
     }
   
-    &__button__panel {
+    &-search {
         display: none;
+        margin: auto;
+        width: 50%;
+        overflow: hidden;
         background-color: $background-color;
         color: $font-color;
-        overflow: hidden;
-        width: 50%;
-        margin: auto;
-        .categoriesSearch__panel {
-            width: 100%;
+        &__panel {
             margin: auto;
             padding-bottom: 30px;
+            width: 100%;
             li {
                 border: solid 1px $hover-color;
-                color: $font-color;
                 font-family: $font-family;
                 font-weight: bold;
+                color: $font-color;
             }
     
             h3 {
-                font-size: 1.6rem;
-                text-align: center;
                 padding: 20px 10px;
                 width: 95%;
+                text-align: center;
+                font-size: 1.6rem;
                 font-style: italic;
             }
             
             p {
-                font-size: 1.6rem;
-                background-color: $hover-color;
-                text-align: center;
+                margin-left: 40%;
                 padding: 10px;
                 width: 60%;
                 border-top-left-radius: 50px;
-                margin-left: 40%;
+                text-align: center;
+                font-size: 1.6rem;
+                background-color: $hover-color;
             }
         }
     }
@@ -113,26 +114,27 @@ $background-color:#116466;
 @media only screen and (max-width: 1350px) {
   
     .categories {
-        &__header {
-            &__box, img {
+        &-header {
+            &__box, 
+            img {
                 width: 70%;
             }
         }
         
-        &__button {
+        &-button {
             width: 70%;
         }
   
-        &__button__panel {
+        &-search {
             width: 70%;
-            .categoriesSearch__panel {
+            &__panel {
                 h3 {
                     font-size: 1.4rem;
                 }
   
                 p {
-                    font-size: 1.4rem;
-                    padding: 8px;        
+                    padding: 8px;  
+                    font-size: 1.4rem;      
                 }
             }
         }
@@ -146,7 +148,7 @@ $background-color:#116466;
             font-size: 2rem;
         }
   
-        &__header {
+        &-header {
             &__box {
                 h3 {
                     font-size: 1.6rem;
@@ -154,13 +156,14 @@ $background-color:#116466;
             }
         }
         
-        &__button {
+        &-button {
             font-size: 1.6rem;
         }
         
-        &__button__panel {
-            .categoriesSearch__panel {
-                h3, p {
+        &-search {
+            &__panel {
+                h3, 
+                p {
                     font-size: 1.25rem;
                 }
             }
@@ -174,17 +177,17 @@ $background-color:#116466;
         padding: 25px 0 20px;
         
         h1 {
-            font-size: 1.6rem;
             padding: 10px 0;
+            font-size: 1.6rem;
         }
   
-        &__header h3 {
+        &-header h3 {
             font-size: 1.4rem;  
         }
               
-        &__button {
-            font-size: 1.4rem;
+        &-button {
             padding: 20px;
+            font-size: 1.4rem;
         } 
     }
 }
@@ -192,26 +195,26 @@ $background-color:#116466;
 @media only screen and (max-width: 820px) {
   
     .categories {
-        &__header h3 {
+        &-header h3 {
             font-size: 1.2rem;    
         }
         
-        &__button {
+        &-button {
             font-size: 1.2rem;
         }
         
-        &__button__panel {
-            .categoriesSearch__panel {
+        &-search {
+            &__panel {
                 h3 {
-                    font-size: 1.2rem;
                     padding: 15px 10px;
+                    font-size: 1.2rem;
                 }
   
                 p {
-                    font-size: 1.2rem;
-                    width: 70%;
-                    margin-left: 30%;
                     padding: 6px;
+                    margin-left: 30%;
+                    width: 70%;
+                    font-size: 1.2rem;
                 }
             }
         }
@@ -221,13 +224,15 @@ $background-color:#116466;
 @media only screen and (max-width: 640px) {
   
     .categories {
-        &__header {
-            &__box, img {
+        &-header {
+            &__box, 
+            img {
                 width: 90%;
             }
         }
           
-        &__button, &__button__panel {
+        &-button, 
+        &-search {
             width: 90%;
         }
     }
@@ -238,11 +243,11 @@ $background-color:#116466;
     .categories {
         padding: 0 0 20px;
         h1 {
-            font-size: 1.25rem;
             margin: auto auto 20px;
+            font-size: 1.25rem;
         }
   
-        &__header {
+        &-header {
             &__box {
                 padding: 5px;
                 h3 {
@@ -251,29 +256,30 @@ $background-color:#116466;
             }
         }
         
-        &__button {
+        &-button {
             font-size: 1.1rem;
         }
   
-        .active__categories__button, .categories__button:hover {
+        .active-categories__button, 
+        .categories-button:hover {
             background-color: $background-color; 
             &:active {
                 background-color: $hover-color;
             }
         }
   
-        &__button__panel {
-            .categoriesSearch__panel {
+        &-search {
+            &__panel {
                 h3 {
                     font-size: 1rem;
                     padding: 10px;
                 }
   
                 p {
-                    font-size: 1rem;
-                    width: 100%;
                     margin-left: 0;
+                    width: 100%;
                     border-top-left-radius: 0;
+                    font-size: 1rem;
                 }
             }
         }

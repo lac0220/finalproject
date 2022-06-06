@@ -9,52 +9,51 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
     <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
     <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-
     <title>Text Search - Legendary Quotes</title>
 </head>
 
 <body>
   <header>
     <nav>
-      <span class="navbar__hamburger__btn">&#9776;</span>  
+      <span class="navbar-hamburger__btn">&#9776;</span>  
       
-      <a href="index.html" class="navbar__logo"><u>Legendary Quotes</u></a>
+      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
       
-      <ul id="sideNav">
-        <span class="navbar__close__btn">&times;</span>
+      <ul id="side-nav">
+        <span class="navbar-close__btn">&times;</span>
         <li><a href="index.html">Home</a></li>
-        <li><a href="dailyquotes.html">Daily Quote</a></li>
+        <li><a href="daily-quotes.html">Daily Quote</a></li>
         <li>
-          <div class="navbar__dropdown">
+          <div class="navbar-dropdown">
             <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar__dropdown__box">
+            <div class="navbar-dropdown__box">
               <a href="categories.html">Categories</a>
               <a href="authors.html">Authors</a>
-              <a href="textsearch.html">Text Search</a>
+              <a href="text-search.html">Text Search</a>
             </div>  
           </div>
         </li>
-        <li><a href="mystory.html">My Story</a></li>
+        <li><a href="my-story.html">My Story</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="textsearch">
+  <section class="text-search">
     <h1>Text Search</h1>
 
     <img src="./img/textsearch.webp" alt="Text search">
 
-    <input type="text" name="searchBar" id="textSearchBar" placeholder="Search for a quote"<input/>
+    <input type="text" name="text-searchbar" id="text-search-bar" placeholder="Search for quotations here..."<input/>
 
-    <ul id="textSearch"></ul>
+    <ul id="text-search"></ul>
   </section>
 
   <script>
-    const textSearch = document.getElementById('textSearch');
-    document.getElementById("textSearch").style.display = "none";
+    const textSearch = document.getElementById('text-search');
+    document.getElementById("text-search").style.display = "none";
 
-    const searchBar = document.getElementById('textSearchBar');
+    const searchBar = document.getElementById('text-search-bar');
     let allQuotes = [];
   
     searchBar.addEventListener('keyup', (e) => {
@@ -65,14 +64,14 @@
             );
         });
 
-        document.getElementById("textSearch").style.display = "block";
+        document.getElementById("text-search").style.display = "block";
 
         displayQuotes(filteredText);
     });
 
     searchBar.addEventListener('keyup', (e) => {
       if (e.which === 8) {			
-        document.getElementById("textSearch").style.display = "none";
+        document.getElementById("text-search").style.display = "none";
       }
     });
 
@@ -110,8 +109,8 @@
 
   <script>
     // hamburger menu
-    const navHamburger = document.querySelector(".navbar__hamburger__btn");
-    const sideNav = document.querySelector("#sideNav");
+    const navHamburger = document.querySelector(".navbar-hamburger__btn");
+    const sideNav = document.querySelector("#side-nav");
 
     navHamburger.addEventListener("click", mobileNavOpen);
 
@@ -119,7 +118,7 @@
       sideNav.classList.toggle("active");
     }
 
-    const navClose = document.querySelector(".navbar__close__btn");
+    const navClose = document.querySelector(".navbar-close__btn");
 
     navClose.addEventListener("click", mobileNavClose);
 
