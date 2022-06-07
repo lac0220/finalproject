@@ -16,7 +16,7 @@ function showAuthor() {
   }
   slides[slidingAuthor-1].style.display = "block";  
   dots[slidingAuthor-1].className += " sliding-pictures";
-  setTimeout(showAuthor, 4000); 
+  setTimeout(showAuthor, 5000); 
 }
 
 // home page sliding quotes
@@ -37,5 +37,5 @@ function showQuotes() {
   }
   slides[slidingQuotes-1].style.display = "block";  
   dots[slidingQuotes-1].className += " sliding-quotes";
-  setTimeout(showQuotes, 4000);
+  setTimeout(showQuotes, 5000);
 }

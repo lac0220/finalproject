@@ -14,7 +14,7 @@ $background-color:#116466;
         font-size: 2.4rem;
         font-family: $font-family;
         background-color: $hover-color;
-        color:$font-color;
+        color: $font-color;
     }
   
     p {
@@ -62,35 +62,46 @@ $background-color:#116466;
             }
         }
   
-        #daily-quote, 
-        #daily-quote1, 
-        #daily-quote2 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-            padding: 0 14px;
-            height: 10rem;
+        .daily-quotes__box__love__quote,
+        .daily-quotes__box__love__quote1 {
             width: 100%;
-            border-bottom-left-radius: 35px;
-            hyphens: auto;
-            -webkit-hyphens: auto;
-            -webkit-hyphenate-limit-before: 3;
-            -webkit-hyphenate-limit-after: 3;
-            -webkit-hyphenate-limit-chars: 6 3 3;
-            -webkit-hyphenate-limit-lines: 2;
-            -webkit-hyphenate-limit-last: always;
-            -webkit-hyphenate-limit-zone: 8%;
-            font-family: $font-family;
-            font-size: 1.55rem;
-            font-weight: bold;
-            font-style: italic;
-            background-color: $background-color;
-            color: $font-color;
         }
   
-        #daily-quote2 {
+        .daily-quotes__box__love__quote2 {
             width: 50%;
+        }
+  
+        .daily-quotes__box__love__quote,
+        .daily-quotes__box__love__quote1,
+        .daily-quotes__box__love__quote2 {
+            position: relative;
+            margin: auto;
+            height: 8rem;
+            border-bottom-left-radius: 35px;
+            background-color: $background-color;
+            color: $font-color;
+            #daily-quote, 
+            #daily-quote1, 
+            #daily-quote2 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 95%;
+                transform: translate(-50%, -50%);
+                hyphens: auto;
+                -webkit-hyphens: auto;
+                -webkit-hyphenate-limit-before: 3;
+                -webkit-hyphenate-limit-after: 3;
+                -webkit-hyphenate-limit-chars: 6 3 3;
+                -webkit-hyphenate-limit-lines: 2;
+                -webkit-hyphenate-limit-last: always;
+                -webkit-hyphenate-limit-zone: 8%;
+                text-align: center;
+                font-style: italic;
+                font-size: 1.6rem;
+                font-weight: bold;
+                font-family: $font-family;
+            }
         }
   
         #daily-author, 
@@ -115,18 +126,39 @@ $background-color:#116466;
     }
 } 
   
+  @media only screen and (max-width: 1612px) {
+  
+    .daily-quotes {
+        &__box {
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
+                height: 9.8rem;
+            }
+        }
+    }
+}
+  
 @media only screen and (max-width: 1350px) {
   
     .daily-quotes {
         &__box {
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2, 
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
+                height: 8.6rem;
+                #daily-quote, 
+                #daily-quote1, 
+                #daily-quote2 {
+                    font-size: 1.4rem;
+                }
+            }
+  
             #daily-author, 
             #daily-author1, 
             #daily-author2 {
                 font-size: 1.4rem;
-            }
+            }    
         }
     }
 }
@@ -146,7 +178,6 @@ $background-color:#116466;
             grid-template-columns: repeat(1, 1fr); 
             row-gap: 10px;
             width: 90%;
-
             h2 {
                 font-size: 1.6rem;
             }
@@ -170,12 +201,16 @@ $background-color:#116466;
                 grid-row: 3;
             }
   
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2 {
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
                 width: 60%;
-                height: 8rem;
-                font-size: 1.25rem;
+                height: 6rem;
+                #daily-quote, 
+                #daily-quote1, 
+                #daily-quote2 {
+                    font-size: 1.25rem;
+                }
             }
         
             #daily-author, 
@@ -208,10 +243,15 @@ $background-color:#116466;
   
     .daily-quotes {
         &__box {
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2 {
-                font-size: 1.2rem;
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
+                height: 7.5rem;
+                #daily-quote, 
+                #daily-quote1, 
+                #daily-quote2 {
+                    font-size: 1.2rem;
+                }
             }
             
             #daily-author, 
@@ -220,7 +260,7 @@ $background-color:#116466;
                 margin-left: 35%;
                 width: 45%;
                 font-size: 1.2rem;
-            }
+            } 
         }
     }
 }  
@@ -230,27 +270,30 @@ $background-color:#116466;
     .daily-quotes {
         &__box {
             img {
-                max-width: 100%;
+                max-width: 80%;
             }
   
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2 {
-                width: 100%;
-                height: 8rem;
-                border-bottom-left-radius: 0;
-                font-size: 1.25rem;
-            }
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
+                height: 7.7rem;
+                width: 80%;
+                #daily-quote, 
+                #daily-quote1, 
+                #daily-quote2 {
+                    font-size: 1.25rem;
+                }
+            } 
         
             #daily-author, 
             #daily-author1, 
             #daily-author2 {
-                margin-left: 0;
-                width: 100%;
+                margin-left: 30%;
+                width: 60%;
             }
         }
     }
-}  
+} 
   
 @media only screen and (max-width: 500px) {
   
@@ -266,34 +309,33 @@ $background-color:#116466;
                 padding: 10px 0;
                 font-size: 1.1rem;
             }
-        
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2 {
-                height: 6.5rem;
-                font-size: 1rem;
+  
+            img {
+                max-width: 100%;
             }
-
+  
+            .daily-quotes__box__love__quote,
+            .daily-quotes__box__love__quote1,
+            .daily-quotes__box__love__quote2 {
+                width: 100%;
+                height: 6.5rem;
+                border-bottom-left-radius: 0;
+                #daily-quote, 
+                #daily-quote1, 
+                #daily-quote2 {
+                    font-size: 1rem;
+                }
+            }
+  
             #daily-author, 
             #daily-author1, 
             #daily-author2 {
+                margin-left: 0;
+                width: 100%;
                 font-size: 1rem;
             }
         }
     }
 }
-  
-@media only screen and (max-width: 360px) {
-  
-    .daily-quotes {
-        &__box {
-            #daily-quote, 
-            #daily-quote1, 
-            #daily-quote2 {
-                font-size: 0.9rem;
-            }
-        }
-    }
-} 
   
   

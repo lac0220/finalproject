@@ -84,10 +84,10 @@ $background-color:#116466;
   
     .fadeaway-random {  
         -webkit-animation-name: fadeaway-random;
-        -webkit-animation-duration: 4s;
+        -webkit-animation-duration: 5s;
         -webkit-animation-count: infinite;
         animation-name: fadeaway-random ;
-        animation-duration: 4s;
+        animation-duration: 5s;
         animation-iteration-count: infinite;
   
         @-webkit-keyframes fadeaway-random  {
@@ -398,18 +398,13 @@ $background-color:#116466;
 @media only screen and (max-width: 360px) {
     
     .home {
-        h2:nth-child(2),
-        h2:nth-child(6) {
-            font-size: 1rem;
-        }
-  
-        #quote, 
-        &-slides2 h2 {
-            font-size: 0.9rem;
-        }
+        &-random {
+            height: 10.5rem; 
+        } 
+
+        &-slides2 {
+            height: 4.8rem;
+        } 
     }
 }
     
-    
-  
-  

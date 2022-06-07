@@ -23,5 +23,5 @@ const randomQuote = async () => {
   author.innerHTML = "- " + auth;
 }
 
-const myInterval = setInterval(randomQuote, 4000);
+const myInterval = setInterval(randomQuote, 5000);
 randomQuote();
