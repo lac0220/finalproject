@@ -1,4 +1,4 @@
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
@@ -11,10 +11,11 @@ $background-color:#116466;
         margin: auto auto 20px; 
         padding: 10px 0 15px;
         width: 100%;     
+        font-weight: bold;
         font-size: 2.4rem;
         font-family: $font-family;
         background-color: $hover-color;
-        color:$font-color;
+        color: $font-color;
     }
         
     p {
@@ -22,52 +23,63 @@ $background-color:#116466;
         width: 70%;
     }
     
-    &__box {
+    ul {
         margin: 20px auto;
         padding-top: 5px;
         width: 20%;
         text-align: center;
         border-radius: 10%;
         background-color: black;
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-  
-        h2, 
-        h3 {
-            margin: 0 10px;
-            color: $font-color;
-        }
-  
-        h3 {
-            padding-bottom: 10px;
-        }
-        
-        &__contact {
-            padding-bottom: 5px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            background-color: $background-color;
-            a {
-                display: block;
-                padding: 10px;
+        li {
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 50%;
+            }
+     
+            h2, 
+            h3 {
+                margin: 0 10px;
                 font-weight: bold;
-                font-size: 1.563rem;
                 color: $font-color;
-                &:hover {
-                    color: $hover-color;
+            }
+
+            h2 {
+                padding-top: 8px;
+                font-size: 1.875rem;
+            }
+    
+            h3 {
+                padding-bottom: 10px;
+                font-size: 1.463rem;
+            }
+            
+            p {
+                padding: 10px 0 15px;
+                width: 100%;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                text-align: center;
+                background-color: $background-color;
+                a {
+                    height: 0;
+                    width: 0;
+                    font-weight: bold;
+                    font-size: 1.563rem;
+                    color: $font-color;
+                    &:hover {
+                        color: $hover-color;
+                    }
                 }
             }
         }
     }
 }
-  
+
 @media only screen and (max-width: 1500px) {
   
     .my-story {
-        &__box {
+        ul {
             width: 25%;
         }
     }
@@ -84,23 +96,25 @@ $background-color:#116466;
             width: 90%;
         }
   
-        &__box {
+        ul {
             width: 30%;
-            h2 {
-                font-size: 1.7rem;
-            }
-  
-            h3 {
-                font-size: 1.4rem;
-            }
-            
-            &__contact a {
-                font-size: 1.4rem;
+            li {
+                h2 {
+                    font-size: 1.7rem;
+                }
+    
+                h3 {
+                    font-size: 1.4rem;
+                }
+                
+                p a {
+                    font-size: 1.4rem;
+                }
             }
         }
     }
-}
-  
+} 
+
 @media only screen and (max-width: 1000px) {
   
     .my-story {
@@ -110,42 +124,46 @@ $background-color:#116466;
             font-size: 1.6rem;
         }
   
-        &__box {
+        ul {
             margin: 10px auto;
             width: 35%;
-            h2 {
-              font-size: 1.55rem;
-            }
-    
-            h3,
-            &__contact a {
-                font-size: 1.35rem;
+            li {
+                h2 {
+                    font-size: 1.55rem;
+                }
+        
+                h3,
+                p a {
+                    font-size: 1.35rem;
+                }
             }
         }
     }
 }
-  
+
 @media only screen and (max-width: 775px) {
     
     .my-story {
-        &__box {
-          width: 43%;
-          h2 {
-                font-size: 1.45rem;
-            }
-  
-            h3,
-            &__contact a {
-                font-size: 1.25rem;
+        ul {
+            width: 43%;
+            li {
+                h2 {
+                    font-size: 1.45rem;
+                }
+    
+                h3,
+                p a {
+                    font-size: 1.25rem;
+                }
             }
         }
     }
-}
-  
+} 
+
 @media only screen and (max-width: 600px) {
     
     .my-story {
-        &__box {
+        ul {
           width: 55%;
         }
     }
@@ -160,34 +178,36 @@ $background-color:#116466;
             font-size: 1.25rem;
         }
   
-        &__box {
+        ul {
             width: 60%;
-            h2 {
-                font-size: 1.25rem;
-            }
-  
-            h3 {
-                font-size: 1.05rem;
-            }
-  
-            &__contact a {
-                font-size: 1.05rem;
-                &:hover {
-                    color: $font-color;
+            li {
+                h2 {
+                    font-size: 1.25rem;
                 }
-  
-                &:active {
-                    color: $hover-color;
+    
+                h3 {
+                    font-size: 1.05rem;
+                }
+    
+                p a {
+                    font-size: 1.05rem;
+                    &:hover {
+                        color: $font-color;
+                    }
+    
+                    &:active {
+                        color: $hover-color;
+                    }
                 }
             }
         }
     }
-}
-  
+} 
+
 @media only screen and (max-width: 370px) {
     
     .my-story {
-        &__box {
+        ul {
             width: 70%;    
         }
     }

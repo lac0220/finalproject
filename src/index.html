@@ -1,157 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="/css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
-    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
-    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-    <title>Legendary Quotes</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Home page - Legendary Quotes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+        <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <title>Legendary Quotes</title>
+    </head>
 
-<body>
-  <header>
-    <nav>
-      <span class="navbar-hamburger__btn">&#9776;</span>  
-      
-      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
-      
-      <ul id="side-nav">
-        <span class="navbar-close__btn">&times;</span>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="daily-quotes.html">Daily Quote</a></li>
-        <li>
-          <div class="navbar-dropdown">
-            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar-dropdown__box">
-              <a href="categories.html">Categories</a>
-              <a href="authors.html">Authors</a>
-              <a href="text-search.html">Text Search</a>
-            </div>  
-          </div>
-        </li>
-        <li><a href="my-story.html">My Story</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <body>
+        <header>
+            <nav>
+                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <ul id="side-nav">
+                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="daily-quotes.html">Daily Quote</a></li>
+                    <li>
+                        <ul>
+                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <li>
+                                <a href="categories.html">Categories</a>
+                                <a href="authors.html">Authors</a>
+                                <a href="text-search.html">Text Search</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li><a href="my-story.html">My Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <section class="home">
-    <h1>Welcome to Legendary Quotes</h1>
+        <section class="home">
+            <h1>Welcome to Legendary Quotes</h1>
+            <h2><u>Get inspired by the best epic quotes</u></h2>
+            <div class="home-random fadeaway">
+                <div id="quote"></div>
+            </div>
+            <div id="author" class="fadeaway"></div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.</p>
 
-    <h2><u>Get inspired by the best epic quotes</u></h2>
+            <h2>You find here famous authors like:</h2>
+            <div class="home-slides__img fadeaway">
+                <img src="./img/authors/gandhi.webp" alt="Gandhi">
+            </div>
+            <div class="home-slides__img fadeaway">
+                <img src="./img/authors/benjamin.webp" alt="Benjamin Franklin">
+            </div>
+            <div class="home-slides__img fadeaway">
+                <img src="./img/authors/einstein.webp" alt="Albert Einstein">
+            </div>
+            <div class="home-slides__img fadeaway">
+                <img src="./img/authors/buddha.webp" alt="Buddha">
+            </div>
+            <div class="home-slides__img fadeaway">
+                <img src="./img/authors/churchill.webp" alt="Churchill">
+            </div>
+            <div>
+                <span class="home-dot"></span> 
+                <span class="home-dot"></span> 
+                <span class="home-dot"></span>
+                <span class="home-dot"></span> 
+                <span class="home-dot"></span>  
+            </div>
+            <div class="home-slides__quote fadeaway">
+                <h2><i>"Forgiveness is choosing to love. It is the first skill of self-giving love."</i></h2>
+                <div class="home-slides__quote__author">&#45; Mohandas Gandhi</div>
+            </div>
+            <div class="home-slides__quote fadeaway">
+                <h2><i>"There never was a good knife made of bad steel."</i></h2>
+                <div class="home-slides__quote__author">&#45; Benjamin Franklin</div>
+            </div>
+            <div class="home-slides__quote fadeaway">
+                <h2><i>"Life is like riding a bicycle. To keep your balance you must keep moving."</i></h2>
+                <div class="home-slides__quote__author">&#45; Albert Einstein</div>
+            </div>
+            <div class="home-slides__quote fadeaway">
+                <h2><i>"Every human being is the author of his own health or disease."</i></h2>
+                <div class="home-slides__quote__author">&#45; Buddha</div>
+            </div>
+            <div class="home-slides__quote fadeaway">
+                <h2><i>"Courage is going from failure to failure without losing enthusiasm."</i></h2>
+                <div class="home-slides__quote__author">&#45; Winston Churchill</div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.</p>
+        </section>
 
-    <div class="home-random fadeaway-random">
-      <div id="quote"></div>
-    </div>
-    <div id="author" class="fadeaway-random"></div>
-      
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate.</p>
+        <footer>
+            <p>Created by Laszlo Nemeth &copy; 2022</p>
+            <ul>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="my-story.html">My Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Visit me on Linkedin"></i></a></li>  <!-- linkedin -->
+                <li><a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Visit me on Github"></i></a></li> <!-- github -->
+            </ul>
+        </footer>
 
-    <h2>You find here famous authors like:</h2>
+        <script src="./js/script.js" charset="utf-8"></script>
 
-    <div class="home-slides">
-      <img class="fadeaway-sliding" src="./img/authors/gandhi.webp" alt="Gandhi">
-    </div>
-  
-    <div class="home-slides">
-      <img class="fadeaway-sliding" src="./img/authors/benjamin.webp" alt="Benjamin Franklin">
-    </div>
-  
-    <div class="home-slides">
-      <img class="fadeaway-sliding" src="./img/authors/einstein.webp" alt="Albert Einstein">
-    </div>
+        <script>
+            // hamburger menu open
+            "use strict";
+            const navHamburger = document.querySelector(".navbar-hamburger__btn");
+            const sideNav = document.querySelector("#side-nav");
 
-    <div class="home-slides">
-      <img class="fadeaway-sliding" src="./img/authors/buddha.webp" alt="Buddha">
-    </div>
+            const mobileNavOpen = () => {
+                sideNav.classList.toggle("active");
+            }
+            navHamburger.addEventListener("click", mobileNavOpen);
 
-    <div class="home-slides">
-      <img class="fadeaway-sliding" src="./img/authors/churchill.webp" alt="Churchill">
-    </div>
-  
-    <div>
-      <span class="home-dot"></span> 
-      <span class="home-dot"></span> 
-      <span class="home-dot"></span>
-      <span class="home-dot"></span> 
-      <span class="home-dot"></span>  
-    </div>
+            // hamburger menu close
+            const navClose = document.querySelector(".navbar-close__btn");
 
-    <div>
-      <span class="home-dot2"></span>
-      <span class="home-dot2"></span>
-      <span class="home-dot2"></span>
-      <span class="home-dot2"></span>
-      <span class="home-dot2"></span>
-    </div>
-  
-    <div class="home-slides2 fadeaway-sliding">
-      <h2><i>"Forgiveness is choosing to love. It is the first skill of self-giving love."</i></h2>
-      <div class="home-slides2__author">- Mohandas Gandhi</div>
-    </div>
-
-    <div class="home-slides2 fadeaway-sliding">
-      <h2><i>"There never was a good knife made of bad steel."</i></h2>
-      <div class="home-slides2__author">- Benjamin Franklin</div>
-    </div>
-
-    <div class="home-slides2 fadeaway-sliding">
-      <h2><i>"Life is like riding a bicycle. To keep your balance you must keep moving."</i></h2>
-      <div class="home-slides2__author">- Albert Einstein</div>
-    </div>
-
-    <div class="home-slides2 fadeaway-sliding">
-      <h2><i>"Every human being is the author of his own health or disease."</i></h2>
-      <div class="home-slides2__author">- Buddha</div>
-    </div>
-
-    <div class="home-slides2 fadeaway-sliding">
-      <h2><i>"Courage is going from failure to failure without losing enthusiasm."</i></h2>
-      <div class="home-slides2__author">- Winston Churchill</div>
-    </div>
-
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id. Ad accusantium pariatur debitis repudiandae. Corrupti, magni veniam nihil suscipit eos, laborum quas blanditiis recusandae adipisci unde nobis voluptate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, laborum id.</p>
-  </section>
-
-  <footer>
-    <p>Created by Laszlo Nemeth &copy; 2022</p>
-
-    <div class="footer-menu">
-      <a href="index.html" class="footer-home-link">Home</a>
-      <a href="my-story.html">My Story</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="footer-social-media">
-      <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
-      <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
-    </div>
-  </footer>
-
-  <script src="./js/script.js" charset="utf-8"></script>
-
-  <script>
-    // hamburger menu
-    const navHamburger = document.querySelector(".navbar-hamburger__btn");
-    const sideNav = document.querySelector("#side-nav");
-
-    navHamburger.addEventListener("click", mobileNavOpen);
-
-    function mobileNavOpen() {
-      sideNav.classList.toggle("active");
-    }
-
-    const navClose = document.querySelector(".navbar-close__btn");
-
-    navClose.addEventListener("click", mobileNavClose);
-
-    function mobileNavClose() {
-      sideNav.classList.remove("active");
-    }
-  </script> 
-</body>
+            const mobileNavClose = () => {
+                sideNav.classList.remove("active");
+            }
+            navClose.addEventListener("click", mobileNavClose);
+        </script>
+    </body>
 </html>

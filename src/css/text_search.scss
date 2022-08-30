@@ -1,4 +1,4 @@
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
@@ -10,33 +10,36 @@ $background-color:#116466;
     h1 {
         margin: auto auto 30px; 
         padding: 10px 0 15px;
-        width: 100%;     
+        width: 100%;    
+        font-weight: bold; 
         font-size: 2.4rem;
         font-family: $font-family;
         background-color: $hover-color;
         color: $font-color;
     }
-  
+    
+    #text-search-bar {
+        display: block;
+        margin: auto;
+        padding: 10px;
+        width: 50%;
+        border: 5px solid $background-color; 
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        outline: none;
+        font-size: 1.6rem; 
+        font-family: inherit;
+    }
+
     img {
         display: block;
         margin: auto;
         max-height: 640px;
         width: 50%;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     
-    #text-search-bar {
-        display: block;
-        margin: auto;
-        padding: 8px 10px;
-        width: 50%;
-        border: 5px solid $background-color; 
-        outline: none;
-        font-size: 1.6rem; 
-        font-family: inherit;
-    }
-  
     #text-search {
         margin: auto;
         padding-bottom: 30px;
@@ -48,83 +51,89 @@ $background-color:#116466;
             border: solid 1px $hover-color;
             font-weight: bold;
             font-family: $font-family;
-        }
-  
-        h3 {
-            padding: 20px 10px;
-            width: 95%;
-            text-align: center;
-            font-size: 1.6rem;
-            font-style: italic;
-            color: lightgreen;
-        }
-  
-        p {
-            margin-left: 40%;
-            padding: 10px;
-            width: 60%;
-            border-top-left-radius: 50px;
-            text-align: center;
-            font-size: 1.6rem;
-            background-color: $hover-color;
-            color: $font-color;
+            h3 {
+                margin: auto;
+                padding: 30px 20px;
+                text-align: center;
+                font-weight: bold;
+                font-size: 1.6rem;
+                font-style: italic;
+                color: lightgreen;
+            }
+        
+            p {
+                margin-left: 40%;
+                padding: 10px;
+                width: 60%;
+                border-top-left-radius: 50px;
+                text-align: center;
+                font-size: 1.6rem;
+                background-color: $hover-color;
+                color: $font-color;
+            }
         }
     }
-  
+
     ::placeholder {
         font-weight: bold;
         color: $background-color;
-      }
-  }
-  
-@media only screen and (max-width: 1350px) {
-  
-    .text-search {
-        img {
-            width: 70%;
         }
-  
+    }
+    
+@media only screen and (max-width: 1350px) {
+    
+    .text-search {
         #text-search-bar {
             width: 70%;
             font-size: 1.4rem; 
         }
-  
+
+        img {
+            width: 70%;
+        }
+    
         #text-search {
             width: 70%;
-            h3 {
-                font-size: 1.4rem;
-            }
-  
-            p {
-                padding: 8px;
-                font-size: 1.4rem;
+            li {
+                h3 {
+                    font-size: 1.4rem;
+                }
+        
+                p {
+                    padding: 8px;
+                    font-size: 1.4rem;
+                }
             }
         }
     }
 }
-  
+    
 @media only screen and (max-width: 1200px) {
-  
+    
     .text-search {
         h1 {
             font-size: 2rem;
         }
-  
+    
         #text-search-bar {
             font-size: 1.25rem; 
         }
-  
+    
         #text-search {
+            li {
+                h3, 
             h3, 
-            p {
-                font-size: 1.25rem;
+                h3, 
+                p {
+                    font-size: 1.25rem;
+                }
             }
         }
     }
 }
-  
+    
 @media only screen and (max-width: 1000px) {
-  
+    
     .text-search {
         padding: 25px 0 20px;
         h1 {
@@ -133,69 +142,77 @@ $background-color:#116466;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 820px) {
-  
+    
     .text-search {
         #text-search-bar {
             width: 70%;
             font-size: 1.2rem; 
         }
-  
+    
         #text-search {
-            h3 {
-                font-size: 1.2rem;
-            }
-            
-            p {
+            li {
+                h3 {
+                    padding: 20px 10px;
+                    font-size: 1.2rem;
+                }
+                
+                p {
+                    margin-left: 30%; 
                 margin-left: 30%; 
-                padding: 6px;
-                width: 70%;
+                    margin-left: 30%; 
+                    padding: 6px;
+                    width: 70%;
+                    font-size: 1.2rem;  
                 font-size: 1.2rem;  
+                    font-size: 1.2rem;  
+                }
             }
         }
     }
 }
-  
+    
 @media only screen and (max-width: 640px) {
-  
+    
     .text-search {
+        #text-search-bar,
         img, 
-        #text-search-bar, 
         #text-search {
             width: 90%;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 500px) {
-  
+    
     .text-search {  
         padding: 0 0 20px;  
         h1 {
             margin: auto auto 20px;
             font-size: 1.25rem;
         }
-  
+    
         #text-search-bar {
             font-size: 1rem; 
         }
-  
+    
         #text-search {
-            h3 {
-                padding: 10px;
-                font-size: 1rem;
-            }
-            
-            p {
-                margin-left: 0;
-                width: 100%;
+            li {
+                h3 {
+                    padding: 15px 10px;
+                    font-size: 1rem;
+                }
+                
+                p {
+                    margin-left: 0;
+                    width: 100%;
+                    border-top-left-radius: 0;   
                 border-top-left-radius: 0;   
-                font-size: 1rem;
+                    border-top-left-radius: 0;   
+                    font-size: 1rem;
+                }
             }
         }
     }
 }
-  
-  
-  

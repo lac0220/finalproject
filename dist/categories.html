@@ -1,240 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="/css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
-    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
-    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-    <title>Categories - Legendary Quotes</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Categories Search page - Legendary Quotes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+        <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <title>Categories - Legendary Quotes</title>
+    </head>
 
-<body>
-  <header>
-    <nav>
-      <span class="navbar-hamburger__btn">&#9776;</span>  
-      
-      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
-      
-      <ul id="side-nav">
-        <span class="navbar-close__btn">&times;</span>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="daily-quotes.html">Daily Quote</a></li>
-        <li>
-          <div class="navbar-dropdown">
-            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar-dropdown__box">
-              <a href="categories.html">Categories</a>
-              <a href="authors.html">Authors</a>
-              <a href="text-search.html">Text Search</a>
-            </div>  
-          </div>
-        </li>
-        <li><a href="my-story.html">My Story</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <body>
+        <header>
+            <nav>
+                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <ul id="side-nav">
+                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="daily-quotes.html">Daily Quote</a></li>
+                    <li>
+                        <ul>
+                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <li>
+                                <a href="categories.html">Categories</a>
+                                <a href="authors.html">Authors</a>
+                                <a href="text-search.html">Text Search</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li><a href="my-story.html">My Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <section class="categories">
-    <h1>Categories</h1>
-
-    <div class="categories-header">
-      <img src="./img/search.webp" class="search_img" alt="Search">
-      <div class="categories-header__box">
-        <h3>These categories help you to find the quote that best suits you</h3>
-      </div>
-    </div>
-
-    <button class="categories-button">LOVE</button>
-    <div class="categories-search">
-      <ul id="categories-search" class="categories-search__panel"></ul>
-    </div>
-
-    <button class="categories-button">FORGIVENESS</button>
-    <div class="categories-search">
-      <ul id="categories-search1" class="categories-search__panel"></ul>
-    </div>
-
-    <button class="categories-button">SUCCESS</button>
-    <div class="categories-search">
-      <ul id="categories-search2" class="categories-search__panel"></ul>
-    </div>
-
-    <button class="categories-button">FAILURE</button>
-    <div class="categories-search">
-      <ul id="categories-search3" class="categories-search__panel"></ul>
-    </div>
-
-    <button class="categories-button">HEALTH</button>
-    <div class="categories-search">
-      <ul id="categories-search4" class="categories-search__panel"></ul>
-    </div>
-  </section>
-
-  <script>
-    const categoriesSearch = document.getElementById('categories-search');
-    const categoriesSearch1 = document.getElementById('categories-search1');
-    const categoriesSearch2 = document.getElementById('categories-search2');
-    const categoriesSearch3 = document.getElementById('categories-search3');
-    const categoriesSearch4 = document.getElementById('categories-search4');
-
-    let allQuotes = [];
-
-    const loadQuotes = async () => {
-        try {
-            const res = await fetch('https://type.fit/api/quotes');
-            allQuotes = await res.json();
-            displayQuotes(allQuotes);
-            displayQuotes1(allQuotes);
-            displayQuotes2(allQuotes);
-            displayQuotes3(allQuotes);
-            displayQuotes4(allQuotes);
-        } catch (err) {
-            console.error(err);
-        }
-    };
-    loadQuotes();
-
-    var displayQuotes = (objects) => {
-      const theWord  = "Love";
-      const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord) !== -1)   
-                return `
+        <section class="categories">
+            <h1>Categories</h1>
+            <ul>
                 <li>
-                    <h3>"${object.text}"</h3>
-                    <p>- ${object.author}</p>
+                    <img src="./img/search/category_search.webp"  alt="Categories search">
+                    <div>
+                        <h2>These categories help you to find the quote that best suits you</h2>
+                    </div>
                 </li>
-            `;
-            })
-            .join('');
-            categoriesSearch.innerHTML = htmlString;
-    };
+            </ul>
+            <button class="categories-button">LOVE</button>
+            <div class="categories-search">
+                <div id="categories-search__love"></div>
+            </div>
+            <button class="categories-button">FORGIVENESS</button>
+            <div class="categories-search">
+                <div id="categories-search__forgiveness"></div>
+            </div>
+            <button class="categories-button">SUCCESS</button>
+            <div class="categories-search">
+                <div id="categories-search__success"></div>
+            </div>
+            <button class="categories-button">FAILURE</button>
+            <div class="categories-search">
+                <div id="categories-search__failure"></div>
+            </div>
+            <button class="categories-button">HEALTH</button>
+            <div class="categories-search">
+                <div id="categories-search__health"></div>
+            </div>
+        </section>
 
-    var displayQuotes1 = (objects) => {
-      const theWord1  = "forgive";
-      const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord1) !== -1)   
-                return `
-                <li>
-                    <h3>"${object.text}"</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            categoriesSearch1.innerHTML = htmlString;
-    };
-    
-    var displayQuotes2 = (objects) => {
-      const theWord2  = "success";
-      const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord2) !== -1)   
-                return `
-                <li>
-                    <h3>"${object.text}"</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            categoriesSearch2.innerHTML = htmlString;
-          };
+        <script>
+            //generates categories from API by using keywords
+            "use strict";
+            const categoriesSearchLove = document.getElementById('categories-search__love');
+            const categoriesSearchForgiveness = document.getElementById('categories-search__forgiveness');
+            const categoriesSearchSuccess = document.getElementById('categories-search__success');
+            const categoriesSearchFailure = document.getElementById('categories-search__failure');
+            const categoriesSearchHealth = document.getElementById('categories-search__health');
 
-    var displayQuotes3 = (objects) => {
-      const theWord3  = "failure";
-      const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord3) !== -1)   
-                return `
-                <li>
-                    <h3>"${object.text}"</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            categoriesSearch3.innerHTML = htmlString;
-    };
+            let allQuotes = [];
 
-    var displayQuotes4 = (objects) => {
-      const theWord4  = "health";
-      const htmlString = objects
-            .map((object) => {
-               if (object.author == null) {
-                object.author = "Anonymous author";
-            } 
-            if
-            (object.text.indexOf(theWord4) !== -1)   
-                return `
-                <li>
-                    <h3>"${object.text}"</h3>
-                    <p>- ${object.author}</p>
-                </li>
-            `;
-            })
-            .join('');
-            categoriesSearch4.innerHTML = htmlString;
-    };
-      
-    // hiding and showing the panel
-    const categoriesPanel = document.getElementsByClassName("categories-button");
+            //fetching the data
+            const loadQuotes = async () => {    
+                try {
+                    const res = await fetch('https://type.fit/api/quotes');
+                    allQuotes = await res.json();
+                    displayQuotesLove(allQuotes);
+                    displayQuotesForgiveness(allQuotes);
+                    displayQuotesSuccess(allQuotes);
+                    displayQuotesFailure(allQuotes);
+                    displayQuotesHealth(allQuotes);
+                } catch (err) {
+                    console.error(err);
+                }
+            };
+            loadQuotes();
 
-    let i;
-    for (i = 0; i < categoriesPanel.length; i++) {
-      categoriesPanel[i].addEventListener("click", function() {
-        this.classList.toggle("active-categories__button");
+            const displayQuotesLove = (objects) => {
+                const theKeyWord  = "Love";
+                const htmlString = objects
+                    .map((object) => {
+                        //rename author if = null
+                        if (object.author == null) {
+                            object.author = "Anonymous author";  
+                        } 
+                        //search for specific keyword between quotes
+                        if (object.text.indexOf(theKeyWord) !== -1)   
+                        return `
+                            <li>
+                                <h3>"${object.text}"</h3>
+                                <p>- ${object.author}</p>
+                            </li>
+                        `;
+                    })
+                    .join('');
+                categoriesSearchLove.innerHTML = htmlString;
+            };
 
-        let panel = this.nextElementSibling;
-        if (panel.style.display === "block") {
-          panel.style.display = "none";
-        } else {
-          panel.style.display = "block";
-        }
-      });
-    }
-  </script>
+            const displayQuotesForgiveness = (objects) => {
+                const theKeyWord1  = "forgive";
+                const htmlString = objects
+                    .map((object) => {
+                        if (object.author == null) {
+                            object.author = "Anonymous author";
+                        } 
+                        if (object.text.indexOf(theKeyWord1) !== -1)   
+                        return `
+                            <li>
+                                <h3>"${object.text}"</h3>
+                                <p>- ${object.author}</p>
+                            </li>
+                        `;
+                    })
+                    .join('');
+                categoriesSearchForgiveness.innerHTML = htmlString;
+            };
+            
+            const displayQuotesSuccess = (objects) => {
+                const theKeyWord2  = "success";
+                const htmlString = objects
+                    .map((object) => {
+                        if (object.author == null) {
+                            object.author = "Anonymous author";
+                        } 
+                        if (object.text.indexOf(theKeyWord2) !== -1)   
+                        return `
+                            <li>
+                                <h3>"${object.text}"</h3>
+                                <p>- ${object.author}</p>
+                            </li>
+                        `;
+                    })
+                    .join('');
+                categoriesSearchSuccess.innerHTML = htmlString;
+            };
 
-  <script>
-    // hamburger menu
-    const navHamburger = document.querySelector(".navbar-hamburger__btn");
-    const sideNav = document.querySelector("#side-nav");
+            const displayQuotesFailure = (objects) => {
+                const theKeyWord3  = "failure";
+                const htmlString = objects
+                    .map((object) => {
+                        if (object.author == null) {
+                            object.author = "Anonymous author";
+                        } 
+                        if (object.text.indexOf(theKeyWord3) !== -1)   
+                        return `
+                            <li>
+                                <h3>"${object.text}"</h3>
+                                <p>- ${object.author}</p>
+                            </li>
+                        `;
+                    })
+                    .join('');
+                categoriesSearchFailure.innerHTML = htmlString;
+            };
 
-    navHamburger.addEventListener("click", mobileNavOpen);
+            const displayQuotesHealth = (objects) => {
+                const theKeyWord4  = "health";
+                const htmlString = objects
+                    .map((object) => {
+                        if (object.author == null) {
+                            object.author = "Anonymous author";
+                        } 
+                        if( object.text.indexOf(theKeyWord4) !== -1)   
+                        return `
+                            <li>
+                                <h3>"${object.text}"</h3>
+                                <p>- ${object.author}</p>
+                            </li>
+                        `;
+                    })
+                    .join('');
+                categoriesSearchHealth.innerHTML = htmlString;
+            };
+        </script>
 
-    function mobileNavOpen() {
-      sideNav.classList.toggle("active");
-    }
+        <script>    
+            // hiding and showing the panel
+            "use strict";
+            const categoriesPanel = document.getElementsByClassName("categories-button");
 
-    const navClose = document.querySelector(".navbar-close__btn");
+            let i;
+            for (i = 0; i < categoriesPanel.length; i++) {
+                categoriesPanel[i].addEventListener("click", function() {
+                    let panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>
 
-    navClose.addEventListener("click", mobileNavClose);
+        <script>
+            // hamburger menu open
+            "use strict";
+            const navHamburger = document.querySelector(".navbar-hamburger__btn");
+            const sideNav = document.querySelector("#side-nav");
 
-    function mobileNavClose() {
-      sideNav.classList.remove("active");
-    }
-  </script>
-</body>
+            const mobileNavOpen = () => {
+                sideNav.classList.toggle("active");
+            }
+            navHamburger.addEventListener("click", mobileNavOpen);
+
+            // hamburger menu close
+            const navClose = document.querySelector(".navbar-close__btn");
+
+            const mobileNavClose = () => {
+                sideNav.classList.remove("active");
+            }
+            navClose.addEventListener("click", mobileNavClose);
+        </script>
+    </body>
 </html>

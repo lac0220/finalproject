@@ -8,67 +8,69 @@
 @import 'my_story';
 @import 'contact';
 @import 'message';
+@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');     //Social media logos
+@import url('https://fonts.googleapis.com/css?family=Trykker&display=swap');    //font 
 
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $font-color2:#d1e8e2;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
-  font-size: 100%;
+    font-size: 100%;
 }
 
 body {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
 }
 
 html, 
 body {
-  height: 100vh;
-  scroll-behavior: smooth;
-  background: url('../img/bground.webp') white center center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  line-height: 1.5;
-  font-family:'Times New Roman', Times, serif;
+    height: 100vh;
+    scroll-behavior: smooth;
+    background: url('../img/bground.webp') $font-color center center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    line-height: 1.5;
+    font-family:'Times New Roman', Times, serif;
 }
 
 section p {
-  text-align: left;
+    text-align: left;
 }
 
 li {
-  list-style: none;
+    list-style: none;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1000px) {
     
-  html, 
-  body {
-    margin-top: 28px;
-    background-attachment: scroll;
-    background-size: 1000rem;
-  }
+    html, 
+    body {
+        margin-top: 28px;
+        background-attachment: scroll;
+        background-size: 1000rem;
+    }
 
-  section p {
-    font-size: 1.125rem;
-  }
+    section p {
+        font-size: 1.125rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
     
-  section p {
-    font-size: 0.95rem;
-  }
+    section p {
+        font-size: 0.95rem;
+    }
 }

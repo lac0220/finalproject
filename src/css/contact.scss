@@ -1,4 +1,4 @@
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $font-color2:#d1e8e2;
 $hover-color:rgb(56, 11, 11);
@@ -10,7 +10,8 @@ $background-color:#116466;
     text-align: center;
     h1 {
         padding: 10px 0 15px;
-        width: 100%;     
+        width: 100%;    
+        font-weight: bold; 
         font-size: 2.4rem;
         font-family: $font-family;
         background-color: $hover-color;
@@ -25,7 +26,8 @@ $background-color:#116466;
     }
   
     h2 {
-        padding: 20px 0;
+        padding: 30px 0 20px;
+        font-weight: bold;
         font-size: 2.2rem;
         color: $hover-color;
     }
@@ -62,7 +64,7 @@ $background-color:#116466;
         }
         
         textarea {
-            margin: 6px 0;
+            margin: 6px 0 15px;
             height: 200px;
             resize: vertical;
         }
@@ -170,7 +172,7 @@ $background-color:#116466;
         }
   
         h2 {
-            padding: 10px 0;
+            padding: 20px 0 10px;
             font-size: 1.1rem;
         }
   
@@ -199,10 +201,4 @@ $background-color:#116466;
         }
     }
 }
-  
-  
-  
-  
-  
-  
   

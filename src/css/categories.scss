@@ -1,4 +1,4 @@
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
@@ -11,37 +11,39 @@ $background-color:#116466;
         margin: auto auto 30px; 
         padding: 10px 0 15px;
         width: 100%; 
+        font-weight: bold;
         font-size: 2.4rem;
         font-family: $font-family;    
         background-color: $hover-color;
         color: $font-color;
     }
   
-    &-header {
+    ul li {
         position: relative;
-        margin-bottom: -8px;
         img {
-            max-height: 630px;
-            width: 50%;
+            max-height: 400px; 
+            width: 50%; 
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
         }
   
-        &__box {
+        div {
             position: absolute; 
-            bottom: 8px;
+            bottom: 1px;
             left: 0;
             right: 0;
             margin: auto;
-            padding: 8px;
             width: 50%; 
             text-align: center;
-            background: rgba(187, 185, 185, 0.4); 
+            background: rgb(61, 61, 61); 
             color: $font-color;
-            h3 {
+            h2 {
                 margin: center;
+                padding: 10px;
                 text-align: center;
-                font-size: 1.875rem;
+                line-height: 1.8rem;
+                font-weight: bold;
+                font-size: 1.8rem;
             }
         }
     }
@@ -67,8 +69,7 @@ $background-color:#116466;
         border-bottom-right-radius: 20px;
     }
   
-    .active-categories__button, 
-    .categories-button:hover {
+    &-button:hover {
         background-color: $hover-color; 
     }
   
@@ -79,23 +80,18 @@ $background-color:#116466;
         overflow: hidden;
         background-color: $background-color;
         color: $font-color;
-        &__panel {
-            margin: auto;
-            padding-bottom: 30px;
-            width: 100%;
-            li {
-                border: solid 1px $hover-color;
-                font-family: $font-family;
-                font-weight: bold;
-                color: $font-color;
-            }
-    
+        li {
+            border: solid 1px $hover-color;
+            font-weight: bold;
+            font-family: $font-family;
+            color: $font-color;
             h3 {
-                padding: 20px 10px;
-                width: 95%;
+                margin: auto;
+                padding: 30px 20px;
                 text-align: center;
-                font-size: 1.6rem;
                 font-style: italic;
+                font-weight: bold;
+                font-size: 1.6rem;
             }
             
             p {
@@ -108,26 +104,30 @@ $background-color:#116466;
                 background-color: $hover-color;
             }
         }
-    }
+    } 
 }
-    
+   
 @media only screen and (max-width: 1350px) {
   
     .categories {
-        &-header {
-            &__box, 
-            img {
+        ul li { 
+            img,
+            div {
                 width: 70%;
+                h2 {
+                    font-size: 1.7rem; 
+                }
             }
         }
         
         &-button {
             width: 70%;
+            font-size: 1.7rem;
         }
   
         &-search {
             width: 70%;
-            &__panel {
+            li {
                 h3 {
                     font-size: 1.4rem;
                 }
@@ -148,11 +148,9 @@ $background-color:#116466;
             font-size: 2rem;
         }
   
-        &-header {
-            &__box {
-                h3 {
-                    font-size: 1.6rem;
-                }
+        ul li {
+            div h2 {
+                font-size: 1.6rem;
             }
         }
         
@@ -160,73 +158,77 @@ $background-color:#116466;
             font-size: 1.6rem;
         }
         
-        &-search {
-            &__panel {
-                h3, 
-                p {
-                    font-size: 1.25rem;
-                }
+        &-search li {
+            h3, 
+            p {
+                font-size: 1.25rem;
             }
         }
     }
 }
+
   
 @media only screen and (max-width: 1000px) {
   
     .categories {
         padding: 25px 0 20px;
-        
         h1 {
             padding: 10px 0;
             font-size: 1.6rem;
         }
   
-        &-header h3 {
+        ul li div h2 {
+            padding: 8px 5px;
+            line-height: 1.5rem;
             font-size: 1.4rem;  
         }
-              
+    
         &-button {
             padding: 20px;
             font-size: 1.4rem;
-        } 
+        }   
     }
 }
-  
+
 @media only screen and (max-width: 820px) {
   
     .categories {
-        &-header h3 {
+        ul li {
+            div h2 {
+                line-height: 1.3rem;   
+                font-size: 1.2rem; 
             font-size: 1.2rem;    
+                font-size: 1.2rem; 
+            }
         }
         
         &-button {
             font-size: 1.2rem;
         }
         
-        &-search {
-            &__panel {
-                h3 {
-                    padding: 15px 10px;
-                    font-size: 1.2rem;
-                }
-  
-                p {
-                    padding: 6px;
-                    margin-left: 30%;
-                    width: 70%;
-                    font-size: 1.2rem;
-                }
+        &-search li {
+            h3 {
+                padding: 20px 10px;
+                font-size: 1.1rem;
+            }
+
+            p {
+                margin-left: 30%;
+                padding: 6px;
+                width: 70%;
+                font-size: 1.1rem;
             }
         }
     }
 }
+
   
 @media only screen and (max-width: 640px) {
   
     .categories {
-        &-header {
-            &__box, 
-            img {
+        ul li { 
+            img, 
+            div {
                 width: 90%;
             }
         }
@@ -247,53 +249,38 @@ $background-color:#116466;
             font-size: 1.25rem;
         }
   
-        &-header {
-            &__box {
+        ul li {
+            div h2 {
                 padding: 5px;
-                h3 {
-                    font-size: 1.1rem;
-                }
+                font-size: 1.1rem;
             }
         }
         
         &-button {
             font-size: 1.1rem;
-        }
-  
-        .active-categories__button, 
-        .categories-button:hover {
+            &:hover {
+                background-color: $background-color; 
             background-color: $background-color; 
-            &:active {
-                background-color: $hover-color;
+                background-color: $background-color; 
+                &:active {
+                    background-color: $hover-color;
+                }
             }
         }
   
-        &-search {
-            &__panel {
-                h3 {
-                    font-size: 1rem;
-                    padding: 10px;
-                }
-  
-                p {
-                    margin-left: 0;
-                    width: 100%;
-                    border-top-left-radius: 0;
-                    font-size: 1rem;
-                }
+        &-search li {
+            h3 {
+                padding: 15px 10px;
+                font-size: 1rem;
+            }
+
+            p {
+                margin-left: 0;
+                width: 100%;
+                border-top-left-radius: 0;
+                font-size: 1rem;
             }
         }
     }
 }
-  
-  
-  
-    
-    
-    
-    
-    
-    
-    
-    
-  
+

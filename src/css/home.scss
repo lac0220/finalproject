@@ -1,4 +1,4 @@
-$font-family: "Trykker"; 
+$font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
 $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
@@ -11,31 +11,35 @@ $background-color:#116466;
         margin: auto auto 30px; 
         padding: 10px 0 15px;
         width: 100%; 
+        font-weight: bold;
         font-size: 2.4rem;
         font-family: $font-family;    
         background-color: $hover-color;
         color: $font-color;
     }
-  
+    
     h2:nth-child(2) {
+        font-weight: bold;
         font-size: 2.2rem;
         color: $hover-color;
     }
-  
+    
     h2:nth-child(6) {
+        font-weight: bold;
+        font-size: 1.875rem;
         padding: 10px 0;
         color:$hover-color;
     }
-  
+    
     p {
         margin: auto;
         width: 70%;
     }
-  
+    
     p:nth-child(5) {
         padding-top: 20px;
     }
-  
+    
     &-random {
         position: relative;
         margin: 20px auto 0;
@@ -67,7 +71,7 @@ $background-color:#116466;
             font-family: $font-family;
         }
     }
-  
+    
     #author {
         margin-left: 50%;
         padding-top: 10px;
@@ -81,27 +85,8 @@ $background-color:#116466;
         color: $font-color;
         background-color: $hover-color;
     }
-  
-    .fadeaway-random {  
-        -webkit-animation-name: fadeaway-random;
-        -webkit-animation-duration: 5s;
-        -webkit-animation-count: infinite;
-        animation-name: fadeaway-random ;
-        animation-duration: 5s;
-        animation-iteration-count: infinite;
-  
-        @-webkit-keyframes fadeaway-random  {
-            from {opacity: .2} 
-            to {opacity: 1}
-        }
-  
-        @keyframes fadeaway-random  {
-            from {opacity: .2} 
-            to {opacity: 1}
-        }
-    }
-  
-    &-slides {  
+    
+    &-slides__img {  
         margin: auto;
         padding-bottom: 10px;
         max-width: 30%;
@@ -110,8 +95,8 @@ $background-color:#116466;
             border-radius: 20px;
         }
     }
-  
-    &-dot2 {
+    
+    &-dot {
         display: inline-block;
         margin: 0 2px 10px;
         height: 15px;
@@ -120,8 +105,8 @@ $background-color:#116466;
         transition: $background-color 0.6s ease;
         background-color: $background-color;
     }
-  
-    &-slides2 {
+    
+    &-slides__quote {
         position: relative;
         margin: auto auto 80px auto;
         width: 70%;
@@ -138,6 +123,8 @@ $background-color:#116466;
             width: 90%;
             transform: translate(-50%, -50%);
             hyphens: auto;
+            font-weight: bold;
+            font-style: italic;
             font-size: 1.563rem;
             color: $font-color;
         }
@@ -158,50 +145,52 @@ $background-color:#116466;
             color: $font-color;
         }
     }
-  
-    .fadeaway-sliding {  
-        -webkit-animation-name: fadeaway-sliding;
-        -webkit-animation-duration: 1.5s;
-        animation-name: fadeaway-sliding;
-        animation-duration: 1.5s;
-        
-        @-webkit-keyframes fadeaway-sliding {
-            from {opacity: .4} 
+
+    .fadeaway {  
+        -webkit-animation-name: fadeaway-random;
+        -webkit-animation-duration: 5s;
+        -webkit-animation-count: infinite;
+        animation-name: fadeaway-random;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+
+        @-webkit-keyframes fadeaway-random  {
+            from {opacity: .5} 
             to {opacity: 1}
         }
-  
-        @keyframes fadeaway-sliding {
-            from {opacity: .4} 
+
+        @keyframes fadeaway-random  {
+            from {opacity: .5} 
             to {opacity: 1}
         }
     }
-  
+
     .sliding-quotes {
         background-color: $hover-color
     }
 }
-  
+    
 @media only screen and (max-width: 1350px) {
-  
+    
     .home {
         #quote {
             font-size: 1.4rem;
         }
-  
+    
         #author {
             height: 3.5rem;
             font-size: 1.4rem;
         }  
-  
-        &-slides {  
+    
+        &-slides__img {  
             max-width: 40%;
         }
         
-        &-slides2 {
+        &-slides__quote {
             h2 {
                 font-size: 1.4rem;   
             }
-  
+    
             &__author {
                 height: 3.5rem;
                 font-size: 1.4rem;
@@ -209,30 +198,30 @@ $background-color:#116466;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 1200px) {
-  
+    
     .home {
         h1 {
             font-size: 2rem;
         }
-  
+    
         h2:nth-child(2) {
             font-size: 1.8rem;
         }
-  
+    
         h2:nth-child(6) {
             font-size: 1.6rem;
         }
-  
+    
         p {
             width: 90%;;
         }
-  
+    
         p:nth-child(5) {
             padding-top: 10px;
         }
-  
+    
         &-random {
             height: 6.6rem;
             width: 90%;
@@ -240,7 +229,7 @@ $background-color:#116466;
                 font-size: 1.25rem;
             }
         }
-  
+    
         #author {
             padding: 10px 0;
             width: 45%;
@@ -248,14 +237,14 @@ $background-color:#116466;
             font-size: 1.25rem;
         }
     
-        &-slides2 {
+        &-slides__quote {
             margin: auto auto 60px auto;
             width: 90%;
             height: 5rem;
             h2 {
                 font-size: 1.25rem;
             }
-  
+    
             &__author {
                 height: 3.3rem;
                 font-size: 1.25rem;
@@ -263,29 +252,29 @@ $background-color:#116466;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 1000px) {
-  
+    
     .home {
         padding: 25px 0 20px;
         h1 {
             padding: 10px 0;
             font-size: 1.6rem;
         }
-  
+    
         h2:nth-child(2), 
         h2:nth-child(6) {
             font-size: 1.4rem;
         }
         
-        &-slides {  
+        &-slides__img {  
             max-width: 50%;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 820px) {
-  
+    
     .home {
         &-random {
             height: 8rem;
@@ -293,30 +282,30 @@ $background-color:#116466;
                 font-size: 1.2rem;
             }
         }
-  
+    
         #author {
             margin-left: 25%;
             width: 70%;
             height: 3.2rem;
             font-size: 1.2rem;
         }
-       
-        &-slides {  
+        
+        &-slides__img {  
             padding-bottom: 0;
             max-width: 65%; 
         }
-  
-        &-dot2 {
+    
+        &-dot {
             margin: 0 2px 5px;
             height: 10px;
             width: 10px;
         }
-  
-        &-slides2 {
+    
+        &-slides__quote {
             h2 { 
                 font-size: 1.2rem;   
             }
-  
+    
             &__author {
                 margin-left: 25%;
                 width: 75%;
@@ -326,16 +315,16 @@ $background-color:#116466;
         }
     }
 }
-  
+    
 @media only screen and (max-width: 640px) {
-  
+    
     .home {
         &-random {
             height: 9.5rem;
         }
     }
 } 
-  
+    
 @media only screen and (max-width: 500px) {
     
     .home {
@@ -344,12 +333,12 @@ $background-color:#116466;
             margin: auto auto 20px;
             font-size: 1.25rem;
         }
-  
+    
         h2:nth-child(2), 
         h2:nth-child(6) {
             font-size: 1.1rem;
         }
-  
+    
         &-random {
             height: 8.5rem;
             border-bottom-left-radius: 0; 
@@ -357,25 +346,25 @@ $background-color:#116466;
                 font-size: 1rem;
             }
         }
-  
+    
         #author {
             margin: auto;
             width: 90%;
             height: 2.8rem;
             font-size: 1rem;
         }
-  
-        &-slides { 
+    
+        &-slides__img { 
             max-width: 90%;
         }
-  
-        &-slides2 {
+    
+        &-slides__quote {
             height: 4.6rem;
             border-bottom-left-radius: 0; 
             h2 { 
                 font-size: 1rem;  
             }
-  
+    
             &__author {
                 margin: auto;
                 width: 100%;
@@ -385,7 +374,7 @@ $background-color:#116466;
         }  
     }
 }
-  
+    
 @media only screen and (max-width: 405px) {
     
     .home {
@@ -402,9 +391,8 @@ $background-color:#116466;
             height: 10.5rem; 
         } 
 
-        &-slides2 {
+        &-slides__quote {
             height: 4.8rem;
         } 
     }
 }
-    
