@@ -1,113 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="/css/reset.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"> <!-- linkedin and github -->
-    <link href='https://fonts.googleapis.com/css?family=Trykker&display=swap' rel='stylesheet'> <!-- font -->
-    <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
-    <title>Contact - Legendary Quotes</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Contact page - Legendary Quotes">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
+        <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <title>Contact - Legendary Quotes</title>
+    </head>
 
-<body>
-  <header>
-    <nav>
-      <span class="navbar-hamburger__btn">&#9776;</span>  
-      
-      <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
-      
-      <ul id="side-nav">
-        <span class="navbar-close__btn">&times;</span>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="daily-quotes.html">Daily Quote</a></li>
-        <li>
-          <div class="navbar-dropdown">
-            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
-            <div class="navbar-dropdown__box">
-              <a href="categories.html">Categories</a>
-              <a href="authors.html">Authors</a>
-              <a href="text-search.html">Text Search</a>
-            </div>  
-          </div>
-        </li>
-        <li><a href="my-story.html">My Story</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <body>
+        <header>
+            <nav>
+                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <ul id="side-nav">
+                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="daily-quotes.html">Daily Quote</a></li>
+                    <li>
+                        <ul>
+                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <li>
+                                <a href="categories.html">Categories</a>
+                                <a href="authors.html">Authors</a>
+                                <a href="text-search.html">Text Search</a>
+                            </li>  
+                        </ul>
+                    </li>
+                    <li><a href="my-story.html">My Story</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <section class="contact">
-    <h1>Contact Form</h1>
+        <section class="contact">
+            <h1>Contact Form</h1>
+            <img src="./img/contact.webp" alt="contact">
+            <h2>Please fill out the form below</h2>
+            <form action="https://formsubmit.co/nemeth0220@gmail.com" method="POST">
+                <label for="subject">Choose a topic
+                    <select id="subject" name="subject">
+                        <option value=""></option>
+                        <option value="newquote">Send me your quote</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="other">Other</option>
+                    </select>
+                </label>
+                <label for="name">
+                    <input type="text" id="name" name="name" required placeholder="Name">
+                </label>
+                <label for="email">
+                    <input type="text" id="email" name="email" required placeholder="Email address">
+                    <input type="hidden" name="_next" value="http://lac0220.github.io/finalproject-quotes/message.html">
+                </label>
+                <label for="comment">
+                    <textarea id="comment" name="comment" placeholder="Leave a message here..."></textarea>
+                </label>
+                <div class="contact-submit">
+                    <input type="submit" value="SEND">
+                </div>
+            </form>
+        </section>
 
-    <img src="./img/contact.webp" alt="contact">
+        <footer>
+            <p>Created by Laszlo Nemeth &copy; 2022</p>
+            <ul>
+                <li><a href="index.html" class="home-link">Home</a></li>
+                <li><a href="my-story.html">My Story</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Visit me on Linkedin"></i></a></li>  <!-- linkedin -->
+                <li><a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Visit me on Github"></i></a></li> <!-- github -->
+            </ul>
+        </footer>
 
-    <h2>Please fill out the form below</h2>
+        <script>
+            // hamburger menu open
+            "use strict";
+            const navHamburger = document.querySelector(".navbar-hamburger__btn");
+            const sideNav = document.querySelector("#side-nav");
 
-    <form action="https://formsubmit.co/nemeth0220@gmail.com" method="POST">
-      <label for="subject">Choose a topic
-        <select id="subject" name="subject">
-          <option value=""></option>
-          <option value="newquote">Send me your quote</option>
-          <option value="feedback">Feedback</option>
-          <option value="other">Other</option>
-        </select>
-      </label>
+            const mobileNavOpen = () => {
+                sideNav.classList.toggle("active");
+            }
+            navHamburger.addEventListener("click", mobileNavOpen);
 
-      <label for="name">
-        <input type="text" id="name" name="name" required placeholder="Name">
-      </label>
+            // hamburger menu close
+            const navClose = document.querySelector(".navbar-close__btn");
 
-      <label for="email">
-        <input type="text" id="email" name="email" required placeholder="Email address">
-        <input type="hidden" name="_next" value="http://lac0220.github.io/finalproject-quotes/message.html">
-      </label>
-
-      <label for="comment">
-        <textarea id="comment" name="comment" placeholder="Leave a message here..."></textarea>
-      </label>
-
-      <div class="contact-submit">
-        <input type="submit" value="SEND">
-      </div>
-    </form>
-  </section>
-
-  <footer>
-    <p>Created by Laszlo Nemeth &copy; 2022</p>
-
-    <div class="footer-menu">
-      <a href="index.html" class="footer-home-link">Home</a>
-      <a href="my-story.html">My Story</a>
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <div class="footer-social-media">
-      <a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Linkedin"></i></a>    <!-- linkedin -->
-      <a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Github"></i></a>      <!-- github -->
-    </div>
-  </footer>
-
-  <script>
-    // hamburger menu
-    const navHamburger = document.querySelector(".navbar-hamburger__btn");
-    const sideNav = document.querySelector("#side-nav");
-
-    navHamburger.addEventListener("click", mobileNavOpen);
-
-    function mobileNavOpen() {
-      sideNav.classList.toggle("active");
-    }
-
-    const navClose = document.querySelector(".navbar-close__btn");
-
-    navClose.addEventListener("click", mobileNavClose);
-
-    function mobileNavClose() {
-      sideNav.classList.remove("active");
-    }
-  </script>
-</body>
+            const mobileNavClose = () => {
+                sideNav.classList.remove("active");
+            }
+            navClose.addEventListener("click", mobileNavClose);
+        </script>
+    </body>
 </html>

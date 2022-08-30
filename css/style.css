@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://use.fontawesome.com/releases/v5.0.8/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Trykker&display=swap");
 footer {
   display: flex;
   flex-direction: row;
@@ -13,47 +15,50 @@ footer p {
   margin: auto;
   padding-left: 50px;
 }
-footer .footer-menu {
+footer ul:nth-child(2) {
   margin: auto;
   font-weight: bold;
+  display: flex;
 }
-footer .footer-menu a {
+footer ul:nth-child(2) li a {
   font-size: 1.563rem;
   color: inherit;
   /* dot for nav links */
 }
-footer .footer-menu a:hover {
+footer ul:nth-child(2) li a:hover {
   color: #380b0b;
 }
-footer .footer-menu a:before {
+footer ul:nth-child(2) li a:before {
   content: "·";
   display: inline-block;
-  padding-right: 5px;
+  margin: auto 10px;
   color: #d1e8e2;
 }
-footer .footer-menu .footer-home-link:before {
+footer ul:nth-child(2) .home-link:before {
   content: none;
 }
-footer .footer-social-media {
+footer ul:nth-child(3) {
   flex-grow: 10;
   margin: auto;
   padding-right: 50px;
   text-align: right;
 }
-footer .footer-social-media a {
+footer ul:nth-child(3) li {
   display: inline-block;
+}
+footer ul:nth-child(3) li a {
   margin: auto 2px;
-  padding: 0 10px;
+  padding: 10px 12px;
   border-radius: 10px;
   font-size: 1.875rem;
   background-color: #380b0b;
   color: inherit;
 }
-footer .footer-social-media a:hover {
+footer ul:nth-child(3) li a:hover {
   transform: scale(1.1);
   -webkit-transform: scale(1.2);
 }
-footer .footer-social-media a:active {
+footer ul:nth-child(3) li a:active {
   color: #116466;
 }
 
@@ -65,20 +70,21 @@ footer .footer-social-media a:active {
   footer p {
     order: 3;
     padding: 0;
+    font-size: 1.125rem;
   }
-  footer .footer-menu {
-    padding-top: 5px;
+  footer ul:nth-child(2) {
+    padding-top: 7px;
   }
-  footer .footer-menu a {
+  footer ul:nth-child(2) li a {
     order: 2;
     font-size: 1.375rem;
   }
-  footer .footer-social-media {
+  footer ul:nth-child(3) {
     order: 1;
-    padding: 5px 0;
+    padding: 8px 0;
   }
-  footer .footer-social-media a {
-    padding: 3px 10px 0;
+  footer ul:nth-child(3) li a {
+    padding: 8px;
     font-size: 1.6rem;
   }
 }
@@ -86,25 +92,28 @@ footer .footer-social-media a:active {
   footer p {
     font-size: 0.938rem;
   }
-  footer .footer-menu {
-    padding-top: 0;
+  footer ul:nth-child(2) {
+    padding-top: 3px;
   }
-  footer .footer-menu a {
+  footer ul:nth-child(2) li a {
     font-size: 1.125rem;
   }
-  footer .footer-menu a:hover {
+  footer ul:nth-child(2) li a:hover {
     color: white;
   }
-  footer .footer-menu a:active {
+  footer ul:nth-child(2) li a:active {
     color: #380b0b;
   }
-  footer .footer-social-media {
-    padding: 3px 0;
+  footer ul:nth-child(2) li a:before {
+    margin: auto 5px;
   }
-  footer .footer-social-media a {
-    font-size: 1.6rem;
+  footer ul:nth-child(3) {
+    padding: 5px 0;
   }
-  footer .footer-social-media a:hover {
+  footer ul:nth-child(3) li a {
+    font-size: 1.5rem;
+  }
+  footer ul:nth-child(3) li a:hover {
     transform: none;
   }
 }
@@ -125,32 +134,32 @@ nav .navbar-logo {
   left: 150px;
   bottom: 4px;
   font-size: 2.188rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   color: white;
 }
-nav ul {
+nav ul:nth-child(3) {
   display: flex;
   margin-left: auto;
   padding-right: 100px;
 }
-nav ul .navbar-close__btn {
+nav ul:nth-child(3) .navbar-close__btn {
   visibility: hidden;
 }
-nav ul li {
+nav ul:nth-child(3) li {
   margin: auto;
 }
-nav ul li a {
+nav ul:nth-child(3) li a {
   margin-right: 50px;
   font-size: 1.563rem;
   color: white;
 }
-nav ul li a:hover {
+nav ul:nth-child(3) li a:hover {
   color: #380b0b;
 }
-nav ul .navbar-dropdown {
+nav ul:nth-child(3) li:nth-child(4) ul {
   margin: 0 50px -3px 0;
 }
-nav ul .navbar-dropdown button {
+nav ul:nth-child(3) li:nth-child(4) ul button {
   border: none;
   cursor: pointer;
   font-family: inherit;
@@ -159,20 +168,20 @@ nav ul .navbar-dropdown button {
   background-color: inherit;
   color: white;
 }
-nav ul .navbar-dropdown button:hover {
+nav ul:nth-child(3) li:nth-child(4) ul button:hover {
   color: #380b0b;
 }
-nav ul .navbar-dropdown button i {
+nav ul:nth-child(3) li:nth-child(4) ul button i {
   padding: 0 10px;
 }
-nav ul .navbar-dropdown__box {
+nav ul:nth-child(3) li:nth-child(4) ul li {
   display: none;
   position: absolute;
   z-index: 1;
   border-radius: 10px;
   background-color: green;
 }
-nav ul .navbar-dropdown__box a {
+nav ul:nth-child(3) li:nth-child(4) ul li a {
   display: block;
   margin: auto;
   padding: 5px 5px 5px 10px;
@@ -181,10 +190,11 @@ nav ul .navbar-dropdown__box a {
   font-size: 1.4rem;
   color: white;
 }
-nav ul .navbar-dropdown__box a:hover {
+nav ul:nth-child(3) li:nth-child(4) ul li a:hover {
   background-color: lightgreen;
+  color: #380b0b;
 }
-nav ul .navbar-dropdown:hover .navbar-dropdown__box {
+nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   display: block;
 }
 
@@ -192,7 +202,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   nav .navbar-logo {
     left: 70px;
   }
-  nav ul {
+  nav ul:nth-child(3) {
     padding-right: 0;
   }
 }
@@ -202,17 +212,17 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     bottom: 2px;
     font-size: 1.875rem;
   }
-  nav ul li a {
+  nav ul:nth-child(3) li a {
     margin-right: 30px;
     font-size: 1.375rem;
   }
-  nav ul li .navbar-dropdown {
+  nav ul:nth-child(3) li:nth-child(4) ul {
     margin: 0 30px 0 0;
   }
-  nav ul li .navbar-dropdown button {
+  nav ul:nth-child(3) li:nth-child(4) ul button {
     font-size: 1.375rem;
   }
-  nav ul li .navbar-dropdown__box a {
+  nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a {
     padding: 3px 5px 3px 10px;
     font-size: 1.125rem;
   }
@@ -239,7 +249,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     margin: auto;
     left: 0;
   }
-  nav ul {
+  nav ul:nth-child(3) {
     display: block;
     position: fixed;
     top: 0;
@@ -253,7 +263,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     overflow-x: hidden;
     background-color: #116466;
   }
-  nav ul .navbar-close__btn {
+  nav ul:nth-child(3) .navbar-close__btn {
     visibility: visible;
     position: absolute;
     top: 30px;
@@ -264,24 +274,25 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     font-weight: normal;
     color: #d1e8e2;
   }
-  nav ul li {
+  nav ul:nth-child(3) li {
     margin-right: -150px;
     padding: 20px 0 0 30px;
   }
-  nav ul li a {
+  nav ul:nth-child(3) li a {
     margin-right: 0;
     font-size: 1.2rem;
   }
-  nav ul li .navbar-dropdown {
+  nav ul:nth-child(3) li:nth-child(4) ul {
     margin: 0 -50px 0 0;
   }
-  nav ul li .navbar-dropdown button {
+  nav ul:nth-child(3) li:nth-child(4) ul button {
     font-size: 1.2rem;
   }
-  nav ul li .navbar-dropdown__box {
+  nav ul:nth-child(3) li:nth-child(4) ul li {
     left: 25%;
+    padding: 0;
   }
-  nav ul li .navbar-dropdown__box a {
+  nav ul:nth-child(3) li:nth-child(4) ul li a {
     padding: 3px 12px 3px 12px;
   }
 
@@ -299,29 +310,28 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   nav .navbar-logo {
     font-size: 1.563rem;
   }
-  nav ul li a:hover {
+  nav ul:nth-child(3) li a:hover {
     color: white;
   }
-  nav ul li a:hover:active {
+  nav ul:nth-child(3) li a:hover:active {
     color: #380b0b;
   }
-  nav ul li .navbar-dropdown button:hover {
+  nav ul:nth-child(3) li:nth-child(4) ul button:hover {
     color: white;
   }
-  nav ul li .navbar-dropdown button:hover:active {
-    color: white;
-  }
-  nav ul li .navbar-dropdown__box {
+  nav ul:nth-child(3) li:nth-child(4) ul li {
     left: 15%;
   }
-  nav ul li .navbar-dropdown__box a {
+  nav ul:nth-child(3) li:nth-child(4) ul li a {
     padding: 3px 5px 3px 10px;
   }
-  nav ul li .navbar-dropdown__box a:hover {
+  nav ul:nth-child(3) li:nth-child(4) ul li a:hover {
     background-color: green;
+    color: white;
   }
-  nav ul li .navbar-dropdown__box a:active {
+  nav ul:nth-child(3) li:nth-child(4) ul li a:active {
     background-color: lightgreen;
+    color: #380b0b;
   }
 }
 @media only screen and (max-width: 360px) {
@@ -342,16 +352,20 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 30px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
 .home h2:nth-child(2) {
+  font-weight: bold;
   font-size: 2.2rem;
   color: #380b0b;
 }
 .home h2:nth-child(6) {
+  font-weight: bold;
+  font-size: 1.875rem;
   padding: 10px 0;
   color: #380b0b;
 }
@@ -391,7 +405,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   font-style: italic;
   font-size: 1.6rem;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
 }
 .home #author {
   margin-left: 50%;
@@ -402,44 +416,20 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-bottom-right-radius: 50px;
   font-size: 1.6rem;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   color: white;
   background-color: #380b0b;
 }
-.home .fadeaway-random {
-  -webkit-animation-name: fadeaway-random;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-count: infinite;
-  animation-name: fadeaway-random;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-}
-@-webkit-keyframes fadeaway-random {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeaway-random {
-  from {
-    opacity: 0.2;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.home-slides {
+.home-slides__img {
   margin: auto;
   padding-bottom: 10px;
   max-width: 30%;
 }
-.home-slides img {
+.home-slides__img img {
   width: 100%;
   border-radius: 20px;
 }
-.home-dot2 {
+.home-dot {
   display: inline-block;
   margin: 0 2px 10px;
   height: 15px;
@@ -448,7 +438,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   transition: #116466 0.6s ease;
   background-color: #116466;
 }
-.home-slides2 {
+.home-slides__quote {
   position: relative;
   margin: auto auto 80px auto;
   width: 70%;
@@ -456,20 +446,22 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   border-bottom-left-radius: 35px;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #116466;
 }
-.home-slides2 h2 {
+.home-slides__quote h2 {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 90%;
   transform: translate(-50%, -50%);
   hyphens: auto;
+  font-weight: bold;
+  font-style: italic;
   font-size: 1.563rem;
   color: white;
 }
-.home-slides2__author {
+.home-slides__quote__author {
   position: absolute;
   top: 100%;
   margin-left: 50%;
@@ -480,27 +472,29 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-bottom-right-radius: 50px;
   font-weight: bold;
   font-size: 1.563rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
-.home .fadeaway-sliding {
-  -webkit-animation-name: fadeaway-sliding;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fadeaway-sliding;
-  animation-duration: 1.5s;
+.home .fadeaway {
+  -webkit-animation-name: fadeaway-random;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-count: infinite;
+  animation-name: fadeaway-random;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
-@-webkit-keyframes fadeaway-sliding {
+@-webkit-keyframes fadeaway-random {
   from {
-    opacity: 0.4;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
   }
 }
-@keyframes fadeaway-sliding {
+@keyframes fadeaway-random {
   from {
-    opacity: 0.4;
+    opacity: 0.5;
   }
   to {
     opacity: 1;
@@ -518,13 +512,13 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     height: 3.5rem;
     font-size: 1.4rem;
   }
-  .home-slides {
+  .home-slides__img {
     max-width: 40%;
   }
-  .home-slides2 h2 {
+  .home-slides__quote h2 {
     font-size: 1.4rem;
   }
-  .home-slides2__author {
+  .home-slides__quote__author {
     height: 3.5rem;
     font-size: 1.4rem;
   }
@@ -558,15 +552,15 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     height: 3.3rem;
     font-size: 1.25rem;
   }
-  .home-slides2 {
+  .home-slides__quote {
     margin: auto auto 60px auto;
     width: 90%;
     height: 5rem;
   }
-  .home-slides2 h2 {
+  .home-slides__quote h2 {
     font-size: 1.25rem;
   }
-  .home-slides2__author {
+  .home-slides__quote__author {
     height: 3.3rem;
     font-size: 1.25rem;
   }
@@ -583,7 +577,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 .home h2:nth-child(6) {
     font-size: 1.4rem;
   }
-  .home-slides {
+  .home-slides__img {
     max-width: 50%;
   }
 }
@@ -600,19 +594,19 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     height: 3.2rem;
     font-size: 1.2rem;
   }
-  .home-slides {
+  .home-slides__img {
     padding-bottom: 0;
     max-width: 65%;
   }
-  .home-dot2 {
+  .home-dot {
     margin: 0 2px 5px;
     height: 10px;
     width: 10px;
   }
-  .home-slides2 h2 {
+  .home-slides__quote h2 {
     font-size: 1.2rem;
   }
-  .home-slides2__author {
+  .home-slides__quote__author {
     margin-left: 25%;
     width: 75%;
     height: 3.2rem;
@@ -649,17 +643,17 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     height: 2.8rem;
     font-size: 1rem;
   }
-  .home-slides {
+  .home-slides__img {
     max-width: 90%;
   }
-  .home-slides2 {
+  .home-slides__quote {
     height: 4.6rem;
     border-bottom-left-radius: 0;
   }
-  .home-slides2 h2 {
+  .home-slides__quote h2 {
     font-size: 1rem;
   }
-  .home-slides2__author {
+  .home-slides__quote__author {
     margin: auto;
     width: 100%;
     height: 2.8rem;
@@ -675,7 +669,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .home-random {
     height: 10.5rem;
   }
-  .home-slides2 {
+  .home-slides__quote {
     height: 4.8rem;
   }
 }
@@ -688,8 +682,9 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 20px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
@@ -697,7 +692,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto;
   width: 70%;
 }
-.daily-quotes__box {
+.daily-quotes ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   /* same sized column */
@@ -706,44 +701,38 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto;
   width: 70%;
 }
-.daily-quotes__box h2 {
+.daily-quotes ul li:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+.daily-quotes ul li:nth-child(2) {
+  grid-column: 2;
+  grid-row: 1;
+}
+.daily-quotes ul li:nth-child(3) {
+  grid-column: span 2;
+  grid-row: 2;
+}
+.daily-quotes ul li:nth-child(3) img {
+  max-width: 50%;
+}
+.daily-quotes ul li h2 {
   padding: 20px 0 10px;
   text-decoration: underline;
+  font-weight: bold;
   font-size: 1.875rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.daily-quotes__box img {
+.daily-quotes ul li img {
   margin-bottom: -10px;
   max-width: 100%;
   height: auto;
   border-top-right-radius: 80px;
   border-top-left-radius: 80px;
 }
-.daily-quotes__box__love {
-  grid-column: 1;
-  grid-row: 1;
-}
-.daily-quotes__box__success {
-  grid-column: 2;
-  grid-row: 1;
-}
-.daily-quotes__box__health {
-  grid-column: span 2;
-  grid-row: 2;
-}
-.daily-quotes__box__health img {
-  max-width: 50%;
-}
-.daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 {
-  width: 100%;
-}
-.daily-quotes__box .daily-quotes__box__love__quote2 {
-  width: 50%;
-}
-.daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+.daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
   position: relative;
   margin: auto;
   height: 8rem;
@@ -751,15 +740,15 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   background-color: #116466;
   color: white;
 }
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -775,57 +764,83 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   -webkit-hyphenate-limit-zone: 8%;
   text-align: center;
   font-style: italic;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
+.daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success {
+  width: 100%;
+}
+.daily-quotes ul li .daily-quotes__health {
+  width: 50%;
+}
+.daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
   margin-left: 30%;
   padding: 15px 0;
   width: 70%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
-.daily-quotes__box #daily-author2 {
+.daily-quotes ul li #daily-quotes__author__health {
   margin-left: 40%;
   width: 35%;
 }
 
 @media only screen and (max-width: 1612px) {
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li h2 {
+    font-size: 1.72rem;
+  }
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 9.8rem;
+  }
+  .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
+    font-size: 1.4rem;
+  }
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
+    font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 1350px) {
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 8.6rem;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
-    font-size: 1.4rem;
+  .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
+    font-size: 1.3rem;
   }
-  .daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
-    font-size: 1.4rem;
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
+    font-size: 1.3rem;
   }
 }
 @media only screen and (max-width: 1200px) {
@@ -835,52 +850,51 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .daily-quotes p {
     width: 90%;
   }
-  .daily-quotes__box {
+  .daily-quotes ul {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 10px;
     width: 90%;
   }
-  .daily-quotes__box h2 {
-    font-size: 1.6rem;
-  }
-  .daily-quotes__box img {
-    max-width: 60%;
-  }
-  .daily-quotes__box__love {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .daily-quotes__box__success {
+  .daily-quotes ul li:nth-child(2) {
     grid-column: 1;
     grid-row: 2;
   }
-  .daily-quotes__box__health {
+  .daily-quotes ul li:nth-child(3) {
     grid-column: span 1;
     grid-row: 3;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li:nth-child(3) img {
+    max-width: 60%;
+  }
+  .daily-quotes ul li h2 {
+    font-size: 1.6rem;
+  }
+  .daily-quotes ul li img {
+    max-width: 60%;
+  }
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     width: 60%;
     height: 6rem;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
-    font-size: 1.25rem;
+  .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
+    font-size: 1.2rem;
   }
-  .daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin-left: 40%;
     width: 40%;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 1000px) {
@@ -891,59 +905,51 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     padding: 10px 0;
     font-size: 1.6rem;
   }
-  .daily-quotes h2 {
+  .daily-quotes ul li h2 {
     font-size: 1.4rem;
   }
 }
 @media only screen and (max-width: 820px) {
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 7.5rem;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
-    font-size: 1.2rem;
+  .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
+    font-size: 1.1rem;
   }
-  .daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin-left: 35%;
     width: 45%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 645px) {
-  .daily-quotes__box img {
+  .daily-quotes ul li:nth-child(3) img {
     max-width: 80%;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li img {
+    max-width: 80%;
+  }
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 7.7rem;
     width: 80%;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
-    font-size: 1.25rem;
-  }
-  .daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin-left: 30%;
     width: 60%;
   }
@@ -956,34 +962,37 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     margin: auto auto 10px;
     font-size: 1.25rem;
   }
-  .daily-quotes__box h2 {
+  .daily-quotes ul li:nth-child(3) img {
+    max-width: 100%;
+  }
+  .daily-quotes ul li h2 {
     padding: 10px 0;
     font-size: 1.1rem;
   }
-  .daily-quotes__box img {
+  .daily-quotes ul li img {
     max-width: 100%;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote,
-.daily-quotes__box .daily-quotes__box__love__quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 {
+  .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     width: 100%;
     height: 6.5rem;
     border-bottom-left-radius: 0;
   }
-  .daily-quotes__box .daily-quotes__box__love__quote #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote1 #daily-quote2,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote1,
-.daily-quotes__box .daily-quotes__box__love__quote2 #daily-quote2 {
+  .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
     font-size: 1rem;
   }
-  .daily-quotes__box #daily-author,
-.daily-quotes__box #daily-author1,
-.daily-quotes__box #daily-author2 {
+  .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin-left: 0;
     width: 100%;
     font-size: 1rem;
@@ -998,37 +1007,39 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 30px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
-.categories-header {
+.categories ul li {
   position: relative;
-  margin-bottom: -8px;
 }
-.categories-header img {
-  max-height: 630px;
+.categories ul li img {
+  max-height: 400px;
   width: 50%;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-.categories-header__box {
+.categories ul li div {
   position: absolute;
-  bottom: 8px;
+  bottom: 1px;
   left: 0;
   right: 0;
   margin: auto;
-  padding: 8px;
   width: 50%;
   text-align: center;
-  background: rgba(187, 185, 185, 0.4);
+  background: #3d3d3d;
   color: white;
 }
-.categories-header__box h3 {
+.categories ul li div h2 {
   margin: center;
+  padding: 10px;
   text-align: center;
-  font-size: 1.875rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  font-size: 1.8rem;
 }
 .categories-button {
   display: block;
@@ -1049,8 +1060,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.categories .active-categories__button,
-.categories .categories-button:hover {
+.categories-button:hover {
   background-color: #380b0b;
 }
 .categories-search {
@@ -1061,25 +1071,21 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   background-color: #116466;
   color: white;
 }
-.categories-search__panel {
-  margin: auto;
-  padding-bottom: 30px;
-  width: 100%;
-}
-.categories-search__panel li {
+.categories-search li {
   border: solid 1px #380b0b;
-  font-family: "Trykker";
   font-weight: bold;
+  font-family: "Trykker", "Times New Roman", Times, serif;
   color: white;
 }
-.categories-search__panel h3 {
-  padding: 20px 10px;
-  width: 95%;
+.categories-search li h3 {
+  margin: auto;
+  padding: 30px 20px;
   text-align: center;
-  font-size: 1.6rem;
   font-style: italic;
+  font-weight: bold;
+  font-size: 1.6rem;
 }
-.categories-search__panel p {
+.categories-search li p {
   margin-left: 40%;
   padding: 10px;
   width: 60%;
@@ -1090,20 +1096,25 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 }
 
 @media only screen and (max-width: 1350px) {
-  .categories-header__box,
-.categories-header img {
+  .categories ul li img,
+.categories ul li div {
     width: 70%;
+  }
+  .categories ul li img h2,
+.categories ul li div h2 {
+    font-size: 1.7rem;
   }
   .categories-button {
     width: 70%;
+    font-size: 1.7rem;
   }
   .categories-search {
     width: 70%;
   }
-  .categories-search__panel h3 {
+  .categories-search li h3 {
     font-size: 1.4rem;
   }
-  .categories-search__panel p {
+  .categories-search li p {
     padding: 8px;
     font-size: 1.4rem;
   }
@@ -1112,14 +1123,14 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .categories h1 {
     font-size: 2rem;
   }
-  .categories-header__box h3 {
+  .categories ul li div h2 {
     font-size: 1.6rem;
   }
   .categories-button {
     font-size: 1.6rem;
   }
-  .categories-search__panel h3,
-.categories-search__panel p {
+  .categories-search li h3,
+.categories-search li p {
     font-size: 1.25rem;
   }
 }
@@ -1131,7 +1142,9 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     padding: 10px 0;
     font-size: 1.6rem;
   }
-  .categories-header h3 {
+  .categories ul li div h2 {
+    padding: 8px 5px;
+    line-height: 1.5rem;
     font-size: 1.4rem;
   }
   .categories-button {
@@ -1140,26 +1153,29 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   }
 }
 @media only screen and (max-width: 820px) {
-  .categories-header h3 {
+  .categories ul li div h2 {
+    line-height: 1.3rem;
+    font-size: 1.2rem;
+    font-size: 1.2rem;
     font-size: 1.2rem;
   }
   .categories-button {
     font-size: 1.2rem;
   }
-  .categories-search__panel h3 {
-    padding: 15px 10px;
-    font-size: 1.2rem;
+  .categories-search li h3 {
+    padding: 20px 10px;
+    font-size: 1.1rem;
   }
-  .categories-search__panel p {
-    padding: 6px;
+  .categories-search li p {
     margin-left: 30%;
+    padding: 6px;
     width: 70%;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 640px) {
-  .categories-header__box,
-.categories-header img {
+  .categories ul li img,
+.categories ul li div {
     width: 90%;
   }
   .categories-button, .categories-search {
@@ -1174,28 +1190,26 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     margin: auto auto 20px;
     font-size: 1.25rem;
   }
-  .categories-header__box {
+  .categories ul li div h2 {
     padding: 5px;
-  }
-  .categories-header__box h3 {
     font-size: 1.1rem;
   }
   .categories-button {
     font-size: 1.1rem;
   }
-  .categories .active-categories__button,
-.categories .categories-button:hover {
+  .categories-button:hover {
+    background-color: #116466;
+    background-color: #116466;
     background-color: #116466;
   }
-  .categories .active-categories__button:active,
-.categories .categories-button:hover:active {
+  .categories-button:hover:active {
     background-color: #380b0b;
   }
-  .categories-search__panel h3 {
+  .categories-search li h3 {
+    padding: 15px 10px;
     font-size: 1rem;
-    padding: 10px;
   }
-  .categories-search__panel p {
+  .categories-search li p {
     margin-left: 0;
     width: 100%;
     border-top-left-radius: 0;
@@ -1211,27 +1225,30 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 30px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   color: white;
   background-color: #380b0b;
+}
+.authors #author-search-bar {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  border: 5px solid #116466;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-size: 1.6rem;
+  font-family: inherit;
+  outline: none;
 }
 .authors img {
   display: block;
   margin: auto;
   width: 50%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.authors #author-search-bar {
-  display: block;
-  margin: auto;
-  padding: 8px 10px;
-  width: 50%;
-  border: 5px solid #116466;
-  font-size: 1.6rem;
-  font-family: inherit;
-  outline: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .authors #author-search {
   margin: auto;
@@ -1244,17 +1261,18 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 .authors #author-search li {
   border: solid 1px #380b0b;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.authors #author-search h3 {
-  padding: 20px 10px;
-  width: 95%;
+.authors #author-search li h3 {
+  margin: auto;
+  padding: 30px 20px;
   text-align: center;
+  font-weight: bold;
   font-size: 1.6rem;
   font-style: italic;
   color: white;
 }
-.authors #author-search p {
+.authors #author-search li p {
   margin-left: 40%;
   padding: 10px;
   width: 60%;
@@ -1270,20 +1288,20 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 }
 
 @media only screen and (max-width: 1350px) {
-  .authors img {
-    width: 70%;
-  }
   .authors #author-search-bar {
     width: 70%;
     font-size: 1.4rem;
   }
+  .authors img {
+    width: 70%;
+  }
   .authors #author-search {
     width: 70%;
   }
-  .authors #author-search h3 {
+  .authors #author-search li h3 {
     font-size: 1.4rem;
   }
-  .authors #author-search p {
+  .authors #author-search li p {
     padding: 8px;
     font-size: 1.4rem;
   }
@@ -1295,8 +1313,10 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .authors #author-search-bar {
     font-size: 1.25rem;
   }
-  .authors #author-search h3,
-.authors #author-search p {
+  .authors #author-search li h3,
+.authors #author-search li h3,
+.authors #author-search li h3,
+.authors #author-search li p {
     font-size: 1.25rem;
   }
 }
@@ -1314,19 +1334,24 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     width: 70%;
     font-size: 1.2rem;
   }
-  .authors #author-search h3 {
+  .authors #author-search li h3 {
+    padding: 20px 10px;
     font-size: 1.2rem;
   }
-  .authors #author-search p {
+  .authors #author-search li p {
+    margin-left: 30%;
+    margin-left: 30%;
     margin-left: 30%;
     padding: 6px;
     width: 70%;
     font-size: 1.2rem;
+    font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 640px) {
-  .authors img,
-.authors #author-search-bar,
+  .authors #author-search-bar,
+.authors img,
 .authors #author-search {
     width: 90%;
   }
@@ -1342,13 +1367,15 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .authors #author-search-bar {
     font-size: 1rem;
   }
-  .authors #author-search h3 {
-    padding: 10px;
+  .authors #author-search li h3 {
+    padding: 15px 10px;
     font-size: 1rem;
   }
-  .authors #author-search p {
+  .authors #author-search li p {
     margin-left: 0;
     width: 100%;
+    border-top-left-radius: 0;
+    border-top-left-radius: 0;
     border-top-left-radius: 0;
     font-size: 1rem;
   }
@@ -1362,28 +1389,31 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 30px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
+}
+.text-search #text-search-bar {
+  display: block;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+  border: 5px solid #116466;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  outline: none;
+  font-size: 1.6rem;
+  font-family: inherit;
 }
 .text-search img {
   display: block;
   margin: auto;
   max-height: 640px;
   width: 50%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-.text-search #text-search-bar {
-  display: block;
-  margin: auto;
-  padding: 8px 10px;
-  width: 50%;
-  border: 5px solid #116466;
-  outline: none;
-  font-size: 1.6rem;
-  font-family: inherit;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 .text-search #text-search {
   margin: auto;
@@ -1396,17 +1426,18 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 .text-search #text-search li {
   border: solid 1px #380b0b;
   font-weight: bold;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.text-search #text-search h3 {
-  padding: 20px 10px;
-  width: 95%;
+.text-search #text-search li h3 {
+  margin: auto;
+  padding: 30px 20px;
   text-align: center;
+  font-weight: bold;
   font-size: 1.6rem;
   font-style: italic;
   color: lightgreen;
 }
-.text-search #text-search p {
+.text-search #text-search li p {
   margin-left: 40%;
   padding: 10px;
   width: 60%;
@@ -1422,20 +1453,20 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 }
 
 @media only screen and (max-width: 1350px) {
-  .text-search img {
-    width: 70%;
-  }
   .text-search #text-search-bar {
     width: 70%;
     font-size: 1.4rem;
   }
+  .text-search img {
+    width: 70%;
+  }
   .text-search #text-search {
     width: 70%;
   }
-  .text-search #text-search h3 {
+  .text-search #text-search li h3 {
     font-size: 1.4rem;
   }
-  .text-search #text-search p {
+  .text-search #text-search li p {
     padding: 8px;
     font-size: 1.4rem;
   }
@@ -1447,8 +1478,10 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .text-search #text-search-bar {
     font-size: 1.25rem;
   }
-  .text-search #text-search h3,
-.text-search #text-search p {
+  .text-search #text-search li h3,
+.text-search #text-search li h3,
+.text-search #text-search li h3,
+.text-search #text-search li p {
     font-size: 1.25rem;
   }
 }
@@ -1466,19 +1499,24 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     width: 70%;
     font-size: 1.2rem;
   }
-  .text-search #text-search h3 {
+  .text-search #text-search li h3 {
+    padding: 20px 10px;
     font-size: 1.2rem;
   }
-  .text-search #text-search p {
+  .text-search #text-search li p {
+    margin-left: 30%;
+    margin-left: 30%;
     margin-left: 30%;
     padding: 6px;
     width: 70%;
     font-size: 1.2rem;
+    font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 640px) {
-  .text-search img,
-.text-search #text-search-bar,
+  .text-search #text-search-bar,
+.text-search img,
 .text-search #text-search {
     width: 90%;
   }
@@ -1494,13 +1532,15 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .text-search #text-search-bar {
     font-size: 1rem;
   }
-  .text-search #text-search h3 {
-    padding: 10px;
+  .text-search #text-search li h3 {
+    padding: 15px 10px;
     font-size: 1rem;
   }
-  .text-search #text-search p {
+  .text-search #text-search li p {
     margin-left: 0;
     width: 100%;
+    border-top-left-radius: 0;
+    border-top-left-radius: 0;
     border-top-left-radius: 0;
     font-size: 1rem;
   }
@@ -1514,8 +1554,9 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto auto 20px;
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
@@ -1523,7 +1564,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   margin: auto;
   width: 70%;
 }
-.my-story__box {
+.my-story ul {
   margin: 20px auto;
   padding-top: 5px;
   width: 20%;
@@ -1531,38 +1572,46 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-radius: 10%;
   background-color: black;
 }
-.my-story__box img {
+.my-story ul li img {
   max-width: 100%;
   height: auto;
   border-radius: 50%;
 }
-.my-story__box h2,
-.my-story__box h3 {
+.my-story ul li h2,
+.my-story ul li h3 {
   margin: 0 10px;
+  font-weight: bold;
   color: white;
 }
-.my-story__box h3 {
-  padding-bottom: 10px;
+.my-story ul li h2 {
+  padding-top: 8px;
+  font-size: 1.875rem;
 }
-.my-story__box__contact {
-  padding-bottom: 5px;
+.my-story ul li h3 {
+  padding-bottom: 10px;
+  font-size: 1.463rem;
+}
+.my-story ul li p {
+  padding: 10px 0 15px;
+  width: 100%;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  text-align: center;
   background-color: #116466;
 }
-.my-story__box__contact a {
-  display: block;
-  padding: 10px;
+.my-story ul li p a {
+  height: 0;
+  width: 0;
   font-weight: bold;
   font-size: 1.563rem;
   color: white;
 }
-.my-story__box__contact a:hover {
+.my-story ul li p a:hover {
   color: #380b0b;
 }
 
 @media only screen and (max-width: 1500px) {
-  .my-story__box {
+  .my-story ul {
     width: 25%;
   }
 }
@@ -1573,16 +1622,16 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   .my-story p {
     width: 90%;
   }
-  .my-story__box {
+  .my-story ul {
     width: 30%;
   }
-  .my-story__box h2 {
+  .my-story ul li h2 {
     font-size: 1.7rem;
   }
-  .my-story__box h3 {
+  .my-story ul li h3 {
     font-size: 1.4rem;
   }
-  .my-story__box__contact a {
+  .my-story ul li p a {
     font-size: 1.4rem;
   }
 }
@@ -1594,30 +1643,32 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     padding: 10px 0;
     font-size: 1.6rem;
   }
-  .my-story__box {
+  .my-story ul {
     margin: 10px auto;
     width: 35%;
   }
-  .my-story__box h2 {
+  .my-story ul li h2 {
     font-size: 1.55rem;
   }
-  .my-story__box h3, .my-story__box__contact a {
+  .my-story ul li h3,
+.my-story ul li p a {
     font-size: 1.35rem;
   }
 }
 @media only screen and (max-width: 775px) {
-  .my-story__box {
+  .my-story ul {
     width: 43%;
   }
-  .my-story__box h2 {
+  .my-story ul li h2 {
     font-size: 1.45rem;
   }
-  .my-story__box h3, .my-story__box__contact a {
+  .my-story ul li h3,
+.my-story ul li p a {
     font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 600px) {
-  .my-story__box {
+  .my-story ul {
     width: 55%;
   }
 }
@@ -1629,27 +1680,27 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     margin: auto auto 10px;
     font-size: 1.25rem;
   }
-  .my-story__box {
+  .my-story ul {
     width: 60%;
   }
-  .my-story__box h2 {
+  .my-story ul li h2 {
     font-size: 1.25rem;
   }
-  .my-story__box h3 {
+  .my-story ul li h3 {
     font-size: 1.05rem;
   }
-  .my-story__box__contact a {
+  .my-story ul li p a {
     font-size: 1.05rem;
   }
-  .my-story__box__contact a:hover {
+  .my-story ul li p a:hover {
     color: white;
   }
-  .my-story__box__contact a:active {
+  .my-story ul li p a:active {
     color: #380b0b;
   }
 }
 @media only screen and (max-width: 370px) {
-  .my-story__box {
+  .my-story ul {
     width: 70%;
   }
 }
@@ -1661,8 +1712,9 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 .contact h1 {
   padding: 10px 0 15px;
   width: 100%;
+  font-weight: bold;
   font-size: 2.4rem;
-  font-family: "Trykker";
+  font-family: "Trykker", "Times New Roman", Times, serif;
   background-color: #380b0b;
   color: white;
 }
@@ -1673,7 +1725,8 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border-bottom-right-radius: 20px;
 }
 .contact h2 {
-  padding: 20px 0;
+  padding: 30px 0 20px;
+  font-weight: bold;
   font-size: 2.2rem;
   color: #380b0b;
 }
@@ -1707,7 +1760,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
   border: 2px solid red;
 }
 .contact form textarea {
-  margin: 6px 0;
+  margin: 6px 0 15px;
   height: 200px;
   resize: vertical;
 }
@@ -1790,7 +1843,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
     max-width: 100%;
   }
   .contact h2 {
-    padding: 10px 0;
+    padding: 20px 0 10px;
     font-size: 1.1rem;
   }
   .contact form {
@@ -1826,6 +1879,7 @@ nav ul .navbar-dropdown:hover .navbar-dropdown__box {
 }
 .message h1 {
   padding: 0 30px 180px;
+  font-weight: bold;
   font-size: 2.5rem;
 }
 .message p {
@@ -1905,117 +1959,6 @@ body {
 @media screen and (max-width: 500px) {
   section p {
     font-size: 0.95rem;
-  }
-}
-footer {
-  display: flex;
-  flex-direction: row;
-  padding: 20px 0;
-  width: 100%;
-  color: white;
-  background-color: #116466;
-  /* no dot before home */
-}
-footer p {
-  flex-grow: 7;
-  margin: auto;
-  padding-left: 50px;
-}
-footer .footer-menu {
-  margin: auto;
-  font-weight: bold;
-}
-footer .footer-menu a {
-  font-size: 1.563rem;
-  color: inherit;
-  /* dot for nav links */
-}
-footer .footer-menu a:hover {
-  color: #380b0b;
-}
-footer .footer-menu a:before {
-  content: "·";
-  display: inline-block;
-  padding-right: 5px;
-  color: #d1e8e2;
-}
-footer .footer-menu .footer-home-link:before {
-  content: none;
-}
-footer .footer-social-media {
-  flex-grow: 10;
-  margin: auto;
-  padding-right: 50px;
-  text-align: right;
-}
-footer .footer-social-media a {
-  display: inline-block;
-  margin: auto 2px;
-  padding: 0 10px;
-  border-radius: 10px;
-  font-size: 1.875rem;
-  background-color: #380b0b;
-  color: inherit;
-}
-footer .footer-social-media a:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.2);
-}
-footer .footer-social-media a:active {
-  color: #116466;
-}
-
-@media screen and (max-width: 1250px) {
-  footer {
-    flex-direction: column;
-    padding: 0 0 10px;
-  }
-  footer p {
-    order: 3;
-    padding: 0;
-    font-size: 1.125rem;
-  }
-  footer .footer-menu {
-    padding-top: 5px;
-  }
-  footer .footer-menu a {
-    order: 2;
-    font-size: 1.375rem;
-  }
-  footer .footer-social-media {
-    order: 1;
-    padding: 5px 0;
-  }
-  footer .footer-social-media a {
-    padding: 3px 10px 0;
-    font-size: 1.6rem;
-  }
-}
-@media screen and (max-width: 500px) {
-  footer p {
-    font-size: 0.938rem;
-  }
-  footer .footer-menu {
-    padding-top: 0;
-  }
-  footer .footer-menu a {
-    font-size: 1.125rem;
-  }
-  footer .footer-menu a:hover {
-    color: white;
-  }
-  footer .footer-menu a:active {
-    color: #380b0b;
-  }
-  footer .footer-social-media {
-    padding: 3px 0;
-  }
-  footer .footer-social-media a {
-    padding: 5px 10px 3px;
-    font-size: 1.5rem;
-  }
-  footer .footer-social-media a:hover {
-    transform: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
