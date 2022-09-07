@@ -5,17 +5,9 @@ $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
 .contact {
-    margin: auto;
-    padding-bottom: 40px;
-    text-align: center;
+    @extend .home;
     h1 {
-        padding: 10px 0 15px;
-        width: 100%;    
-        font-weight: bold; 
-        font-size: 2.4rem;
-        font-family: $font-family;
-        background-color: $hover-color;
-        color: $font-color;
+        margin: 0;
     }
   
     img {
@@ -99,10 +91,6 @@ $background-color:#116466;
 @media only screen and (max-width: 1200px) {
   
     .contact {
-        h1 {
-            font-size: 2rem;
-        }
-  
         img {
             max-width: 80%;
         }
@@ -120,12 +108,6 @@ $background-color:#116466;
 @media only screen and (max-width: 1000px) {
   
     .contact {
-        padding: 25px 0 20px;
-        h1 {
-            padding: 10px 0;
-            font-size: 1.6rem;
-        }
-  
         h2 {
             font-size: 1.4rem;
         }
@@ -162,13 +144,9 @@ $background-color:#116466;
 @media only screen and (max-width: 500px) {
   
     .contact {
-        padding: 0 0 20px;
-        h1 {
-            font-size: 1.25rem;
-        }
-  
         img {
             max-width: 100%;
+            border-radius: 0;
         }
   
         h2 {
@@ -201,4 +179,3 @@ $background-color:#116466;
         }
     }
 }
-  

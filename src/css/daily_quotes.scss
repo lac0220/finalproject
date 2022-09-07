@@ -4,25 +4,11 @@ $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
 .daily-quotes {
-    margin: auto;
-    padding-bottom: 40px;
-    text-align: center;
+    @extend .home;
     h1 {
         margin: auto auto 20px; 
-        padding: 10px 0 15px;
-        width: 100%; 
-        font-weight: bold;    
-        font-size: 2.4rem;
-        font-family: $font-family;
-        background-color: $hover-color;
-        color: $font-color;
     }
   
-    p {
-        margin: auto;
-        width: 70%;
-    }
-    
     ul {
         display: grid;
         grid-template-columns: repeat(2, 1fr);  /* same sized column */
@@ -77,19 +63,12 @@ $background-color:#116466;
                 #daily-quotes__text__love, 
                 #daily-quotes__text__success, 
                 #daily-quotes__text__health {
+                    @extend .hyphens;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     width: 95%;
                     transform: translate(-50%, -50%);
-                    hyphens: auto;
-                    -webkit-hyphens: auto;
-                    -webkit-hyphenate-limit-before: 3;
-                    -webkit-hyphenate-limit-after: 3;
-                    -webkit-hyphenate-limit-chars: 6 3 3;
-                    -webkit-hyphenate-limit-lines: 2;
-                    -webkit-hyphenate-limit-last: always;
-                    -webkit-hyphenate-limit-zone: 8%;
                     text-align: center;
                     font-style: italic;
                     font-size: 1.5rem;
@@ -133,32 +112,30 @@ $background-color:#116466;
 @media only screen and (max-width: 1612px) {
   
     .daily-quotes {
-        ul { 
-            li {
-                h2 {
-                    font-size: 1.72rem;
-                }
-
-                .daily-quotes__love,
-                .daily-quotes__success,
-                .daily-quotes__health {
-                    height: 9.8rem;
-                    #daily-quotes__text__love, 
-                    #daily-quotes__text__success, 
-                    #daily-quotes__text__health {
-                        font-size: 1.4rem;
-                    }
-                }
-
-                #daily-quotes__author__love, 
-                #daily-quotes__author__success, 
-                #daily-quotes__author__health {
-                    font-size: 1.4rem;
-                }     
+        ul li {
+            h2 {
+                font-size: 1.72rem;
             }
+
+            .daily-quotes__love,
+            .daily-quotes__success,
+            .daily-quotes__health {
+                height: 9.8rem;
+                #daily-quotes__text__love, 
+                #daily-quotes__text__success, 
+                #daily-quotes__text__health {
+                    font-size: 1.4rem;
+                }
+            }
+
+            #daily-quotes__author__love, 
+            #daily-quotes__author__success, 
+            #daily-quotes__author__health {
+                font-size: 1.4rem;
+            }     
         }
     }
-} 
+}
 
 @media only screen and (max-width: 1350px) {
   
@@ -186,146 +163,122 @@ $background-color:#116466;
   
 @media only screen and (max-width: 1200px) {
     
-    .daily-quotes {
-        h1 {
-            font-size: 2rem;
+    .daily-quotes ul {
+        grid-template-columns: repeat(1, 1fr); 
+        row-gap: 10px;
+        width: 90%;
+        li:nth-child(2) {
+            grid-column: 1;
+            grid-row: 2; 
         }
-  
-        p {
-            width: 90%;
-        }
-  
-        ul {
-            grid-template-columns: repeat(1, 1fr); 
-            row-gap: 10px;
-            width: 90%;
-            li:nth-child(2) {
-              grid-column: 1;
-              grid-row: 2; 
+        
+        li:nth-child(3) {
+            grid-column: span 1;
+            grid-row: 3;
+            img {
+                max-width: 60%;
             }
-          
-            li:nth-child(3) {
-                grid-column: span 1;
-                grid-row: 3;
-                img {
-                    max-width: 60%;
-                }
+        }
+
+        li {
+            h2 {
+                font-size: 1.6rem;
             }
 
-            li {
-                h2 {
-                    font-size: 1.6rem;
-                }
-    
-                img {
-                    max-width: 60%;
-                }
-                
-                .daily-quotes__love,
-                .daily-quotes__success,
-                .daily-quotes__health {
-                    width: 60%;
-                    height: 6rem;
-                    #daily-quotes__text__love, 
-                    #daily-quotes__text__success, 
-                    #daily-quotes__text__health {
-                        font-size: 1.2rem;
-                    }
-                }
+            img {
+                max-width: 60%;
+            }
             
-                #daily-quotes__author__love, 
-                #daily-quotes__author__success, 
-                #daily-quotes__author__health {
-                    margin-left: 40%;
-                    width: 40%;
+            .daily-quotes__love,
+            .daily-quotes__success,
+            .daily-quotes__health {
+                width: 60%;
+                height: 6rem;
+                #daily-quotes__text__love, 
+                #daily-quotes__text__success, 
+                #daily-quotes__text__health {
                     font-size: 1.2rem;
                 }
             }
+        
+            #daily-quotes__author__love, 
+            #daily-quotes__author__success, 
+            #daily-quotes__author__health {
+                margin-left: 40%;
+                width: 40%;
+                font-size: 1.2rem;
+            }
         }
-    }  
-} 
+    }
+}  
 
 @media only screen and (max-width: 1000px) {
   
-    .daily-quotes {
-        padding: 25px 0 20px;
-        h1 {
-            padding: 10px 0;
-            font-size: 1.6rem;
-        }
-    
-        ul li h2 {
-            font-size: 1.4rem;
-        }
+    .daily-quotes ul li h2 {
+        font-size: 1.4rem;
     }
 }
   
 @media only screen and (max-width: 820px) {
   
-    .daily-quotes {
-        ul li {
-          .daily-quotes__love,
-          .daily-quotes__success,
-          .daily-quotes__health {
-                height: 7.5rem;
-                #daily-quotes__text__love, 
-                #daily-quotes__text__success, 
-                #daily-quotes__text__health {
-                    font-size: 1.1rem;
-                }
-            }
-            
-            #daily-quotes__author__love, 
-            #daily-quotes__author__success, 
-            #daily-quotes__author__health {
-                margin-left: 35%;
-                width: 45%;
+    .daily-quotes ul li {
+        .daily-quotes__love,
+        .daily-quotes__success,
+        .daily-quotes__health {
+            height: 7.5rem;
+            #daily-quotes__text__love, 
+            #daily-quotes__text__success, 
+            #daily-quotes__text__health {
                 font-size: 1.1rem;
-            } 
+            }
         }
+        
+        #daily-quotes__author__love, 
+        #daily-quotes__author__success, 
+        #daily-quotes__author__health {
+            margin-left: 35%;
+            width: 45%;
+            font-size: 1.1rem;
+        } 
     }
-}  
+} 
   
 @media only screen and (max-width: 645px) {
   
-    .daily-quotes {
-        ul {
-            li:nth-child(3) img { 
+    .daily-quotes ul {
+        li:nth-child(3) img { 
+            max-width: 80%;
+        }
+        
+        li {
+            img {
                 max-width: 80%;
             }
-            
-            li {
-                img {
-                    max-width: 80%;
-                }
-    
-                .daily-quotes__love,
-                .daily-quotes__success,
-                .daily-quotes__health {
-                    height: 7.7rem;
-                    width: 80%;
-                } 
-            
-                #daily-quotes__author__love, 
-                #daily-quotes__author__success, 
-                #daily-quotes__author__health {
-                    margin-left: 30%;
-                    width: 60%;
-                }
+
+            .daily-quotes__love,
+            .daily-quotes__success,
+            .daily-quotes__health {
+                height: 7.7rem;
+                width: 80%;
+            } 
+        
+            #daily-quotes__author__love, 
+            #daily-quotes__author__success, 
+            #daily-quotes__author__health {
+                margin-left: 30%;
+                width: 60%;
             }
         }
-    } 
+    }
 } 
   
 @media only screen and (max-width: 500px) {
   
     .daily-quotes {
-        padding: 0 0 20px;
         h1 {
             margin: auto auto 10px;
-            font-size: 1.25rem;
         }
-  
+        
         ul {
             li:nth-child(3) img {
                 max-width: 100%;
@@ -336,11 +289,11 @@ $background-color:#116466;
                     padding: 10px 0;
                     font-size: 1.1rem;
                 }
-    
+
                 img {
                     max-width: 100%;
                 }
-    
+
                 .daily-quotes__love,
                 .daily-quotes__success,
                 .daily-quotes__health {
@@ -353,7 +306,7 @@ $background-color:#116466;
                         font-size: 1rem;
                     }
                 }
-    
+
                 #daily-quotes__author__love, 
                 #daily-quotes__author__success, 
                 #daily-quotes__author__health {
@@ -365,5 +318,4 @@ $background-color:#116466;
         }
     }
 }
-  
   

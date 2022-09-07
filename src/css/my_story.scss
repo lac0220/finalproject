@@ -4,23 +4,9 @@ $hover-color:rgb(56, 11, 11);
 $background-color:#116466;
 
 .my-story {
-    margin: auto;
-    padding-bottom: 40px;
-    text-align: center;
+    @extend .home;
     h1 {
         margin: auto auto 20px; 
-        padding: 10px 0 15px;
-        width: 100%;     
-        font-weight: bold;
-        font-size: 2.4rem;
-        font-family: $font-family;
-        background-color: $hover-color;
-        color: $font-color;
-    }
-        
-    p {
-        margin: auto;
-        width: 70%;
     }
     
     ul {
@@ -78,64 +64,41 @@ $background-color:#116466;
 
 @media only screen and (max-width: 1500px) {
   
-    .my-story {
-        ul {
-            width: 25%;
-        }
+    .my-story ul {
+        width: 25%;
     }
 }
   
 @media only screen and (max-width: 1200px) {
   
-    .my-story { 
-        h1 {
-            font-size: 2rem;
-        }
-  
-        p {
-            width: 90%;
-        }
-  
-        ul {
-            width: 30%;
-            li {
-                h2 {
-                    font-size: 1.7rem;
-                }
-    
-                h3 {
-                    font-size: 1.4rem;
-                }
-                
-                p a {
-                    font-size: 1.4rem;
-                }
+    .my-story ul {
+        width: 30%;
+        li {
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            h3,
+            p a {
+                font-size: 1.4rem;
             }
         }
     }
-} 
+}
 
 @media only screen and (max-width: 1000px) {
   
-    .my-story {
-        padding: 25px 0 20px;
-        h1 {
-            padding: 10px 0;
-            font-size: 1.6rem;
-        }
-  
-        ul {
-            margin: 10px auto;
-            width: 35%;
-            li {
-                h2 {
-                    font-size: 1.55rem;
-                }
-        
-                h3,
-                p a {
-                    font-size: 1.35rem;
-                }
+    .my-story ul {
+        margin: 10px auto;
+        width: 35%;
+        li {
+            h2 {
+                font-size: 1.55rem;
+            }
+    
+            h3,
+            p a {
+                font-size: 1.35rem;
             }
         }
     }
@@ -143,58 +106,52 @@ $background-color:#116466;
 
 @media only screen and (max-width: 775px) {
     
-    .my-story {
-        ul {
-            width: 43%;
-            li {
-                h2 {
-                    font-size: 1.45rem;
-                }
-    
-                h3,
-                p a {
-                    font-size: 1.25rem;
-                }
+    .my-story ul {
+        width: 43%;
+        li {
+            h2 {
+                font-size: 1.45rem;
+            }
+
+            h3,
+            p a {
+                font-size: 1.25rem;
             }
         }
     }
-} 
+}
 
 @media only screen and (max-width: 600px) {
     
-    .my-story {
-        ul {
-          width: 55%;
-        }
+    .my-story ul {
+        width: 55%;
     }
 }
   
 @media only screen and (max-width: 500px) {
     
     .my-story {
-        padding: 0 0 20px;
         h1 {
             margin: auto auto 10px;
-            font-size: 1.25rem;
         }
-  
+    
         ul {
             width: 60%;
             li {
                 h2 {
                     font-size: 1.25rem;
                 }
-    
+
                 h3 {
                     font-size: 1.05rem;
                 }
-    
+
                 p a {
                     font-size: 1.05rem;
                     &:hover {
                         color: $font-color;
                     }
-    
+
                     &:active {
                         color: $hover-color;
                     }
@@ -202,14 +159,13 @@ $background-color:#116466;
             }
         }
     }
-} 
+}   
 
 @media only screen and (max-width: 370px) {
     
-    .my-story {
-        ul {
-            width: 70%;    
-        }
+    .my-story ul {
+        width: 70%;    
     }
 }
+
   

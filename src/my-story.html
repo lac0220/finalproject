@@ -8,21 +8,21 @@
         <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
         <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <script src="./js/script.js" charset="utf-8" defer></script>
         <title>My Story - Legendary Quotes</title>
     </head>
-
     <body>
         <header>
             <nav>
-                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
                 <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
-                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="daily-quotes.html">Daily Quote</a></li>
                     <li>
                         <ul>
-                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <button>Search Quotes<i class="fa-solid fa-magnifying-glass"></i></button>
                             <li>
                                 <a href="categories.html">Categories</a>
                                 <a href="authors.html">Authors</a>
@@ -35,7 +35,6 @@
                 </ul>
             </nav>
         </header>
-
         <section class="my-story">
             <h1>My Story</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae.</p>
@@ -43,13 +42,12 @@
                 <li>
                     <img src="./img/logo/profile.webp" alt="Laszlo Nemeth profile picture">
                     <h2>Laszlo Nemeth</h2>
-                    <h3>Front-End Web Developer</h3>
+                    <h3>Front-End Developer</h3>
                     <p><a href="contact.html">Send me a message</a></p>
                 </li>
             </ul>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati dolore quae. Possimus, adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero fuga, laboriosam ipsa at quas animi ea rem aperiam voluptate ab ratione voluptates quaerat incidunt repellendus obcaecati.</p>
         </section>
-
         <footer>
             <p>Created by Laszlo Nemeth &copy; 2022</p>
             <ul>
@@ -62,25 +60,6 @@
                 <li><a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Visit me on Github"></i></a></li> <!-- github -->
             </ul>
         </footer>
-
-        <script>
-            // hamburger menu open
-            "use strict";
-            const navHamburger = document.querySelector(".navbar-hamburger__btn");
-            const sideNav = document.querySelector("#side-nav");
-
-            const mobileNavOpen = () => {
-                sideNav.classList.toggle("active");
-            }
-            navHamburger.addEventListener("click", mobileNavOpen);
-
-            // hamburger menu close
-            const navClose = document.querySelector(".navbar-close__btn");
-
-            const mobileNavClose = () => {
-                sideNav.classList.remove("active");
-            }
-            navClose.addEventListener("click", mobileNavClose);
-        </script>
+        <div class="loader-animation"</div>
     </body>
 </html>

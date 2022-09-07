@@ -8,21 +8,21 @@
         <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
         <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <script src="./js/script.js" charset="utf-8" defer></script>
         <title>Authors - Legendary Quotes</title>
     </head>
-
     <body>
         <header>
             <nav>
-                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
                 <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
-                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="daily-quotes.html">Daily Quote</a></li>
                     <li>
                         <ul>
-                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <button>Search Quotes<i class="fa-solid fa-magnifying-glass"></i></button>
                             <li>
                                 <a href="categories.html">Categories</a>
                                 <a href="authors.html">Authors</a>
@@ -35,14 +35,13 @@
                 </ul>
             </nav>
         </header>
-
         <section class="authors">
             <h1>Authors</h1>
             <input type="text" name="author-searchbar" id="author-search-bar" placeholder="Search for authors here..." autofocus <input/>
             <img id="author-search-image"src="./img/search/author_search.webp" alt="Author">
             <div id="author-search"></div>
         </section>
-
+        <div class="loader-animation"</div>
         <script>
             //generates author search from API
             "use strict";
@@ -98,26 +97,6 @@
             
                 displayAuthors(filteredAuthors);
             });
-        </script>
-
-        <script>
-            "use strict";
-            // hamburger menu open
-            const navHamburger = document.querySelector(".navbar-hamburger__btn");
-            const sideNav = document.querySelector("#side-nav");
-
-            const mobileNavOpen = () => {
-                sideNav.classList.toggle("active");
-            }
-            navHamburger.addEventListener("click", mobileNavOpen);
-
-            // hamburger menu close
-            const navClose = document.querySelector(".navbar-close__btn");
-
-            const mobileNavClose = () => {
-                sideNav.classList.remove("active");
-            }
-            navClose.addEventListener("click", mobileNavClose);
         </script>
     </body>
 </html>

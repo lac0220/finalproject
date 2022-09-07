@@ -8,8 +8,11 @@
 @import 'my_story';
 @import 'contact';
 @import 'message';
-@import url('https://use.fontawesome.com/releases/v5.0.8/css/all.css');     //Social media logos
-@import url('https://fonts.googleapis.com/css?family=Trykker&display=swap');    //font 
+@import 'loader_animation';
+@import "../fonts/brands.scss";
+@import "../fonts/solid.scss";
+@import "../fonts/_icons.scss";
+@import url('https://fonts.googleapis.com/css?family=Trykker&display=swap'); //font 
 
 $font-family: "Trykker", 'Times New Roman', Times, serif;
 $font-color:white;
@@ -52,6 +55,36 @@ li {
 
 a {
     text-decoration: none;
+}
+
+.hyphens {
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -webkit-hyphenate-limit-before: 3;
+    -webkit-hyphenate-limit-after: 3;
+    -webkit-hyphenate-limit-chars: 6 3 3;
+    -webkit-hyphenate-limit-lines: 2;
+    -webkit-hyphenate-limit-last: always;
+    -webkit-hyphenate-limit-zone: 8%;
+}
+
+.fadeaway {  
+    -webkit-animation-name: fadeaway-random;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-count: infinite;
+    animation-name: fadeaway-random;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+
+    @-webkit-keyframes fadeaway-random  {
+        from {opacity: .5} 
+        to {opacity: 1}
+    }
+
+    @keyframes fadeaway-random  {
+        from {opacity: .5} 
+        to {opacity: 1}
+    }
 }
 
 @media screen and (max-width: 1000px) {

@@ -8,21 +8,21 @@
         <link rel="stylesheet" type="text/css" href="/css/reset.css" media="screen" />
         <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" /> 
         <link rel="shortcut icon" href="./img/logo/favicon.webp" type="image/webp" /> <!-- favicon -->
+        <script src="./js/script.js" charset="utf-8" defer></script>
         <title>Text Search - Legendary Quotes</title>
     </head>
-
     <body>
         <header>
             <nav>
-                <span class="navbar-hamburger__btn">&#9776;</span>  
+                <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
                 <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
-                    <li><span class="navbar-close__btn">&#215;</span></li>
+                    <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="daily-quotes.html">Daily Quote</a></li>
                     <li>
                         <ul>
-                            <button>Search Quotes<i class="fa fa-fw fa-search"></i></button>
+                            <button>Search Quotes<i class="fa-solid fa-magnifying-glass"></i></button>
                             <li>
                                 <a href="categories.html">Categories</a>
                                 <a href="authors.html">Authors</a>
@@ -35,14 +35,13 @@
                 </ul>
             </nav>
         </header>
-
         <section class="text-search">
             <h1>Text Search</h1>
             <input type="text" name="text-searchbar" id="text-search-bar" placeholder="Search for quotations here..." autofocus <input/>
             <img id="text-search-image" src="./img/search/text_search.webp" alt="Text search">
             <div id="text-search"></div>
         </section>
-
+        <div class="loader-animation"</div>
         <script>
             //generates text search from API
             "use strict";
@@ -99,26 +98,6 @@
 
                 displayQuotes(filteredText);
             }); 
-        </script>
-
-        <script>
-            "use strict";
-            // hamburger menu open
-            const navHamburger = document.querySelector(".navbar-hamburger__btn");
-            const sideNav = document.querySelector("#side-nav");
-
-            const mobileNavOpen = () => {
-                sideNav.classList.toggle("active");
-            }
-            navHamburger.addEventListener("click", mobileNavOpen);
-
-            // hamburger menu close
-            const navClose = document.querySelector(".navbar-close__btn");
-
-            const mobileNavClose = () => {
-                sideNav.classList.remove("active");
-            }
-            navClose.addEventListener("click", mobileNavClose);
         </script>
     </body>
 </html>
