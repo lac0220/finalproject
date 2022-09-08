@@ -54,10 +54,6 @@ footer ul:nth-child(3) li a {
   color: inherit;
 }
 footer ul:nth-child(3) li a:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.2);
-}
-footer ul:nth-child(3) li a:active {
   color: #116466;
 }
 
@@ -83,7 +79,7 @@ footer ul:nth-child(3) li a:active {
     padding: 8px 0;
   }
   footer ul:nth-child(3) li a {
-    padding: 8px;
+    padding: 8px 10px;
     font-size: 1.6rem;
   }
 }
@@ -113,7 +109,10 @@ footer ul:nth-child(3) li a:active {
     font-size: 1.5rem;
   }
   footer ul:nth-child(3) li a:hover {
-    transform: none;
+    color: white;
+  }
+  footer ul:nth-child(3) li a:active {
+    color: #116466;
   }
 }
 nav {
@@ -173,14 +172,14 @@ nav ul:nth-child(3) li:nth-child(4) ul button:hover {
 nav ul:nth-child(3) li:nth-child(4) ul button i {
   padding-left: 10px;
 }
-nav ul:nth-child(3) li:nth-child(4) ul li {
+nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) {
   display: none;
   position: absolute;
   z-index: 1;
   border-radius: 10px;
   background-color: green;
 }
-nav ul:nth-child(3) li:nth-child(4) ul li a {
+nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a {
   display: block;
   margin: auto;
   padding: 5px 5px 5px 10px;
@@ -189,7 +188,7 @@ nav ul:nth-child(3) li:nth-child(4) ul li a {
   font-size: 1.4rem;
   color: white;
 }
-nav ul:nth-child(3) li:nth-child(4) ul li a:hover {
+nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a:hover {
   background-color: lightgreen;
   color: #380b0b;
 }
@@ -318,17 +317,17 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   nav ul:nth-child(3) li:nth-child(4) ul button:hover {
     color: white;
   }
-  nav ul:nth-child(3) li:nth-child(4) ul li {
+  nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) {
     left: 15%;
   }
-  nav ul:nth-child(3) li:nth-child(4) ul li a {
+  nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a {
     padding: 3px 5px 3px 10px;
   }
-  nav ul:nth-child(3) li:nth-child(4) ul li a:hover {
+  nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a:hover {
     background-color: green;
     color: white;
   }
-  nav ul:nth-child(3) li:nth-child(4) ul li a:active {
+  nav ul:nth-child(3) li:nth-child(4) ul li:nth-child(2) a:active {
     background-color: lightgreen;
     color: #380b0b;
   }
@@ -344,7 +343,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 }
 .home, .contact, .my-story, .authors, .text-search, .categories, .daily-quotes {
   margin: auto;
-  padding-bottom: 40px;
+  padding-bottom: 30px;
   text-align: center;
 }
 .home h1, .contact h1, .my-story h1, .authors h1, .text-search h1, .categories h1, .daily-quotes h1 {
@@ -375,7 +374,9 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .home p:nth-child(5), .contact p:nth-child(5), .my-story p:nth-child(5), .authors p:nth-child(5), .text-search p:nth-child(5), .categories p:nth-child(5), .daily-quotes p:nth-child(5) {
   padding-top: 20px;
 }
-.home-random {
+.home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
   position: relative;
   margin: 20px auto 0;
   width: 70%;
@@ -386,7 +387,15 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   background-color: #116466;
   color: white;
 }
-.home-random #quote {
+.home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -398,7 +407,9 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   font-weight: bold;
   font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.home #author, .contact #author, .my-story #author, .authors #author, .text-search #author, .categories #author, .daily-quotes #author {
+.home-author, .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
   margin-left: 50%;
   padding-top: 10px;
   height: 4rem;
@@ -472,10 +483,20 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 }
 
 @media only screen and (max-width: 1350px) {
-  .home #quote, .contact #quote, .my-story #quote, .authors #quote, .text-search #quote, .categories #quote, .daily-quotes #quote {
+  .home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
     font-size: 1.4rem;
   }
-  .home #author, .contact #author, .my-story #author, .authors #author, .text-search #author, .categories #author, .daily-quotes #author {
+  .home-author, .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     height: 3.5rem;
     font-size: 1.4rem;
   }
@@ -506,14 +527,26 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .home p:nth-child(5), .contact p:nth-child(5), .my-story p:nth-child(5), .authors p:nth-child(5), .text-search p:nth-child(5), .categories p:nth-child(5), .daily-quotes p:nth-child(5) {
     padding-top: 10px;
   }
-  .home-random {
+  .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 6.6rem;
     width: 90%;
   }
-  .home-random #quote {
+  .home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
     font-size: 1.25rem;
   }
-  .home #author, .contact #author, .my-story #author, .authors #author, .text-search #author, .categories #author, .daily-quotes #author {
+  .home-author, .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     padding: 10px 0;
     width: 45%;
     height: 3.3rem;
@@ -555,13 +588,25 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   }
 }
 @media only screen and (max-width: 820px) {
-  .home-random {
+  .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 8rem;
   }
-  .home-random #quote {
+  .home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
     font-size: 1.2rem;
   }
-  .home #author, .contact #author, .my-story #author, .authors #author, .text-search #author, .categories #author, .daily-quotes #author {
+  .home-author, .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin-left: 25%;
     width: 70%;
     height: 3.2rem;
@@ -587,13 +632,15 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   }
 }
 @media only screen and (max-width: 640px) {
-  .home .home-random, .contact .home-random, .my-story .home-random, .authors .home-random, .text-search .home-random, .categories .home-random, .daily-quotes .home-random {
+  .home .home-random, .contact .home-random, .my-story .home-random, .authors .home-random, .text-search .home-random, .categories .home-random, .daily-quotes .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 9.5rem;
   }
 }
 @media only screen and (max-width: 500px) {
   .home, .contact, .my-story, .authors, .text-search, .categories, .daily-quotes {
-    padding: 0 0 20px;
+    padding: 0 0 15px;
   }
   .home h1, .contact h1, .my-story h1, .authors h1, .text-search h1, .categories h1, .daily-quotes h1 {
     margin: auto auto 20px;
@@ -609,14 +656,26 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes h2:nth-child(6) {
     font-size: 1.1rem;
   }
-  .home-random {
+  .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 8.5rem;
     border-bottom-left-radius: 0;
   }
-  .home-random #quote {
+  .home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__success #daily-quotes__text__health,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
+.daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
     font-size: 1rem;
   }
-  .home #author, .contact #author, .my-story #author, .authors #author, .text-search #author, .categories #author, .daily-quotes #author {
+  .home-author, .daily-quotes ul li #daily-quotes__author__love,
+.daily-quotes ul li #daily-quotes__author__success,
+.daily-quotes ul li #daily-quotes__author__health {
     margin: auto;
     width: 90%;
     height: 2.8rem;
@@ -640,12 +699,16 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   }
 }
 @media only screen and (max-width: 405px) {
-  .home .home-random, .contact .home-random, .my-story .home-random, .authors .home-random, .text-search .home-random, .categories .home-random, .daily-quotes .home-random {
+  .home .home-random, .contact .home-random, .my-story .home-random, .authors .home-random, .text-search .home-random, .categories .home-random, .daily-quotes .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 9.2rem;
   }
 }
 @media only screen and (max-width: 360px) {
-  .home-random {
+  .home-random, .daily-quotes ul li .daily-quotes__love,
+.daily-quotes ul li .daily-quotes__success,
+.daily-quotes ul li .daily-quotes__health {
     height: 10.5rem;
   }
   .home-slides__quote {
@@ -696,12 +759,11 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes ul li .daily-quotes__love,
 .daily-quotes ul li .daily-quotes__success,
 .daily-quotes ul li .daily-quotes__health {
-  position: relative;
   margin: auto;
   height: 8rem;
   border-bottom-left-radius: 35px;
-  background-color: #116466;
-  color: white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
 .daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
@@ -712,16 +774,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes ul li .daily-quotes__health #daily-quotes__text__love,
 .daily-quotes ul li .daily-quotes__health #daily-quotes__text__success,
 .daily-quotes ul li .daily-quotes__health #daily-quotes__text__health {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 95%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  font-style: italic;
   font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Trykker", "Times New Roman", Times, serif;
 }
 .daily-quotes ul li .daily-quotes__love,
 .daily-quotes ul li .daily-quotes__success {
@@ -735,14 +788,9 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes ul li #daily-quotes__author__health {
   margin-left: 30%;
   padding: 15px 0;
+  height: inherit;
   width: 70%;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
   font-size: 1.5rem;
-  font-weight: bold;
-  font-family: "Trykker", "Times New Roman", Times, serif;
-  background-color: #380b0b;
-  color: white;
 }
 .daily-quotes ul li #daily-quotes__author__health {
   margin-left: 40%;
@@ -872,6 +920,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes ul li #daily-quotes__author__success,
 .daily-quotes ul li #daily-quotes__author__health {
     margin-left: 35%;
+    height: 3.5rem;
     width: 45%;
     font-size: 1.1rem;
   }
@@ -932,6 +981,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .daily-quotes ul li #daily-quotes__author__success,
 .daily-quotes ul li #daily-quotes__author__health {
     margin-left: 0;
+    height: 3.4rem;
     width: 100%;
     font-size: 1rem;
   }
@@ -986,7 +1036,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .categories .active-categories__button, .categories-button:hover {
   background-color: #380b0b;
 }
-.categories-search, .authors #author-search, .text-search #author-search {
+.categories-search, .authors-search, .text-search #text-search {
   display: none;
   margin: auto;
   width: 50%;
@@ -994,12 +1044,12 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   background-color: #116466;
   color: white;
 }
-.categories-search li, .authors #author-search li, .text-search #author-search li {
+.categories-search li, .authors-search li, .text-search #text-search li {
   border: solid 1px #380b0b;
   font-weight: bold;
   font-family: "Trykker", "Times New Roman", Times, serif;
 }
-.categories-search li h3, .authors #author-search li h3, .text-search #author-search li h3 {
+.categories-search li h3, .authors-search li h3, .text-search #text-search li h3 {
   margin: auto;
   padding: 30px 20px;
   text-align: center;
@@ -1007,7 +1057,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   font-weight: bold;
   font-size: 1.6rem;
 }
-.categories-search li p, .authors #author-search li p, .text-search #author-search li p {
+.categories-search li p, .authors-search li p, .text-search #text-search li p {
   margin-left: 40%;
   padding: 10px;
   width: 60%;
@@ -1030,13 +1080,13 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
     width: 70%;
     font-size: 1.7rem;
   }
-  .categories-search, .authors #author-search, .text-search #author-search {
+  .categories-search, .authors-search, .text-search #text-search {
     width: 70%;
   }
-  .categories-search li h3, .authors #author-search li h3, .text-search #author-search li h3 {
+  .categories-search li h3, .authors-search li h3, .text-search #text-search li h3 {
     font-size: 1.4rem;
   }
-  .categories-search li p, .authors #author-search li p, .text-search #author-search li p {
+  .categories-search li p, .authors-search li p, .text-search #text-search li p {
     padding: 8px;
     font-size: 1.4rem;
   }
@@ -1048,10 +1098,10 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .categories-button {
     font-size: 1.6rem;
   }
-  .categories-search li h3, .authors #author-search li h3, .text-search #author-search li h3,
+  .categories-search li h3, .authors-search li h3, .text-search #text-search li h3,
 .categories-search li p,
-.authors #author-search li p,
-.text-search #author-search li p {
+.authors-search li p,
+.text-search #text-search li p {
     font-size: 1.25rem;
   }
 }
@@ -1076,11 +1126,11 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .categories-button {
     font-size: 1.2rem;
   }
-  .categories-search li h3, .authors #author-search li h3, .text-search #author-search li h3 {
+  .categories-search li h3, .authors-search li h3, .text-search #text-search li h3 {
     padding: 20px 10px;
     font-size: 1.2rem;
   }
-  .categories-search li p, .authors #author-search li p, .text-search #author-search li p {
+  .categories-search li p, .authors-search li p, .text-search #text-search li p {
     margin-left: 30%;
     padding: 6px;
     width: 70%;
@@ -1092,7 +1142,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .categories ul li div {
     width: 90%;
   }
-  .categories-button, .categories-search, .authors #author-search, .text-search #author-search {
+  .categories-button, .categories-search, .authors-search, .text-search #text-search {
     width: 90%;
   }
 }
@@ -1112,18 +1162,18 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .categories-button:hover:active {
     background-color: #380b0b;
   }
-  .categories-search li h3, .authors #author-search li h3, .text-search #author-search li h3 {
+  .categories-search li h3, .authors-search li h3, .text-search #text-search li h3 {
     padding: 15px 10px;
     font-size: 1rem;
   }
-  .categories-search li p, .authors #author-search li p, .text-search #author-search li p {
+  .categories-search li p, .authors-search li p, .text-search #text-search li p {
     margin-left: 0;
     width: 100%;
     border-top-left-radius: 0;
     font-size: 1rem;
   }
 }
-.authors #author-search-bar, .text-search #author-search-bar {
+.authors-search-bar, .text-search #text-search-bar {
   display: block;
   margin: auto;
   padding: 10px;
@@ -1142,15 +1192,15 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.authors #author-search, .text-search #author-search {
+.authors-search, .text-search #text-search {
   padding-bottom: 30px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.authors #author-search li h3, .text-search #author-search li h3 {
+.authors-search li h3, .text-search #text-search li h3 {
   color: white;
 }
-.authors #author-search li p, .text-search #author-search li p {
+.authors-search li p, .text-search #text-search li p {
   color: lightgreen;
 }
 .authors ::placeholder, .text-search ::placeholder {
@@ -1159,7 +1209,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 }
 
 @media only screen and (max-width: 1350px) {
-  .authors #author-search-bar, .text-search #author-search-bar {
+  .authors-search-bar, .text-search #text-search-bar {
     width: 70%;
     font-size: 1.4rem;
   }
@@ -1168,52 +1218,30 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   }
 }
 @media only screen and (max-width: 1200px) {
-  .authors #author-search-bar, .text-search #author-search-bar {
+  .authors .authors-search-bar, .text-search .authors-search-bar, .text-search #text-search-bar {
     font-size: 1.25rem;
   }
 }
 @media only screen and (max-width: 820px) {
-  .authors #author-search-bar, .text-search #author-search-bar {
+  .authors .authors-search-bar, .text-search .authors-search-bar, .text-search #text-search-bar {
     width: 70%;
     font-size: 1.2rem;
   }
 }
 @media only screen and (max-width: 640px) {
-  .authors #author-search-bar, .text-search #author-search-bar,
+  .authors .authors-search-bar, .text-search .authors-search-bar, .text-search #text-search-bar,
 .authors img,
 .text-search img {
     width: 90%;
   }
 }
 @media only screen and (max-width: 500px) {
-  .authors #author-search-bar, .text-search #author-search-bar {
+  .authors .authors-search-bar, .text-search .authors-search-bar, .text-search #text-search-bar {
     font-size: 1rem;
   }
 }
-.text-search #text-search-bar {
-  display: block;
-  margin: auto;
-  padding: 10px;
-  width: 50%;
-  border: 5px solid #116466;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  outline: none;
-  font-size: 1.6rem;
-  font-family: inherit;
-}
 .text-search img {
-  display: block;
-  margin: auto;
   max-height: 640px;
-  width: 50%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.text-search #text-search {
-  padding-bottom: 30px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 .text-search #text-search li h3 {
   color: lightgreen;
@@ -1221,42 +1249,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
 .text-search #text-search li p {
   color: white;
 }
-.text-search ::placeholder {
-  font-weight: bold;
-  color: #116466;
-}
 
-@media only screen and (max-width: 1350px) {
-  .text-search #text-search-bar {
-    width: 70%;
-    font-size: 1.4rem;
-  }
-  .text-search img {
-    width: 70%;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .text-search #text-search-bar {
-    font-size: 1.25rem;
-  }
-}
-@media only screen and (max-width: 820px) {
-  .text-search #text-search-bar {
-    width: 70%;
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width: 640px) {
-  .text-search #text-search-bar,
-.text-search img {
-    width: 90%;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .text-search #text-search-bar {
-    font-size: 1rem;
-  }
-}
 .my-story h1 {
   margin: auto auto 20px;
 }
@@ -1273,19 +1266,19 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   height: auto;
   border-radius: 50%;
 }
-.my-story ul li h2,
+.my-story ul li h2:nth-child(2),
 .my-story ul li h3 {
   margin: 0 10px;
   font-weight: bold;
   color: white;
 }
-.my-story ul li h2 {
-  padding-top: 8px;
+.my-story ul li h2:nth-child(2) {
+  padding-top: 5px;
   font-size: 1.875rem;
 }
 .my-story ul li h3 {
   padding-bottom: 10px;
-  font-size: 1.463rem;
+  font-size: 1.563rem;
 }
 .my-story ul li p {
   padding: 10px 0 15px;
@@ -1315,7 +1308,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .my-story ul {
     width: 30%;
   }
-  .my-story ul li h2 {
+  .my-story ul li h2:nth-child(2) {
     font-size: 1.7rem;
   }
   .my-story ul li h3,
@@ -1328,7 +1321,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
     margin: 10px auto;
     width: 35%;
   }
-  .my-story ul li h2 {
+  .my-story ul li h2:nth-child(2) {
     font-size: 1.55rem;
   }
   .my-story ul li h3,
@@ -1340,7 +1333,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .my-story ul {
     width: 43%;
   }
-  .my-story ul li h2 {
+  .my-story ul li h2:nth-child(2) {
     font-size: 1.45rem;
   }
   .my-story ul li h3,
@@ -1360,7 +1353,7 @@ nav ul:nth-child(3) li:nth-child(4) ul:hover li {
   .my-story ul {
     width: 60%;
   }
-  .my-story ul li h2 {
+  .my-story ul li h2:nth-child(2) {
     font-size: 1.25rem;
   }
   .my-story ul li h3 {
@@ -11491,7 +11484,7 @@ a {
   text-decoration: none;
 }
 
-.hyphens, .home-random #quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
+.hyphens, .home-random__quote, .daily-quotes ul li .daily-quotes__love #daily-quotes__text__love,
 .daily-quotes ul li .daily-quotes__love #daily-quotes__text__success,
 .daily-quotes ul li .daily-quotes__love #daily-quotes__text__health,
 .daily-quotes ul li .daily-quotes__success #daily-quotes__text__love,
@@ -11511,14 +11504,14 @@ a {
 }
 
 .fadeaway {
-  -webkit-animation-name: fadeaway-random;
-  -webkit-animation-duration: 5s;
-  -webkit-animation-count: infinite;
   animation-name: fadeaway-random;
   animation-duration: 5s;
   animation-iteration-count: infinite;
+  -webkit-animation-name: fadeaway-random;
+  -webkit-animation-duration: 5s;
+  -webkit-animation-count: infinite;
 }
-@-webkit-keyframes fadeaway-random {
+@keyframes fadeaway-random {
   from {
     opacity: 0.5;
   }
@@ -11526,7 +11519,7 @@ a {
     opacity: 1;
   }
 }
-@keyframes fadeaway-random {
+@-webkit-keyframes fadeaway-random {
   from {
     opacity: 0.5;
   }
