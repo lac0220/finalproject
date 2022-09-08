@@ -65,7 +65,7 @@ nav {
                 }
             }
     
-            li {
+            li:nth-child(2) {
                 display: none;
                 position: absolute;
                 z-index: 1;
@@ -242,7 +242,7 @@ nav {
                     color: $font-color;
                 }
   
-                li {
+                li:nth-child(2) {
                     left: 15%;
                     a {
                         padding: 3px 5px 3px 10px;

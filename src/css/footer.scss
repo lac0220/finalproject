@@ -42,6 +42,7 @@ footer {
         content: none;
     }
     
+    //social media logos
     ul:nth-child(3) {
         flex-grow: 10;
         margin: auto;
@@ -57,12 +58,8 @@ footer {
                 background-color: $hover-color;
                 color: inherit;
                 &:hover{            
-                    transform:scale(1.1); 
-                    -webkit-transform:scale(1.2);
-                }
-    
-                &:active {
                     color: $background-color;
+
                 }
             }
         }
@@ -92,7 +89,7 @@ footer {
             order: 1;
             padding: 8px 0;
             li a {
-                padding: 8px;
+                padding: 8px 10px;
                 font-size: 1.6rem;       
             }     
         }
@@ -129,10 +126,13 @@ footer {
             li a {
                 font-size: 1.5rem;
                 &:hover {
-                    transform: none;
-                }   
+                    color: $font-color;
+                }
+  
+                &:active {
+                    color: $background-color;
+                } 
             }   
         }   
     }
 }
-  

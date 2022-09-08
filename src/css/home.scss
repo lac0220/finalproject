@@ -5,7 +5,7 @@ $background-color:#116466;
 
 .home {
     margin: auto;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     text-align: center;
     h1 {
         margin: auto auto 30px; 
@@ -50,7 +50,7 @@ $background-color:#116466;
         border-bottom-left-radius: 35px;
         background-color: $background-color;
         color: $font-color;
-        #quote {
+        &__quote {
             @extend .hyphens;
             position: absolute;
             top: 50%;
@@ -65,7 +65,7 @@ $background-color:#116466;
         }
     }
     
-    #author {
+    &-author {
         margin-left: 50%;
         padding-top: 10px;
         height: 4rem;
@@ -147,11 +147,11 @@ $background-color:#116466;
 @media only screen and (max-width: 1350px) {
     
     .home {
-        #quote {
+        &-random__quote {
             font-size: 1.4rem;
         }
     
-        #author {
+        &-author {
             height: 3.5rem;
             font-size: 1.4rem;
         }  
@@ -199,12 +199,12 @@ $background-color:#116466;
         &-random {
             height: 6.6rem;
             width: 90%;
-            #quote {
+            &__quote {
                 font-size: 1.25rem;
             }
         }
     
-        #author {
+        &-author {
             padding: 10px 0;
             width: 45%;
             height: 3.3rem;
@@ -252,12 +252,12 @@ $background-color:#116466;
     .home {
         &-random {
             height: 8rem;
-            #quote {
+            &__quote {
                 font-size: 1.2rem;
             }
         }
     
-        #author {
+        &-author {
             margin-left: 25%;
             width: 70%;
             height: 3.2rem;
@@ -300,7 +300,7 @@ $background-color:#116466;
 @media only screen and (max-width: 500px) {
     
     .home {
-        padding: 0 0 20px;
+        padding: 0 0 15px;
         h1 {
             margin: auto auto 20px;
             font-size: 1.25rem;
@@ -314,12 +314,12 @@ $background-color:#116466;
         &-random {
             height: 8.5rem;
             border-bottom-left-radius: 0; 
-            #quote {
+            &__quote {
                 font-size: 1rem;
             }
         }
     
-        #author {
+        &-author {
             margin: auto;
             width: 90%;
             height: 2.8rem;
