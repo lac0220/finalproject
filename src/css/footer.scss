@@ -45,23 +45,19 @@ footer {
     //social media logos
     ul:nth-child(3) {
         flex-grow: 10;
-        margin: auto;
-        padding-right: 50px;
-        text-align: right;
-        li {
-            display: inline-block;
-            a {
-                margin: auto 2px;
-                padding: 10px 12px;
-                border-radius: 10px;
-                font-size: 1.875rem;                    
-                background-color: $hover-color;
-                color: inherit;
-                &:hover{            
-                    color: $background-color;
+        li a {
+            border-radius: 10px;
+            font-size: 1.875rem;                    
+            background-color: $hover-color;
+            color: inherit;
+            &:hover{            
+                color: $background-color;
 
-                }
             }
+        }
+
+        li:nth-child(1) i {
+            padding: 0 1px;
         }
     }
 }
@@ -87,9 +83,7 @@ footer {
   
         ul:nth-child(3) {
             order: 1;
-            padding: 8px 0;
             li a {
-                padding: 8px 10px;
                 font-size: 1.6rem;       
             }     
         }
@@ -121,18 +115,15 @@ footer {
             }
         }
   
-        ul:nth-child(3) {
-            padding: 5px 0;
-            li a {
-                font-size: 1.5rem;
-                &:hover {
-                    color: $font-color;
-                }
-  
-                &:active {
-                    color: $background-color;
-                } 
-            }   
+        ul:nth-child(3) li a {
+            font-size: 1.5rem;
+            &:hover {
+                color: $font-color;
+            }
+
+            &:active {
+                color: $background-color;
+            } 
         }   
-    }
+    }   
 }
