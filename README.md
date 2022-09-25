@@ -1,6 +1,6 @@
 # Legendary Quotes - Bootcamp finalproject
 
-​​The web application uses an API to generate random and daily inspirational quotes. It delivers 5 different quote categories, alphabetical filtering of authors, text-keyword searching between quotes, contact form submission, and mobile-friendly web design with a navigation bar
+The web application uses an API to generate random and daily inspirational quotes. It delivers 5 different quote categories, alphabetical filtering of authors, text-keyword searching between quotes, contact form submission to an email address, and mobile-friendly web design with a navigation bar
 
 ## Tech Stack
 
@@ -15,13 +15,16 @@
 
 Used [Gulp.js](https://gulpjs.com) for implementation
 
-To run this project locally:
+### To run this project locally:
 
 ```
-$ npm install gulp-cli -g from any directory OR npm install --global gulp
-$ cd ../lorem
+cd ../lorem
+$ npm install
 $ gulp watch
 ```
+
+Please note that first, you need to install the Gulp CLI (command line utility) globally on your computer
+
 ## Version
 
 1.0 - 12/05/2022 - Publishing of the website

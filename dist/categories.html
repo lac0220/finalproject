@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
-                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
                     <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
@@ -80,7 +80,7 @@
 
             let allQuotes = [];
 
-            //fetching the data
+            //fetching the API data
             const loadQuotes = async () => {    
                 try {
                     const res = await fetch('https://type.fit/api/quotes');
@@ -91,7 +91,7 @@
                     displayQuotesFailure(allQuotes);
                     displayQuotesHealth(allQuotes);
                 } catch (err) {
-                    console.error(err);
+                    alert("The server is temporarily unable to service your request")
                 }
             };
             loadQuotes();
