@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
-                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
                     <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
@@ -40,7 +40,7 @@
         <section class="authors">
             <h1>Authors</h1>
             <input type="text" name="name" id="author-search-bar" class="authors-search-bar" placeholder="Search for authors here..." autofocus <input/>
-            <img id="author-search-image"src="./img/search/author_search.webp" alt="Author">
+            <img id="author-search-image" src="./img/search/author_search.webp" alt="Author">
             <div id="author-search" class="authors-search"></div>
         </section>
         <div class="loader-animation"</div>
@@ -53,14 +53,14 @@
 
             let allAuthors = [];
 
-            //fetching the data
+            //fetching the API data
             const loadAuthors = async () => {    
                 try {
                     const res = await fetch('https://type.fit/api/quotes');
                     allAuthors = await res.json();
                     displayAuthors(allAuthors);
                 } catch (err) {
-                    console.error(err);
+                    alert("The server is temporarily unable to service your request")
                 }
             };
             loadAuthors();
@@ -91,7 +91,7 @@
                         document.getElementById("author-search-image").style.display = "none"; 
                     }
                     else {
-                        return (object.author?.toLowerCase().includes(searchString));
+                        return (object.author.toLowerCase().includes(searchString));
                     }     
                 });
                 document.getElementById("author-search").style.display = "block";

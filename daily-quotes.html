@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <span class="navbar-hamburger__btn"><i class="fa-solid fa-bars"></i></span>  
-                <a href="index.html" class="navbar-logo" aria-label="Home page"><u>Legendary Quotes</u></a>
+                <a href="index.html" class="navbar-logo"><u>Legendary Quotes</u></a>
                 <ul id="side-nav">
                     <li><span class="navbar-close__btn"><i class="fa-solid fa-xmark"></i></span></li>
                     <li><a href="index.html">Home</a></li>
@@ -75,8 +75,8 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
             <ul>
-                <li><a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin logo" target="_blank"><i class="fab fa-linkedin" title="Visit me on Linkedin"></i></a></li>  <!-- linkedin -->
-                <li><a href="https://github.com/lac0220" aria-label="Github logo" target="_blank"><i class="fab fa-github" title="Visit me on Github"></i></a></li> <!-- github -->
+                <li><a href="https://www.linkedin.com/in/nemeth0220" aria-label="Linkedin" rel="noopener noreferrer" target="_blank"><i class="fab fa-linkedin" title="Visit me on Linkedin"></i></a></li>  <!-- linkedin -->
+                <li><a href="https://github.com/lac0220" aria-label="Github" rel="noopener noreferrer" target="_blank"><i class="fab fa-github" title="Visit me on Github"></i></a></li> <!-- github -->
             </ul>
         </footer>
         <div class="loader-animation"</div>
@@ -84,8 +84,8 @@
             //generates daily quotes from array
             "use strict";
             window.onload = function() { 
-                const a = new Date().getDay();
-                const quotes = [
+                const daily = new Date().getDay();
+                const quotesOne = [
                     '"If you love someone, set them free. If they come back they\'re yours; if they don\'t they never were."',
                     '"Love is the flower you\'ve got to let grow."',
                     '"Love all, trust a few, do wrong to none."',
@@ -96,7 +96,7 @@
                     '"Love and compassion open our own inner life, reducing stress, distrust and loneliness."',
                 ];
 
-                const authors = [
+                const authorsOne = [
                     '- Richard Bach',
                     '- John Lennon',
                     '- William Shakespeare',
@@ -107,37 +107,30 @@
                     '- Dalai Lama',
                 ];
 
-            document.getElementById('daily-quotes__text__love').innerHTML = quotes[a];
-            document.getElementById('daily-quotes__author__love').innerHTML = authors[a];
-
-                const b = new Date().getDay();
-                const quotes1 = [
+                const quotesTwo = [
                     '"If A is success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut."',
                     '"The path to success is to take massive, determined action."',
                     '"The price of greatness is responsibility."',
                     '"Well done is better than well said."',
+                    '"We make a living by what we get, but we make a life by what we give."',
                     '"Once we accept our limits, we go beyond them."',
                     '"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty."',
                     '"We make a living by what we get, but we make a life by what we give."',
                     '"There never was a good knife made of bad steel."',
                 ];
 
-                const authors1 = [
+                const authorsTwo = [
                     '- Albert Einstein',
                     '- Tony Robbins',
                     '- Winston Churchill',
                     '- Benjamin Franklin',
-                    '- Albert Einstein',
                     '- Winston Churchill',
+                    '- Albert Einstein',
                     '- Winston Churchill',
                     '- Benjamin Franklin',
                 ];
 
-                document.getElementById('daily-quotes__text__success').innerHTML = quotes1[b];
-                document.getElementById('daily-quotes__author__success').innerHTML = authors1[b];
-
-                const c = new Date().getDay();
-                const quotes2 = [
+                const quotesThree = [
                     '"To keep the body in good health is a duty... otherwise we shall not be able to keep our mind strong and clear."',
                     '"Consider that not only do negative thoughts and emotions destroy our experience of peace, they also undermine our health."',
                     '"Imagination is not a talent of some men but is the health of every man."',
@@ -148,7 +141,7 @@
                     '"To ensure good health: eat lightly, breathe deeply, live moderately, cultivate cheerfulness, and maintain an interest in life."',
                 ];
 
-                const authors2 = [
+                const authorsThree = [
                     '- Buddha',
                     '- Dalai Lama',
                     '- Ralph Waldo Emerson',
@@ -158,9 +151,13 @@
                     '- Thomas Carlyle',
                     '- William Londen',
                 ];
-                
-                document.getElementById('daily-quotes__text__health').innerHTML = quotes2[c];
-                document.getElementById('daily-quotes__author__health').innerHTML = authors2[b];
+
+                document.getElementById('daily-quotes__text__love').innerHTML = quotesOne[daily];
+                document.getElementById('daily-quotes__author__love').innerHTML = authorsOne[daily];
+                document.getElementById('daily-quotes__text__success').innerHTML = quotesTwo[daily];
+                document.getElementById('daily-quotes__author__success').innerHTML = authorsTwo[daily];
+                document.getElementById('daily-quotes__text__health').innerHTML = quotesThree[daily];
+                document.getElementById('daily-quotes__author__health').innerHTML = authorsThree[daily];
             }
         </script>
     </body>
