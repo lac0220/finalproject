@@ -1,5 +1,6 @@
-@import 'footer';
+@import 'variables';
 @import 'navbar';
+@import 'footer';
 @import 'home';
 @import 'daily_quotes';
 @import 'categories';
@@ -13,12 +14,6 @@
 @import "../fonts/solid.scss";
 @import "../fonts/_icons.scss";
 @import url('https://fonts.googleapis.com/css?family=Trykker&display=swap'); //font 
-
-$font-family: "Trykker", 'Times New Roman', Times, serif;
-$font-color:white;
-$font-color2:#d1e8e2;
-$hover-color:rgb(56, 11, 11);
-$background-color:#116466;
 
 * {
     margin: 0;

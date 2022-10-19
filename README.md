@@ -7,7 +7,6 @@ The web application uses an API to generate random and daily inspirational quote
 - HTML5
 - SCSS
 - JavaScript
-- Webpack
 
 [API:](https://type.fit/api/quotes) Free API - Inspirational quotes 
 
